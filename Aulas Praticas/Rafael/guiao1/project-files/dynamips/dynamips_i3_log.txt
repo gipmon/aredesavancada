@@ -1,0 +1,64 @@
+Sep 21 19:59:52.584 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Sep 21 19:59:52.584 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 55830.
+Sep 21 19:59:52.595 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 21 19:59:52.595 HYPERVISOR: exec_cmd: hypervisor uuid 
+Sep 21 19:59:52.595 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA/guiao1/project-files/dynamips 
+Sep 21 19:59:52.595 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA/guiao1/project-files/dynamips
+Sep 21 19:59:52.595 HYPERVISOR: exec_cmd: vm create R4 4 c7200 
+Sep 21 19:59:52.596 VM: VM R4 created.
+Sep 21 19:59:52.596 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 2006 
+Sep 21 19:59:52.596 HYPERVISOR: exec_cmd: c7200 get_mac_addr R4 
+Sep 21 19:59:52.596 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:52.597 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-FE 
+Sep 21 19:59:52.597 HYPERVISOR: exec_cmd: vm set_ram R4 512 
+Sep 21 19:59:52.597 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:52.597 HYPERVISOR: exec_cmd: vm slot_add_binding R4 2 0 PA-2FE-TX 
+Sep 21 19:59:52.598 HYPERVISOR: exec_cmd: vm set_nvram R4 512 
+Sep 21 19:59:52.599 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Sep 21 19:59:52.599 HYPERVISOR: exec_cmd: c7200 set_mac_addr R4 ca04.301b.0000 
+Sep 21 19:59:52.600 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:52.600 HYPERVISOR: exec_cmd: vm slot_remove_binding R4 0 0 
+Sep 21 19:59:52.600 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:52.601 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-2FE 
+Sep 21 19:59:52.601 HYPERVISOR: exec_cmd: vm set_ios R4 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Sep 21 19:59:52.601 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:52.601 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x60608040 
+Sep 21 19:59:52.602 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:52.602 HYPERVISOR: exec_cmd: vm slot_add_binding R4 1 0 PA-2FE-TX 
+Sep 21 19:59:52.603 HYPERVISOR: exec_cmd: vm set_config R4 configs/i4_startup-config.cfg 
+Sep 21 19:59:54.168 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Sep 21 19:59:54.169 HYPERVISOR: exec_cmd: vm set_ghost_file R4 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Sep 21 19:59:54.380 HYPERVISOR: exec_cmd: nio create_udp udp-958f12d5-1c58-4664-a303-4b17e9f7fb3f 10005 127.0.0.1 10004 
+Sep 21 19:59:54.394 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 1 udp-958f12d5-1c58-4664-a303-4b17e9f7fb3f 
+Sep 21 19:59:54.417 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 19:59:54.438 HYPERVISOR: exec_cmd: nio create_udp udp-4dadf9b0-7c6a-4daa-9418-0434492ac39f 10010 127.0.0.1 10011 
+Sep 21 19:59:54.460 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 0 udp-4dadf9b0-7c6a-4daa-9418-0434492ac39f 
+Sep 21 19:59:54.474 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:00:18.847 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:00:18.849 HYPERVISOR: exec_cmd: vm start R4 
+Sep 21 20:09:11.629 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:09:11.630 HYPERVISOR: exec_cmd: vm stop R4 
+Sep 21 20:09:12.082 VM: VM R4 shutdown.
+Sep 21 20:09:46.760 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:09:46.761 HYPERVISOR: exec_cmd: vm start R4 
+Sep 21 20:13:09.034 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:13:09.034 HYPERVISOR: exec_cmd: vm stop R4 
+Sep 21 20:13:09.132 VM: VM R4 shutdown.
+Sep 21 20:13:12.283 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:13:12.283 HYPERVISOR: exec_cmd: vm start R4 
+Sep 21 20:13:20.406 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:13:20.406 HYPERVISOR: exec_cmd: vm stop R4 
+Sep 21 20:13:20.499 VM: VM R4 shutdown.
+Sep 21 20:13:26.828 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:13:26.829 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R4 0 0 
+Sep 21 20:13:26.832 HYPERVISOR: exec_cmd: nio delete udp-4dadf9b0-7c6a-4daa-9418-0434492ac39f 
+Sep 21 20:13:26.836 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:13:26.837 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R4 0 1 
+Sep 21 20:13:26.837 HYPERVISOR: exec_cmd: nio delete udp-958f12d5-1c58-4664-a303-4b17e9f7fb3f 
+Sep 21 20:13:26.839 HYPERVISOR: exec_cmd: vm get_status R4 
+Sep 21 20:13:26.839 HYPERVISOR: exec_cmd: vm extract_config R4 
+Sep 21 20:13:26.840 HYPERVISOR: exec_cmd: vm delete R4 
+Sep 21 20:13:26.840 VM: VM R4 destroyed.
+Sep 21 20:13:26.842 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 21 20:13:27.181 HYPERVISOR: Stopped.
+Sep 21 20:13:27.181 GENERAL: reset done.
