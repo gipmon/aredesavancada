@@ -1,0 +1,96 @@
+Sep 28 16:20:17.393 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Sep 28 16:20:17.393 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58569.
+Sep 28 16:20:17.401 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 28 16:20:17.401 HYPERVISOR: exec_cmd: hypervisor uuid 
+Sep 28 16:20:17.402 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/dynamips 
+Sep 28 16:20:17.402 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/dynamips
+Sep 28 16:20:17.402 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+Sep 28 16:20:17.402 VM: VM R2 created.
+Sep 28 16:20:17.402 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 2002 
+Sep 28 16:20:17.403 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Sep 28 16:20:17.403 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:20:17.403 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Sep 28 16:20:17.403 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:20:17.404 HYPERVISOR: exec_cmd: vm slot_remove_binding R2 0 0 
+Sep 28 16:20:17.404 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:20:17.404 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-2FE 
+Sep 28 16:20:17.404 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Sep 28 16:20:17.405 HYPERVISOR: exec_cmd: vm set_ios R2 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Sep 28 16:20:17.405 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:20:17.405 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 PA-2FE-TX 
+Sep 28 16:20:17.406 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Sep 28 16:20:17.406 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Sep 28 16:20:17.406 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:20:17.406 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-2FE-TX 
+Sep 28 16:20:17.407 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:20:17.407 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60608040 
+Sep 28 16:20:17.412 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Sep 28 16:20:17.413 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Sep 28 16:20:17.413 HYPERVISOR: exec_cmd: vm set_ghost_file R2 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Sep 28 16:33:51.994 HYPERVISOR: exec_cmd: nio create_udp udp-455f512c-74ba-4817-adb9-fd42d1c9267c 10003 127.0.0.1 10002 
+Sep 28 16:33:51.995 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-455f512c-74ba-4817-adb9-fd42d1c9267c 
+Sep 28 16:33:51.995 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:34:29.591 HYPERVISOR: exec_cmd: nio create_udp udp-2c0f64c2-8d63-4206-888c-499fa8bd4e5b 10004 127.0.0.1 10005 
+Sep 28 16:34:29.600 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-2c0f64c2-8d63-4206-888c-499fa8bd4e5b 
+Sep 28 16:34:29.601 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:34:48.510 HYPERVISOR: exec_cmd: nio create_udp udp-fc3de4ba-b2d3-404e-9e6d-6ba6a7ec5edd 10006 127.0.0.1 10007 
+Sep 28 16:34:48.521 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-fc3de4ba-b2d3-404e-9e6d-6ba6a7ec5edd 
+Sep 28 16:34:48.521 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:35:18.045 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:35:18.047 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 1 
+Sep 28 16:35:18.048 HYPERVISOR: exec_cmd: nio delete udp-2c0f64c2-8d63-4206-888c-499fa8bd4e5b 
+Sep 28 16:35:43.479 HYPERVISOR: exec_cmd: nio create_udp udp-1a70c7ff-000c-429c-b863-6a2e27248c17 10004 127.0.0.1 10005 
+Sep 28 16:35:43.499 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-1a70c7ff-000c-429c-b863-6a2e27248c17 
+Sep 28 16:35:43.499 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:36:00.788 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:36:00.795 HYPERVISOR: exec_cmd: vm start R2 
+Sep 28 16:37:44.929 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:37:44.930 HYPERVISOR: exec_cmd: vm slot_disable_nio R2 0 0 
+Sep 28 16:37:44.947 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 0 
+Sep 28 16:37:44.948 HYPERVISOR: exec_cmd: nio delete udp-455f512c-74ba-4817-adb9-fd42d1c9267c 
+Sep 28 16:37:46.575 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:37:46.578 HYPERVISOR: exec_cmd: vm slot_disable_nio R2 0 1 
+Sep 28 16:37:46.590 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 1 
+Sep 28 16:37:46.590 HYPERVISOR: exec_cmd: nio delete udp-1a70c7ff-000c-429c-b863-6a2e27248c17 
+Sep 28 16:37:50.352 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:37:50.354 HYPERVISOR: exec_cmd: vm slot_disable_nio R2 1 0 
+Sep 28 16:37:50.367 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 1 0 
+Sep 28 16:37:50.367 HYPERVISOR: exec_cmd: nio delete udp-fc3de4ba-b2d3-404e-9e6d-6ba6a7ec5edd 
+Sep 28 16:38:07.896 HYPERVISOR: exec_cmd: nio create_udp udp-14785e10-0629-486b-98e7-29f03bb65639 10004 127.0.0.1 10003 
+Sep 28 16:38:07.896 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-14785e10-0629-486b-98e7-29f03bb65639 
+Sep 28 16:38:07.897 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:38:07.897 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 0 0 
+Sep 28 16:38:14.143 HYPERVISOR: exec_cmd: nio create_udp udp-661f6ab6-a370-44db-ab75-1671cd3d2c32 10006 127.0.0.1 10007 
+Sep 28 16:38:14.163 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-661f6ab6-a370-44db-ab75-1671cd3d2c32 
+Sep 28 16:38:14.163 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:38:14.164 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 0 1 
+Sep 28 16:38:18.766 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:38:18.768 HYPERVISOR: exec_cmd: vm slot_disable_nio R2 0 1 
+Sep 28 16:38:18.773 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 1 
+Sep 28 16:38:18.773 HYPERVISOR: exec_cmd: nio delete udp-661f6ab6-a370-44db-ab75-1671cd3d2c32 
+Sep 28 16:38:24.311 HYPERVISOR: exec_cmd: nio create_udp udp-f254a1db-e797-4ec1-8467-f0cb11eb7e39 10006 127.0.0.1 10007 
+Sep 28 16:38:24.312 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-f254a1db-e797-4ec1-8467-f0cb11eb7e39 
+Sep 28 16:38:24.312 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:38:24.312 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 1 0 
+Sep 28 16:38:27.644 HYPERVISOR: exec_cmd: nio create_udp udp-ecb16001-b4e1-4507-866b-1fadb5bdabe0 10009 127.0.0.1 10010 
+Sep 28 16:38:27.659 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-ecb16001-b4e1-4507-866b-1fadb5bdabe0 
+Sep 28 16:38:27.659 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 16:38:27.660 HYPERVISOR: exec_cmd: vm slot_enable_nio R2 0 1 
+Sep 28 16:52:10.127 HYPERVISOR: exec_cmd: nio bind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 capture 
+Sep 28 16:52:10.127 HYPERVISOR: exec_cmd: nio setup_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 28 16:57:44.656 HYPERVISOR: exec_cmd: nio unbind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 
+Sep 28 16:57:50.192 HYPERVISOR: exec_cmd: nio bind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 capture 
+Sep 28 16:57:50.193 HYPERVISOR: exec_cmd: nio setup_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 28 17:11:54.511 HYPERVISOR: exec_cmd: nio unbind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 
+Sep 28 17:11:56.926 HYPERVISOR: exec_cmd: nio bind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 capture 
+Sep 28 17:11:56.926 HYPERVISOR: exec_cmd: nio setup_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 28 17:14:25.876 HYPERVISOR: exec_cmd: nio unbind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 
+Sep 28 17:14:43.447 HYPERVISOR: exec_cmd: nio bind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 capture 
+Sep 28 17:14:43.447 HYPERVISOR: exec_cmd: nio setup_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 28 17:17:02.400 HYPERVISOR: exec_cmd: nio unbind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 
+Sep 28 17:23:20.054 HYPERVISOR: exec_cmd: nio bind_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 capture 
+Sep 28 17:23:20.054 HYPERVISOR: exec_cmd: nio setup_filter udp-14785e10-0629-486b-98e7-29f03bb65639 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA/guiao2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 28 17:38:41.821 HYPERVISOR: exec_cmd: vm extract_config R2 
+Sep 28 17:38:45.706 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 28 17:38:45.707 HYPERVISOR: exec_cmd: vm stop R2 
+Sep 28 17:38:47.016 VM: VM R2 shutdown.
