@@ -13,3 +13,10 @@ sh ipv6 policy
 sh route-map
 
 no cdp run
+
+show ip route
+show ipv6 route
+show ip bp 
+show bgp ipv6 unicast
+
+clear ip bgp *
