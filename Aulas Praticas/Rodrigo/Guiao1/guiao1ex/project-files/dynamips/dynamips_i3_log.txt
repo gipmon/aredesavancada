@@ -1,0 +1,57 @@
+Sep 25 11:12:08.687 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Sep 25 11:12:08.687 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50626.
+Sep 25 11:12:08.698 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 25 11:12:08.698 HYPERVISOR: exec_cmd: hypervisor uuid 
+Sep 25 11:12:08.698 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/Guiao1/guiao1/project-files/dynamips 
+Sep 25 11:12:08.698 GENERAL: working_dir=/Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/Guiao1/guiao1/project-files/dynamips
+Sep 25 11:12:08.698 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Sep 25 11:12:08.699 VM: VM R3 created.
+Sep 25 11:12:08.699 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 2003 
+Sep 25 11:12:08.699 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Sep 25 11:12:08.700 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:08.700 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Sep 25 11:12:08.700 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:08.700 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x60609bec 
+Sep 25 11:12:08.701 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Sep 25 11:12:08.701 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Sep 25 11:12:08.701 HYPERVISOR: exec_cmd: vm set_ios R3 /Users/RodrigoCunha/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Sep 25 11:12:08.702 HYPERVISOR: exec_cmd: c7200 set_mac_addr R3 ca03.07a2.0000 
+Sep 25 11:12:08.702 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Sep 25 11:12:08.702 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:08.703 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 PA-2FE-TX 
+Sep 25 11:12:08.703 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:08.703 HYPERVISOR: exec_cmd: vm slot_remove_binding R3 0 0 
+Sep 25 11:12:08.704 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:08.704 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-2FE 
+Sep 25 11:12:08.704 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:08.704 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-2FE-TX 
+Sep 25 11:12:08.705 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Sep 25 11:12:11.617 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Sep 25 11:12:11.630 HYPERVISOR: exec_cmd: vm set_ghost_file R3 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Sep 25 11:12:11.849 HYPERVISOR: exec_cmd: nio create_udp udp-1d33555d-572c-4aa1-8b34-66ae35e0c949 10004 127.0.0.1 10005 
+Sep 25 11:12:11.868 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 1 udp-1d33555d-572c-4aa1-8b34-66ae35e0c949 
+Sep 25 11:12:11.886 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:11.966 HYPERVISOR: exec_cmd: nio create_udp udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 10007 127.0.0.1 10006 
+Sep 25 11:12:11.994 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 
+Sep 25 11:12:12.040 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:12.100 HYPERVISOR: exec_cmd: nio create_udp udp-99b9d211-9c3b-4635-9740-7a839ac290b3 10010 127.0.0.1 10008 
+Sep 25 11:12:12.100 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 1 0 udp-99b9d211-9c3b-4635-9740-7a839ac290b3 
+Sep 25 11:12:12.136 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:15.606 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:12:15.613 HYPERVISOR: exec_cmd: vm start R3 
+Sep 25 11:27:19.522 HYPERVISOR: exec_cmd: nio bind_filter udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 2 capture 
+Sep 25 11:27:19.522 HYPERVISOR: exec_cmd: nio setup_filter udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 2 en10mb /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/Guiao1/guiao1/project-files/captures/R3_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 25 11:44:52.680 HYPERVISOR: exec_cmd: nio unbind_filter udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 2 
+Sep 25 11:45:03.108 HYPERVISOR: exec_cmd: nio bind_filter udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 2 capture 
+Sep 25 11:45:03.109 HYPERVISOR: exec_cmd: nio setup_filter udp-b92e7d01-5406-4e66-8590-26d65d0bd8ce 2 en10mb /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/Guiao1/guiao1/project-files/captures/R3_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Sep 25 11:49:39.261 HYPERVISOR: exec_cmd: vm extract_config R3 
+Sep 25 11:49:43.825 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:49:43.826 HYPERVISOR: exec_cmd: vm stop R3 
+Sep 25 11:49:46.077 VM: VM R3 shutdown.
+Sep 25 11:50:00.183 HYPERVISOR: exec_cmd: vm get_status R3 
+Sep 25 11:50:00.185 HYPERVISOR: exec_cmd: vm extract_config R3 
+Sep 25 11:50:00.186 HYPERVISOR: exec_cmd: vm delete R3 
+Sep 25 11:50:00.186 VM: VM R3 destroyed.
+Sep 25 11:50:00.194 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 25 11:50:00.681 HYPERVISOR: Stopped.
+Sep 25 11:50:00.681 GENERAL: reset done.
