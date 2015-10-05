@@ -20,3 +20,8 @@ show ip bp
 show bgp ipv6 unicast
 
 clear ip bgp *
+show ip bp
+do show run | s bp
+sh ip access-list
+sh ip prefix-list
+

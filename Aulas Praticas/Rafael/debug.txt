@@ -1,0 +1,9 @@
+1º coisa: ips, int desligada, show ip int brief
+neighbor remote asx
+ips neighbor estão corretos
+comandos networks ou redestribute em ipv4 ou ipv6
+show bgp ipv6 unicast
+
+
+filtragens:
+sequencias, o que está a passar e a negar
