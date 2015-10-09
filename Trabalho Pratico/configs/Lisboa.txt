@@ -1,0 +1,30 @@
+conf t
+
+! int f0/0
+! ip add 192.172.100.1 255.255.255.252
+! no shut
+! ipv6 enable
+! ipv6 add 2001:192:100:1::2/64
+
+int f1/1
+ip add 192.172.100.9 255.255.255.252
+no shut
+ipv6 enable
+ipv6 add 2001:192:100:3::2/64
+
+! BGP Peering links
+
+int f0/0
+no shut
+ip add 4.20.20.6 255.255.255.252
+ipv6 enable
+ipv6 add 2001:420:2::2/64
+
+int f0/1
+no shut
+ip add 4.20.20.14 255.255.255.252
+ipv6 enable
+ipv6 add 2001:420:4::2/64
+
+end
+write

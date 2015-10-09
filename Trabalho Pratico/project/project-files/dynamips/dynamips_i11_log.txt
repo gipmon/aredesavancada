@@ -1,0 +1,49 @@
+Oct 09 10:33:37.386 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Oct 09 10:33:37.386 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 62402.
+Oct 09 10:33:37.398 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 09 10:33:37.398 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 09 10:33:37.398 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Oct 09 10:33:37.398 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Oct 09 10:33:37.399 HYPERVISOR: exec_cmd: vm create R1 11 c7200 
+Oct 09 10:33:37.399 VM: VM R1 created.
+Oct 09 10:33:37.400 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 2018 
+Oct 09 10:33:37.400 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Oct 09 10:33:37.400 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 09 10:33:37.401 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Oct 09 10:33:37.401 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 09 10:33:37.402 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 PA-2FE-TX 
+Oct 09 10:33:37.402 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Oct 09 10:33:37.402 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 09 10:33:37.402 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60608040 
+Oct 09 10:33:37.403 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 09 10:33:37.403 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Oct 09 10:33:37.403 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Oct 09 10:33:37.405 HYPERVISOR: exec_cmd: vm set_ios R1 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Oct 09 10:33:37.405 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 09 10:33:37.406 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Oct 09 10:33:37.406 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 09 10:33:37.406 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Oct 09 10:33:37.407 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Oct 09 10:33:37.408 HYPERVISOR: exec_cmd: vm set_config R1 configs/i11_startup-config.cfg 
+Oct 09 10:33:37.409 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Oct 09 10:33:37.410 HYPERVISOR: exec_cmd: vm set_ghost_file R1 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Oct 09 10:35:39.295 HYPERVISOR: exec_cmd: vm rename R1 EthernetCore 
+Oct 09 10:36:29.792 HYPERVISOR: exec_cmd: nio create_udp udp-916cb987-64c5-4a0f-9757-035196f890b8 10031 127.0.0.1 10030 
+Oct 09 10:36:29.794 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 0 0 udp-916cb987-64c5-4a0f-9757-035196f890b8 
+Oct 09 10:36:29.795 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
+Oct 09 10:36:41.143 HYPERVISOR: exec_cmd: nio create_udp udp-5760797d-159a-465a-8801-f992aef60cbb 10033 127.0.0.1 10032 
+Oct 09 10:36:41.157 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 0 1 udp-5760797d-159a-465a-8801-f992aef60cbb 
+Oct 09 10:36:41.158 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
+Oct 09 10:36:45.589 HYPERVISOR: exec_cmd: nio create_udp udp-f39afe1c-5173-4109-9ee9-350203ce86d2 10035 127.0.0.1 10034 
+Oct 09 10:36:45.601 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 1 0 udp-f39afe1c-5173-4109-9ee9-350203ce86d2 
+Oct 09 10:36:45.602 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
+Oct 09 10:36:49.643 HYPERVISOR: exec_cmd: nio create_udp udp-d5b23ffc-50ae-40a8-8234-0ac9a5cbc4ea 10036 127.0.0.1 10037 
+Oct 09 10:36:49.644 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 1 1 udp-d5b23ffc-50ae-40a8-8234-0ac9a5cbc4ea 
+Oct 09 10:36:49.646 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
+Oct 09 10:45:10.274 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
+Oct 09 10:45:10.306 HYPERVISOR: exec_cmd: vm start EthernetCore 
+Oct 09 10:48:57.054 HYPERVISOR: exec_cmd: vm extract_config EthernetCore 
+Oct 09 12:22:39.011 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
+Oct 09 12:22:39.014 HYPERVISOR: exec_cmd: vm stop EthernetCore 
+Oct 09 12:22:39.541 VM: VM EthernetCore shutdown.
+Oct 09 12:22:59.774 HYPERVISOR: exec_cmd: vm extract_config EthernetCore 

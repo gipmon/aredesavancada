@@ -1,0 +1,15 @@
+conf t
+int f0/1
+ip add 192.172.100.5 255.255.255.252
+no shut
+ipv6 enable
+ipv6 add 2001:192:100:2::2/64
+
+int f0/0
+ip add 80.172.100.193 255.255.255.192
+no shut
+ipv6 enable
+ipv6 add 2001:80:100:2::1/64
+
+end
+write
