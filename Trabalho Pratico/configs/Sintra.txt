@@ -20,5 +20,13 @@ ip add 4.20.20.13 255.255.255.252
 ipv6 enable
 ipv6 add 2001:420:4::1/64
 
+! BGP CONFIGS
+router bgp 8657
+address-family ipv4 unicast
+neighbor 4.20.20.9 remote-as 34419 !eBGP Neighboring with London
+neighbor 4.20.20.14 remote-as 9.345 !eBGP Neighboring with Lisboa
+
+network 200.1.100.0 mask 255.255.255.0
+
 end
 write

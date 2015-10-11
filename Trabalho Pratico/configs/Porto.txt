@@ -14,5 +14,13 @@ ip add 4.20.20.2 255.255.255.252
 ipv6 enable
 ipv6 add 2001:420:1::2/64
 
+! BGP CONFIGS
+router bgp 9.345
+address-family ipv4 unicast
+neighbor 4.20.20.1 remote-as 34419 !eBGP Neighboring with London
+neighbor 192.172.100.14 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+
+! network 192.172.100.12 mask 255.255.255.252 ! do ethernet core
+
 end
 write
