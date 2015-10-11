@@ -10,7 +10,7 @@ e a netA2. A empresa tem um polo em Aveiro e outro em Faro. Também tem outra em
 ligada em Aveiro, que é um sistema autónomo privado. Vamos te de fazer os dois tipos
 de vizinhança, uma empresa normal, A, que nos vai dar rotas em OSPF que vamos ter
 de anunciar para a internet sem parcerias bgp, na empresa B já temos uma relação interna
-BGP  do passarmos para o operador do lado esquerdo temos de esconder.
+BGP  ao passarmos para o operador do lado esquerdo temos de esconder.
 
 O ISP X não deverá transportar tráfego.
 
@@ -29,7 +29,7 @@ Os outros routers terão de anunciar as suas redes, deverá haver um processo OS
 dentro do operador todo, OSPF e BGP ao mesmo tempo. Não precisamos de fazer processos
 de fazer processos OSPF dentro da netA1, netA2 e netB, um switch só para simular. Mas
 deveria haver uma redistribuição do OSPF da empresa para o OSPF do operador.
-OSPX não é de transito.
+ISPx não é de transito.
 
 Restrições:
 Definir um caminho preferencialmente e outra restrição sempre por um determinado sítio.
