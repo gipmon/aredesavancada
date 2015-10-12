@@ -1,0 +1,23 @@
+conf t
+
+int f0/0
+ip add 192.2.13.3 255.255.255.0
+no shut
+
+int f0/1
+ip add 192.2.23.3 255.255.255.0
+no shut
+
+router bgp 200
+address-family ipv4 unicast
+neighbor 192.2.13.1 remote-as 200   !IBGP Neighboring with R1
+neighbor 192.2.23.2 remote-as 200   !IBGP Neighboring with R2
+
+network 192.2.13.0 mask 255.255.255.0
+network 192.2.23.0 mask 255.255.255.0
+
+neighbor 192.2.13.1 next-hop-self
+neighbor 192.2.23.2 next-hop-self
+
+end
+write

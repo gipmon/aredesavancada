@@ -1,0 +1,17 @@
+Oct 12 17:19:25.769 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Oct 12 17:19:25.770 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56580.
+Oct 12 17:19:25.781 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 12 17:19:25.788 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 12 17:19:25.790 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips 
+Oct 12 17:19:25.790 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips
+Oct 12 17:19:25.791 HYPERVISOR: exec_cmd: ethsw create SW4 
+Oct 12 17:19:28.349 HYPERVISOR: exec_cmd: nio create_udp udp-f17fdb67-b970-4386-9b5d-e0f1d35a955b 10021 127.0.0.1 10020 
+Oct 12 17:19:28.351 HYPERVISOR: exec_cmd: ethsw add_nio SW4 udp-f17fdb67-b970-4386-9b5d-e0f1d35a955b 
+Oct 12 17:19:28.352 HYPERVISOR: exec_cmd: ethsw set_access_port SW4 udp-f17fdb67-b970-4386-9b5d-e0f1d35a955b 1 
+Oct 12 17:19:28.711 HYPERVISOR: exec_cmd: nio create_udp udp-dcd10569-ee17-45e1-82cc-be9305db0d9f 10004 127.0.0.1 10005 
+Oct 12 17:19:28.715 HYPERVISOR: exec_cmd: ethsw add_nio SW4 udp-dcd10569-ee17-45e1-82cc-be9305db0d9f 
+Oct 12 17:19:28.762 HYPERVISOR: exec_cmd: ethsw set_access_port SW4 udp-dcd10569-ee17-45e1-82cc-be9305db0d9f 1 
+Oct 12 17:52:39.248 HYPERVISOR: exec_cmd: ethsw delete SW4 
+Oct 12 17:52:39.288 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 12 17:52:39.685 HYPERVISOR: Stopped.
+Oct 12 17:52:39.685 GENERAL: reset done.
