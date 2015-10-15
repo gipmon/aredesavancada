@@ -54,3 +54,19 @@ mudar a preferencia local.
 -> Guia 1.b)
 
 --- 2º Parte ---
+
+MPLS
+
+Túnneis MPLS, sobre MPLS com reservas de largura de banda.
+Reserva para o tráfego de voz com uma largura de banda X, de todos os pontos, só
+dentro do operador, ISPx.
+A1 - Lisboa
+A2 - Lisboa
+B - Lisboa
+Só para o tráfego de voz, filtrando em relação à rede IP, reserva de larguda de
+banda. Rota estática a enviar tudo para o túnnel.
+
+VPN MPLS, ligação virtual entre A1 e A2 mas com um processo de routing. O próprio
+BGP irá levar a informação VPN onde esta cada uma das redes.
+
+(Continuar)

@@ -1,0 +1,14 @@
+Oct 12 17:19:25.979 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Oct 12 17:19:25.979 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56588.
+Oct 12 17:19:25.988 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 12 17:19:25.988 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 12 17:19:25.989 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips 
+Oct 12 17:19:25.989 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips
+Oct 12 17:19:25.989 HYPERVISOR: exec_cmd: ethsw create SW6 
+Oct 12 17:19:28.699 HYPERVISOR: exec_cmd: nio create_udp udp-a70eee1c-af7f-47fd-ac1e-5bf3af13fd54 10007 127.0.0.1 10006 
+Oct 12 17:19:28.714 HYPERVISOR: exec_cmd: ethsw add_nio SW6 udp-a70eee1c-af7f-47fd-ac1e-5bf3af13fd54 
+Oct 12 17:19:28.752 HYPERVISOR: exec_cmd: ethsw set_access_port SW6 udp-a70eee1c-af7f-47fd-ac1e-5bf3af13fd54 1 
+Oct 12 17:52:39.249 HYPERVISOR: exec_cmd: ethsw delete SW6 
+Oct 12 17:52:39.264 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 12 17:52:39.306 HYPERVISOR: Stopped.
+Oct 12 17:52:39.306 GENERAL: reset done.
