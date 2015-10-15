@@ -1,0 +1,57 @@
+Oct 12 16:14:00.366 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Oct 12 16:14:00.367 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52510.
+Oct 12 16:14:00.377 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 12 16:14:00.377 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 12 16:14:00.378 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Aulas Praticas/Rodrigo/Guiao2/guiao2parte2/project-files/dynamips 
+Oct 12 16:14:00.378 GENERAL: working_dir=/Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Aulas Praticas/Rodrigo/Guiao2/guiao2parte2/project-files/dynamips
+Oct 12 16:14:00.378 HYPERVISOR: exec_cmd: vm create R2 3 c7200 
+Oct 12 16:14:00.378 VM: VM R2 created.
+Oct 12 16:14:00.379 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 2003 
+Oct 12 16:14:00.379 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Oct 12 16:14:00.379 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:14:00.379 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Oct 12 16:14:00.380 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:14:00.380 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-2FE-TX 
+Oct 12 16:14:00.380 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Oct 12 16:14:00.381 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:14:00.381 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60609bec 
+Oct 12 16:14:00.381 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Oct 12 16:14:00.382 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:14:00.382 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 PA-2FE-TX 
+Oct 12 16:14:00.382 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:14:00.383 HYPERVISOR: exec_cmd: vm slot_remove_binding R2 0 0 
+Oct 12 16:14:00.383 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:14:00.383 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-2FE 
+Oct 12 16:14:00.384 HYPERVISOR: exec_cmd: vm set_ios R2 /Users/RodrigoCunha/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Oct 12 16:14:00.384 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Oct 12 16:14:00.385 HYPERVISOR: exec_cmd: vm set_config R2 configs/i3_startup-config.cfg 
+Oct 12 16:14:00.385 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Oct 12 16:14:00.386 HYPERVISOR: exec_cmd: vm set_ghost_file R2 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Oct 12 16:16:12.329 HYPERVISOR: exec_cmd: nio create_udp udp-e36c6b30-ae67-4c29-a5b9-9933579005dc 10005 127.0.0.1 10004 
+Oct 12 16:16:12.329 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-e36c6b30-ae67-4c29-a5b9-9933579005dc 
+Oct 12 16:16:12.331 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:16:19.072 HYPERVISOR: exec_cmd: nio create_udp udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 10007 127.0.0.1 10006 
+Oct 12 16:16:19.073 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 
+Oct 12 16:16:19.073 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:16:41.140 HYPERVISOR: exec_cmd: nio create_udp udp-0eb8336f-0991-4e60-9a90-5e1fe77aca74 10011 127.0.0.1 10010 
+Oct 12 16:16:41.141 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-0eb8336f-0991-4e60-9a90-5e1fe77aca74 
+Oct 12 16:16:41.142 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:18:02.453 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 16:18:02.476 HYPERVISOR: exec_cmd: vm start R2 
+Oct 12 16:56:57.452 HYPERVISOR: exec_cmd: nio bind_filter udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 2 capture 
+Oct 12 16:56:57.453 HYPERVISOR: exec_cmd: nio setup_filter udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 2 en10mb /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Aulas Praticas/Rodrigo/Guiao2/guiao2parte2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Oct 12 17:23:52.432 HYPERVISOR: exec_cmd: nio unbind_filter udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 2 
+Oct 12 17:24:07.872 HYPERVISOR: exec_cmd: nio bind_filter udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 2 capture 
+Oct 12 17:24:07.873 HYPERVISOR: exec_cmd: nio setup_filter udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 2 en10mb /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Aulas Praticas/Rodrigo/Guiao2/guiao2parte2/project-files/captures/R2_FastEthernet0-0_to_R1_FastEthernet0-0.pcap 
+Oct 12 17:35:25.568 HYPERVISOR: exec_cmd: nio unbind_filter udp-399c4ee7-1edc-47a2-9c7d-4cdf61f0d457 2 
+Oct 12 17:53:10.755 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 17:53:10.756 HYPERVISOR: exec_cmd: vm stop R2 
+Oct 12 17:53:13.286 VM: VM R2 shutdown.
+Oct 12 17:53:19.054 HYPERVISOR: exec_cmd: vm extract_config R2 
+Oct 12 17:53:20.222 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 12 17:53:20.224 HYPERVISOR: exec_cmd: vm extract_config R2 
+Oct 12 17:53:20.232 HYPERVISOR: exec_cmd: vm delete R2 
+Oct 12 17:53:20.232 VM: VM R2 destroyed.
+Oct 12 17:53:20.235 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 12 17:53:20.717 HYPERVISOR: Stopped.
+Oct 12 17:53:20.717 GENERAL: reset done.
