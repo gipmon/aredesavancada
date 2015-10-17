@@ -1,0 +1,40 @@
+Todas as redes públicas que existem dentro do meu sistema autónomo ISP X devem
+ser enviadas para os vizinhos, todas as públicas e nenhuma das privadas (IPv4 e
+IPv6) e devem ser agregadas.
+Por exemplo, na tabela de Sintra, do Operador ISP S, deve aparecer as redes
+públicas do próprio operador e as redes públicas das empresas cliente tudo agregado. 3 entradas com as máscaras certas.
+
+netX1, rede pública toda
+O ISP X, é não transito. London não pode ver as redes do operador X através de Sintra.
+Londres não deverá ver as redes de Sintra (show ip bgp) por Lisboa.
+Só devemos anunciar redes que sejam do nosso próprio sistema autónomo.
+Não transito:
+- Só anunciar rotas com o path vazio. E rotas com o path AS65000.
+
+Provider Edge: Porto, Lisboa, Aveiro e Faro. OSPF no Ethernet Core. Outros
+processos OSPF em Aveiro e Faro (?)
+
+Sendo um Túnel de Aveiro para Lisboa (netX1).
+
+Filtrar as privadas.
+
+--
+O operador sabe qual é a VLAN Voip. E o operador faz uma regra que diz, todo o
+tráfego que venha da VLAN Voip para o SIP ou então vem do SIP.
+
+
+Condições do BGP:
+1º preferência local para todas as rotas mais alta para lisboa (só 1 comando)
+3º prefix-list para filtrar rotas
+2º implica marcar rotas, com redes explícitas. SE fizermos a 1º com, todas as
+rotas vão ter esta preferência local os route-maps da 2º vão ser mais complic.
+porque vamos ter de anular os defaults da 1º (sobrepor). SOlução: dá para juntar
+as duas condições, no route-map qe se faz na 2º dá para fazer com a 1º cond.
+(default) que podemos fazer:
+- Porto, Lisboa em função das redes
+- Todo o resto tem preferência local
+
+Porto comunidade 1
+Lisboa comunidade 2
+- A decisão tem de ser feita em Aveiro, mas Aveiro tem de receber as rotas pelo
+Porto, tem é de ter preferência a enviar por Lisboa.
