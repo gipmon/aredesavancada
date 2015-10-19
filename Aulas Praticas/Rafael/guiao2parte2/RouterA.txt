@@ -24,5 +24,9 @@ neighbor 200.10.11.11 remote-as 100   !IBGP Neighboring with RB
 network 192.3.1.0 mask 255.255.255.0
 network 192.3.2.0 mask 255.255.255.0
 
+! ex 10
+int f1/1
+shut
+
 end
 write

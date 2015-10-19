@@ -29,5 +29,38 @@ network 192.2.0.1 mask 255.255.255.255
 neighbor 192.2.12.2 next-hop-self
 neighbor 192.2.13.3 next-hop-self
 
+! exercicio 4, os comandos em cima nao sao para usar com este
+router ospf 100
+network 192.2.12.0 0.0.0.255 area 0
+network 192.2.13.0 0.0.0.255 area 0
+network 192.2.0.1 0.0.0.0 area 0
+redistribute bgp 200
+
+! ex 5
+router ospf 100
+no redistribute bgp 200
+redistribute bgp 200 subnets
+
+! ex 6
+router bgp 200
+address-family ipv4 unicast
+redistribute ospf 100
+
+! ex 8
+router bgp 200
+address-family ipv4 unicast
+no neighbor 192.2.12.2 remote-as 200
+neighbor 192.2.0.2 remote-as 200
+neighbor 192.2.0.2 next-hop-self
+neighbor 192.2.0.2 update-source Loopback 0
+
+!ex 10
+ip as-path access-list 1 permit ^$
+route-map routes-out
+match as-path 1
+router bgp 200
+address-family ipv4 unicast
+neighbor 200.10.1.10 route-map routes-out out
+
 end
 write

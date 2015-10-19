@@ -19,5 +19,10 @@ network 192.2.23.0 mask 255.255.255.0
 neighbor 192.2.13.1 next-hop-self
 neighbor 192.2.23.2 next-hop-self
 
+! exercicio 4, os comandos em cima nao sao para usar com este
+router ospf 100
+network 192.2.13.0 0.0.0.255 area 0
+network 192.2.23.0 0.0.0.255 area 0
+
 end
 write
