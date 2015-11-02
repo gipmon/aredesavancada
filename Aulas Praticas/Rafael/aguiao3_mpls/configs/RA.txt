@@ -1,0 +1,34 @@
+conf t
+
+ip cef
+
+int f0/0
+ip add 192.3.1.10 255.255.255.0
+ip ospf 1 area 0
+mpls ip
+no shut
+
+int f0/1
+ip add 192.3.2.10 255.255.255.0
+ip ospf 1 area 0
+mpls ip
+no shut
+
+int f1/0
+ip add 200.10.1.10 255.255.255.0
+ip ospf 1 area 0
+mpls ip
+no shut
+
+int f1/1
+ip add 200.10.2.10 255.255.255.0
+ip ospf 1 area 0
+mpls ip
+no shut
+
+int lo0
+ip add 192.2.0.10 255.255.255.255
+ip ospf 1 area 0
+no shut
+
+end

@@ -1,0 +1,58 @@
+Nov 02 16:38:30.096 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Nov 02 16:38:30.096 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52415.
+Nov 02 16:38:30.208 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 02 16:38:30.208 HYPERVISOR: exec_cmd: hypervisor uuid 
+Nov 02 16:38:30.209 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/aguiao3_mpls/Guiao3/guiao3/project-files/dynamips 
+Nov 02 16:38:30.209 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/aguiao3_mpls/Guiao3/guiao3/project-files/dynamips
+Nov 02 16:38:30.210 HYPERVISOR: exec_cmd: vm create RA 3 c7200 
+Nov 02 16:38:30.210 VM: VM RA created.
+Nov 02 16:38:30.210 HYPERVISOR: exec_cmd: vm set_con_tcp_port RA 2003 
+Nov 02 16:38:30.211 HYPERVISOR: exec_cmd: c7200 get_mac_addr RA 
+Nov 02 16:38:30.211 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:30.212 HYPERVISOR: exec_cmd: vm slot_add_binding RA 0 0 C7200-IO-FE 
+Nov 02 16:38:30.212 HYPERVISOR: exec_cmd: vm set_disk0 RA 0 
+Nov 02 16:38:30.213 HYPERVISOR: exec_cmd: c7200 set_mac_addr RA ca03.0207.0000 
+Nov 02 16:38:30.213 HYPERVISOR: exec_cmd: vm set_nvram RA 512 
+Nov 02 16:38:30.214 HYPERVISOR: exec_cmd: vm set_ios RA /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Nov 02 16:38:30.215 HYPERVISOR: exec_cmd: vm set_ram RA 512 
+Nov 02 16:38:30.215 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:30.216 HYPERVISOR: exec_cmd: vm slot_remove_binding RA 0 0 
+Nov 02 16:38:30.216 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:30.217 HYPERVISOR: exec_cmd: vm slot_add_binding RA 0 0 C7200-IO-2FE 
+Nov 02 16:38:30.217 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:30.218 HYPERVISOR: exec_cmd: vm slot_add_binding RA 1 0 PA-2FE-TX 
+Nov 02 16:38:30.219 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:30.220 HYPERVISOR: exec_cmd: vm slot_add_binding RA 2 0 PA-2FE-TX 
+Nov 02 16:38:30.222 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:30.224 HYPERVISOR: exec_cmd: vm set_idle_pc RA 0x60609bec 
+Nov 02 16:38:30.247 HYPERVISOR: exec_cmd: vm set_config RA configs/i3_startup-config.cfg 
+Nov 02 16:38:31.563 HYPERVISOR: exec_cmd: vm set_ghost_status RA 2 
+Nov 02 16:38:31.564 HYPERVISOR: exec_cmd: vm set_ghost_file RA c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Nov 02 16:38:32.101 HYPERVISOR: exec_cmd: nio create_udp udp-3564a43f-98e6-4772-a020-c54a242e2c4d 10015 127.0.0.1 10014 
+Nov 02 16:38:32.120 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RA 1 1 udp-3564a43f-98e6-4772-a020-c54a242e2c4d 
+Nov 02 16:38:32.121 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:32.152 HYPERVISOR: exec_cmd: nio create_udp udp-98d71029-768a-48b3-943e-fb675009fc1f 10012 127.0.0.1 10013 
+Nov 02 16:38:32.180 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RA 1 0 udp-98d71029-768a-48b3-943e-fb675009fc1f 
+Nov 02 16:38:32.191 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:32.219 HYPERVISOR: exec_cmd: nio create_udp udp-c2a42b9a-7a20-49fe-8146-3ace37977b32 10010 127.0.0.1 10011 
+Nov 02 16:38:32.220 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RA 0 1 udp-c2a42b9a-7a20-49fe-8146-3ace37977b32 
+Nov 02 16:38:32.235 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:32.265 HYPERVISOR: exec_cmd: nio create_udp udp-b494d9d7-ae6c-4a69-ad92-c6f26d32e480 10008 127.0.0.1 10009 
+Nov 02 16:38:32.265 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RA 0 0 udp-b494d9d7-ae6c-4a69-ad92-c6f26d32e480 
+Nov 02 16:38:32.265 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:51.871 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 16:38:51.872 HYPERVISOR: exec_cmd: vm start RA 
+Nov 02 16:55:05.994 HYPERVISOR: exec_cmd: vm extract_config RA 
+Nov 02 17:52:16.074 HYPERVISOR: exec_cmd: vm extract_config RA 
+Nov 02 17:52:30.499 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 17:52:30.503 HYPERVISOR: exec_cmd: vm stop RA 
+Nov 02 17:52:32.782 VM: VM RA shutdown.
+Nov 02 17:52:35.306 HYPERVISOR: exec_cmd: vm extract_config RA 
+Nov 02 17:52:38.938 HYPERVISOR: exec_cmd: vm extract_config RA 
+Nov 02 17:54:48.730 HYPERVISOR: exec_cmd: vm get_status RA 
+Nov 02 17:54:48.731 HYPERVISOR: exec_cmd: vm extract_config RA 
+Nov 02 17:54:48.733 HYPERVISOR: exec_cmd: vm delete RA 
+Nov 02 17:54:48.733 VM: VM RA destroyed.
+Nov 02 17:54:48.738 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 02 17:54:49.111 HYPERVISOR: Stopped.
+Nov 02 17:54:49.112 GENERAL: reset done.
