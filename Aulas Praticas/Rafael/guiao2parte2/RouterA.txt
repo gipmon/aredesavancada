@@ -28,5 +28,18 @@ network 192.3.2.0 mask 255.255.255.0
 int f1/1
 shut
 
+! ex 11
+ip bgp-community new-format
+route-map routesA-out permit 10 !10 is the order of processing
+match route-type local
+set community 300:1 !Community 1
+route-map routesA-out permit 20 ! 20 is the order of processing
+match route-type external
+set community 300:2 ! Community 2
+router bgp 300
+address-family ipv4 unicast
+neighbor 200.10.1.1 route-map routesA-out out
+neighbor 200.10.1.1 send-community
+
 end
 write

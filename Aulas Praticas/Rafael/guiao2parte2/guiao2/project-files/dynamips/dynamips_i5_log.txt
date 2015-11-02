@@ -1,55 +1,14 @@
-Oct 19 16:17:12.722 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Oct 19 16:17:12.722 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 54061.
-Oct 19 16:17:12.725 HYPERVISOR: exec_cmd: hypervisor version 
-Oct 19 16:17:12.726 HYPERVISOR: exec_cmd: hypervisor uuid 
-Oct 19 16:17:12.726 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips 
-Oct 19 16:17:12.726 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips
-Oct 19 16:17:12.727 HYPERVISOR: exec_cmd: vm create RouterA 4 c7200 
-Oct 19 16:17:12.728 VM: VM RouterA created.
-Oct 19 16:17:12.739 HYPERVISOR: exec_cmd: vm set_con_tcp_port RouterA 2004 
-Oct 19 16:17:12.758 HYPERVISOR: exec_cmd: c7200 get_mac_addr RouterA 
-Oct 19 16:17:12.759 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:12.760 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-FE 
-Oct 19 16:17:12.761 HYPERVISOR: exec_cmd: c7200 set_mac_addr RouterA ca04.912c.0000 
-Oct 19 16:17:12.762 HYPERVISOR: exec_cmd: vm set_ios RouterA /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Oct 19 16:17:12.763 HYPERVISOR: exec_cmd: vm set_ram RouterA 512 
-Oct 19 16:17:12.763 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:12.764 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 1 0 PA-2FE-TX 
-Oct 19 16:17:12.764 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:12.764 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterA 0 0 
-Oct 19 16:17:12.765 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:12.765 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-2FE 
-Oct 19 16:17:12.766 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:12.766 HYPERVISOR: exec_cmd: vm set_idle_pc RouterA 0x60608040 
-Oct 19 16:17:12.767 HYPERVISOR: exec_cmd: vm set_disk0 RouterA 0 
-Oct 19 16:17:12.768 HYPERVISOR: exec_cmd: vm set_nvram RouterA 512 
-Oct 19 16:17:12.769 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:12.770 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 2 0 PA-2FE-TX 
-Oct 19 16:17:12.772 HYPERVISOR: exec_cmd: vm set_config RouterA configs/i4_startup-config.cfg 
-Oct 19 16:17:14.231 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
-Oct 19 16:17:14.233 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Oct 19 16:17:14.736 HYPERVISOR: exec_cmd: nio create_udp udp-dbb7f4c2-d119-49c1-96e7-a85d0d4874cc 10016 127.0.0.1 10017 
-Oct 19 16:17:14.748 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 1 udp-dbb7f4c2-d119-49c1-96e7-a85d0d4874cc 
-Oct 19 16:17:14.749 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:14.831 HYPERVISOR: exec_cmd: nio create_udp udp-d15bc082-1af5-4b68-a0e7-8ac1bdb27f15 10015 127.0.0.1 10014 
-Oct 19 16:17:14.844 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 1 udp-d15bc082-1af5-4b68-a0e7-8ac1bdb27f15 
-Oct 19 16:17:14.850 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:14.870 HYPERVISOR: exec_cmd: nio create_udp udp-49b546bd-c01f-4274-b75b-a4313bfa673c 10013 127.0.0.1 10012 
-Oct 19 16:17:14.905 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 0 udp-49b546bd-c01f-4274-b75b-a4313bfa673c 
-Oct 19 16:17:14.908 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:14.929 HYPERVISOR: exec_cmd: nio create_udp udp-8eec8e8b-ea75-4196-b653-68f93e5a5a68 10010 127.0.0.1 10011 
-Oct 19 16:17:14.940 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 0 udp-8eec8e8b-ea75-4196-b653-68f93e5a5a68 
-Oct 19 16:17:14.942 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:46.301 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 16:17:46.303 HYPERVISOR: exec_cmd: vm start RouterA 
-Oct 19 17:54:15.961 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 17:54:15.969 HYPERVISOR: exec_cmd: vm stop RouterA 
-Oct 19 17:54:18.332 VM: VM RouterA shutdown.
-Oct 19 17:54:21.010 HYPERVISOR: exec_cmd: vm extract_config RouterA 
-Oct 19 17:54:23.411 HYPERVISOR: exec_cmd: vm get_status RouterA 
-Oct 19 17:54:23.412 HYPERVISOR: exec_cmd: vm extract_config RouterA 
-Oct 19 17:54:23.415 HYPERVISOR: exec_cmd: vm delete RouterA 
-Oct 19 17:54:23.415 VM: VM RouterA destroyed.
-Oct 19 17:54:23.421 HYPERVISOR: exec_cmd: hypervisor stop 
-Oct 19 17:54:23.905 HYPERVISOR: Stopped.
-Oct 19 17:54:23.905 GENERAL: reset done.
+Oct 26 16:18:40.009 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Oct 26 16:18:40.010 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56992.
+Oct 26 16:18:40.017 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 26 16:18:40.018 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 26 16:18:40.019 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips 
+Oct 26 16:18:40.019 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Aulas Praticas/Rafael/guiao2parte2/guiao2/project-files/dynamips
+Oct 26 16:18:40.021 HYPERVISOR: exec_cmd: ethsw create netA1 
+Oct 26 16:18:41.992 HYPERVISOR: exec_cmd: nio create_udp udp-b33f074b-c096-4220-855d-5c9d2a3e3543 10020 127.0.0.1 10021 
+Oct 26 16:18:41.994 HYPERVISOR: exec_cmd: ethsw add_nio netA1 udp-b33f074b-c096-4220-855d-5c9d2a3e3543 
+Oct 26 16:18:42.021 HYPERVISOR: exec_cmd: ethsw set_access_port netA1 udp-b33f074b-c096-4220-855d-5c9d2a3e3543 1 
+Oct 26 17:56:00.478 HYPERVISOR: exec_cmd: ethsw delete netA1 
+Oct 26 17:56:00.486 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 26 17:56:00.955 HYPERVISOR: Stopped.
+Oct 26 17:56:00.955 GENERAL: reset done.

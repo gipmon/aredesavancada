@@ -62,5 +62,51 @@ router bgp 200
 address-family ipv4 unicast
 neighbor 200.10.1.10 route-map routes-out out
 
+!ex 11
+ip bgp-community new-format
+
+!ex 12
+ip bgp-community new-format
+ip community-list 1 permit 300:1
+ip community-list 2 permit 300:2
+route-map routes-in permit 10
+match community 1
+set local-preference 111
+route-map routes-in permit 20
+match community 2
+set local-preference 22
+router bgp 200
+address-family ipv4 unicast
+neighbor 200.10.1.10 route-map routes-in in
+
+router bgp 200
+no neighbor 200.10.1.10 route-map routes-in in
+
+!ex 13
+int f0/0
+shut
+
+router ospf 100
+no redistribute bgp 200 subnets
+no redistribute bgp 200 !if present
+default-information originate always metric 5
+
+!ex 14
+router bgp 200
+bgp default local-preference 200
+
+!ex15
+int Tunnel 0
+ip add 10.0.0.1 255.255.255.252
+tunnel source lo0
+tunnel destination 192.2.0.2
+tunnel mode ipip
+
+router bgp 200
+address-family ipv4 unicast
+no neighbor 192.2.0.2 remote-as 200
+neighbor 10.0.0.2 remote-as 200
+neighbor 10.0.0.2 next-hop-self
+
 end
 write
