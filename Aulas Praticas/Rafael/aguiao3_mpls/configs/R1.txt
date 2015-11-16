@@ -39,5 +39,18 @@ router ospf 1
 mpls traffic-eng area 0
 mpls traffic-eng router-id Loopback 0
 
+! ex12 - Disable relevant MPLS (RSVP-TE) and OSPF commands in all Routers
+conf t
+no mpls traffic-eng tunnels
+interface range FastEthernet 0/0-1
+no mpls traffic-eng tunnels
+no ip rsvp bandwidth 512 512
+interface range FastEthernet 1/0-1
+no mpls traffic-eng tunnels
+no ip rsvp bandwidth 512 512
+router ospf 1
+no mpls traffic-eng router-id Loopback0
+no mpls traffic-eng area 0
+
 end
 write
