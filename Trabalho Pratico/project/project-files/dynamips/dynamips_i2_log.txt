@@ -1,43 +1,48 @@
-Oct 12 16:08:49.943 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Oct 12 16:08:49.957 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 54467.
-Oct 12 16:08:49.966 HYPERVISOR: exec_cmd: hypervisor version 
-Oct 12 16:08:49.967 HYPERVISOR: exec_cmd: hypervisor uuid 
-Oct 12 16:08:49.968 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Oct 12 16:08:49.968 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Oct 12 16:08:49.968 HYPERVISOR: exec_cmd: vm create EmpA1 6 c7200 
-Oct 12 16:08:49.969 VM: VM EmpA1 created.
-Oct 12 16:08:49.970 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpA1 2006 
-Oct 12 16:08:49.970 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpA1 
-Oct 12 16:08:49.971 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:49.971 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-FE 
-Oct 12 16:08:49.972 HYPERVISOR: exec_cmd: vm set_nvram EmpA1 512 
-Oct 12 16:08:49.973 HYPERVISOR: exec_cmd: vm set_disk0 EmpA1 0 
-Oct 12 16:08:49.974 HYPERVISOR: exec_cmd: vm set_ram EmpA1 512 
-Oct 12 16:08:49.975 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:49.975 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 1 0 PA-2FE-TX 
-Oct 12 16:08:49.976 HYPERVISOR: exec_cmd: vm set_ios EmpA1 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Oct 12 16:08:49.977 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:49.978 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpA1 0 0 
-Oct 12 16:08:49.978 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:49.979 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-2FE 
-Oct 12 16:08:49.981 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:49.982 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 2 0 PA-2FE-TX 
-Oct 12 16:08:49.983 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpA1 ca06.3488.0000 
-Oct 12 16:08:49.985 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:49.986 HYPERVISOR: exec_cmd: vm set_idle_pc EmpA1 0x60608040 
-Oct 12 16:08:49.988 HYPERVISOR: exec_cmd: vm set_config EmpA1 configs/i6_startup-config.cfg 
-Oct 12 16:08:51.671 HYPERVISOR: exec_cmd: vm set_ghost_status EmpA1 2 
-Oct 12 16:08:51.673 HYPERVISOR: exec_cmd: vm set_ghost_file EmpA1 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Oct 12 16:08:52.610 HYPERVISOR: exec_cmd: nio create_udp udp-8dd5ca41-d870-456b-8988-8edab7f9d9b6 10033 127.0.0.1 10032 
-Oct 12 16:08:52.611 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 0 udp-8dd5ca41-d870-456b-8988-8edab7f9d9b6 
-Oct 12 16:08:52.612 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:08:52.668 HYPERVISOR: exec_cmd: nio create_udp udp-043c5ffe-d1bd-4b9e-b3d3-1b3a37df71f0 10030 127.0.0.1 10031 
-Oct 12 16:08:52.671 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 1 udp-043c5ffe-d1bd-4b9e-b3d3-1b3a37df71f0 
-Oct 12 16:08:52.671 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:09:03.466 HYPERVISOR: exec_cmd: vm get_status EmpA1 
-Oct 12 16:09:03.469 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
-Oct 12 16:09:03.470 HYPERVISOR: exec_cmd: vm delete EmpA1 
-Oct 12 16:09:03.471 VM: VM EmpA1 destroyed.
-Oct 12 16:09:03.474 HYPERVISOR: exec_cmd: hypervisor stop 
-Oct 12 16:09:03.521 HYPERVISOR: Stopped.
-Oct 12 16:09:03.521 GENERAL: reset done.
+Dec 14 16:51:16.652 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 14 16:51:16.652 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 61328.
+Dec 14 16:51:16.657 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 14 16:51:16.659 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 14 16:51:16.660 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 14 16:51:16.661 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 14 16:51:16.663 HYPERVISOR: exec_cmd: vm create Sintra 3 c7200 
+Dec 14 16:51:16.664 VM: VM Sintra created.
+Dec 14 16:51:16.666 HYPERVISOR: exec_cmd: vm set_con_tcp_port Sintra 2003 
+Dec 14 16:51:16.667 HYPERVISOR: exec_cmd: c7200 get_mac_addr Sintra 
+Dec 14 16:51:16.668 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:16.670 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-FE 
+Dec 14 16:51:16.671 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:16.672 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 1 0 PA-2FE-TX 
+Dec 14 16:51:16.674 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:16.676 HYPERVISOR: exec_cmd: vm set_idle_pc Sintra 0x60608040 
+Dec 14 16:51:16.679 HYPERVISOR: exec_cmd: vm set_disk0 Sintra 0 
+Dec 14 16:51:16.683 HYPERVISOR: exec_cmd: vm set_ram Sintra 512 
+Dec 14 16:51:16.686 HYPERVISOR: exec_cmd: vm set_nvram Sintra 512 
+Dec 14 16:51:16.689 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:16.692 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 2 0 PA-2FE-TX 
+Dec 14 16:51:16.694 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:16.696 HYPERVISOR: exec_cmd: vm slot_remove_binding Sintra 0 0 
+Dec 14 16:51:16.697 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:16.700 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-2FE 
+Dec 14 16:51:16.702 HYPERVISOR: exec_cmd: vm set_ios Sintra /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 14 16:51:16.705 HYPERVISOR: exec_cmd: c7200 set_mac_addr Sintra ca03.3482.0000 
+Dec 14 16:51:16.711 HYPERVISOR: exec_cmd: vm set_config Sintra configs/i3_startup-config.cfg 
+Dec 14 16:51:17.820 HYPERVISOR: exec_cmd: vm set_ghost_status Sintra 2 
+Dec 14 16:51:17.856 HYPERVISOR: exec_cmd: vm set_ghost_file Sintra c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 14 16:51:18.891 HYPERVISOR: exec_cmd: nio create_udp udp-0872db8c-55f8-41fa-9f44-5ddd14afe699 10003 127.0.0.1 10002 
+Dec 14 16:51:18.893 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 0 udp-0872db8c-55f8-41fa-9f44-5ddd14afe699 
+Dec 14 16:51:18.940 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:19.006 HYPERVISOR: exec_cmd: nio create_udp udp-d6521bee-3c37-4dc4-af95-556548cc8f73 10000 127.0.0.1 10001 
+Dec 14 16:51:19.011 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 1 udp-d6521bee-3c37-4dc4-af95-556548cc8f73 
+Dec 14 16:51:19.032 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:51:20.025 HYPERVISOR: exec_cmd: nio create_udp udp-0c621414-c4e7-4560-84e9-1f34cc698bbe 10010 127.0.0.1 10011 
+Dec 14 16:51:20.051 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 1 0 udp-0c621414-c4e7-4560-84e9-1f34cc698bbe 
+Dec 14 16:51:20.073 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 16:52:02.047 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Dec 14 19:51:31.899 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Dec 14 19:51:33.145 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 14 19:51:33.149 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Dec 14 19:51:33.152 HYPERVISOR: exec_cmd: vm delete Sintra 
+Dec 14 19:51:33.152 VM: VM Sintra destroyed.
+Dec 14 19:51:33.155 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 14 19:51:33.647 HYPERVISOR: Stopped.
+Dec 14 19:51:33.647 GENERAL: reset done.

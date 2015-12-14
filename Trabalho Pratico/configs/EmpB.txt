@@ -1,0 +1,18 @@
+conf t
+
+int f0/0
+ip add 81.84.100.2 255.255.255.0
+no shut
+
+! BGP CONFIGS
+router bgp 65000
+address-family ipv4 unicast
+neighbor 192.172.100.1 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.3 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.4 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 81.84.100.2 remote-as 65000 !eBGP Neighboring with EmpB
+
+network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
+
+end
+write

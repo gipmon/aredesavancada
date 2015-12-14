@@ -1,13 +1,5 @@
 conf t
 
-int f1/1
-ip add 192.172.100.9 255.255.255.252
-no shut
-ipv6 enable
-ipv6 add 2001:192:100:3::2/64
-
-! BGP Peering links
-
 int f0/0
 no shut
 ip add 4.20.20.6 255.255.255.252
@@ -20,21 +12,35 @@ ip add 4.20.20.14 255.255.255.252
 ipv6 enable
 ipv6 add 2001:420:4::2/64
 
+int f1/1
+ip add 192.172.100.3 255.255.255.128
+no shut
+ipv6 enable
+ipv6 add 2001:192:100::3/48
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
 int f1/0
 no shut
 ip add 192.172.100.129 255.255.255.128
 ipv6 enable
 ipv6 add 2001:192:101::129/48
 
+int lo0
+ip add 10.1.0.3 255.255.255.255
+no shut
+
 ! BGP CONFIGS
 router bgp 9.345
 address-family ipv4 unicast
 neighbor 4.20.20.13 remote-as 8657 !eBGP Neighboring with Sintra
 neighbor 4.20.20.5 remote-as 34419 !eBGP Neighboring with London
-neighbor 192.172.100.10 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.1 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.2 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.4 remote-as 9.345 !iBGP Neighboring with Ethernet Core
 
 network 192.172.100.128 mask 255.255.255.128 !netX1
-! network 192.172.100.8 mask 255.255.255.252 ! do ethernet core
+network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
 
 end
 write

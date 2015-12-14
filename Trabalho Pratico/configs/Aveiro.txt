@@ -1,21 +1,40 @@
 conf t
-int f1/0
-ip add 192.172.100.1 255.255.255.252
-no shut
-ipv6 enable
-ipv6 add 2001:192:100:1::2/64
 
 int f0/0
-ip add 80.172.100.129 255.255.255.192
+ip add 80.172.100.129 255.255.255.192 ! dividido porque em baixo tambem temos outra empresa, a EmpA
 no shut
 ipv6 enable
 ipv6 add 2001:80:100:1::1/64
+ip ospf 2 area 0
+ipv6 ospf 2 area 0
 
 int f0/1
 ip add 81.84.100.1 255.255.255.0
 no shut
 ipv6 enable
 ipv6 add 2001:81:100::1/48
+
+int f1/0
+ip add 192.172.100.2 255.255.255.128
+no shut
+ipv6 enable
+ipv6 add 2001:192:100::2/48
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int lo0
+ip add 10.1.0.2 255.255.255.255
+no shut
+
+! BGP CONFIGS
+router bgp 9.345
+address-family ipv4 unicast
+neighbor 192.172.100.1 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.3 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 192.172.100.4 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+neighbor 81.84.100.2 remote-as 65000 !eBGP Neighboring with EmpB
+
+network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
 
 end
 write

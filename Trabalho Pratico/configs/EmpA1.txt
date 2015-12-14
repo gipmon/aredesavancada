@@ -1,0 +1,8 @@
+conf t
+
+int f0/0
+ip add 80.172.100.130 255.255.255.192
+no shut
+
+end
+write
