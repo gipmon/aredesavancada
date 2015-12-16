@@ -1,61 +1,23 @@
-Dec 14 16:51:18.246 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 14 16:51:18.246 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 61624.
-Dec 14 16:51:18.265 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 14 16:51:18.269 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 14 16:51:18.274 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 14 16:51:18.274 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 14 16:51:18.279 HYPERVISOR: exec_cmd: vm create EthernetCore 11 c7200 
-Dec 14 16:51:18.280 VM: VM EthernetCore created.
-Dec 14 16:51:18.283 HYPERVISOR: exec_cmd: vm set_con_tcp_port EthernetCore 2018 
-Dec 14 16:51:18.288 HYPERVISOR: exec_cmd: c7200 get_mac_addr EthernetCore 
-Dec 14 16:51:18.292 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:18.294 HYPERVISOR: exec_cmd: vm slot_add_binding EthernetCore 0 0 C7200-IO-FE 
-Dec 14 16:51:18.319 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:18.325 HYPERVISOR: exec_cmd: vm slot_add_binding EthernetCore 1 0 PA-2FE-TX 
-Dec 14 16:51:18.356 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:18.357 HYPERVISOR: exec_cmd: vm set_idle_pc EthernetCore 0x60608040 
-Dec 14 16:51:18.376 HYPERVISOR: exec_cmd: vm set_disk0 EthernetCore 0 
-Dec 14 16:51:18.376 HYPERVISOR: exec_cmd: vm set_ram EthernetCore 512 
-Dec 14 16:51:18.377 HYPERVISOR: exec_cmd: vm set_nvram EthernetCore 512 
-Dec 14 16:51:18.378 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:18.378 HYPERVISOR: exec_cmd: vm slot_add_binding EthernetCore 2 0 PA-2FE-TX 
-Dec 14 16:51:18.379 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:18.379 HYPERVISOR: exec_cmd: vm slot_remove_binding EthernetCore 0 0 
-Dec 14 16:51:18.398 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:18.399 HYPERVISOR: exec_cmd: vm slot_add_binding EthernetCore 0 0 C7200-IO-2FE 
-Dec 14 16:51:18.399 HYPERVISOR: exec_cmd: vm set_ios EthernetCore /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 14 16:51:18.400 HYPERVISOR: exec_cmd: c7200 set_mac_addr EthernetCore ca0b.3518.0000 
-Dec 14 16:51:18.401 HYPERVISOR: exec_cmd: vm set_config EthernetCore configs/i11_startup-config.cfg 
-Dec 14 16:51:18.403 HYPERVISOR: exec_cmd: vm set_ghost_status EthernetCore 2 
-Dec 14 16:51:18.403 HYPERVISOR: exec_cmd: vm set_ghost_file EthernetCore c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 14 16:51:19.313 HYPERVISOR: exec_cmd: nio create_udp udp-016c6117-b009-4336-bed3-7a11d44d865e 10036 127.0.0.1 10037 
-Dec 14 16:51:19.382 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 1 1 udp-016c6117-b009-4336-bed3-7a11d44d865e 
-Dec 14 16:51:19.402 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:19.537 HYPERVISOR: exec_cmd: nio create_udp udp-9bfdb0b5-5a5f-4bc5-95a7-f459159e5d59 10028 127.0.0.1 10029 
-Dec 14 16:51:19.559 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 1 0 udp-9bfdb0b5-5a5f-4bc5-95a7-f459159e5d59 
-Dec 14 16:51:19.587 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:19.703 HYPERVISOR: exec_cmd: nio create_udp udp-96298a8d-4a1c-4083-98ae-b7c0d5a16c51 10026 127.0.0.1 10027 
-Dec 14 16:51:19.717 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 0 1 udp-96298a8d-4a1c-4083-98ae-b7c0d5a16c51 
-Dec 14 16:51:19.719 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:19.782 HYPERVISOR: exec_cmd: nio create_udp udp-da1a0d28-d5d4-4db4-ba5f-d57e8dea9226 10025 127.0.0.1 10024 
-Dec 14 16:51:19.799 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EthernetCore 0 0 udp-da1a0d28-d5d4-4db4-ba5f-d57e8dea9226 
-Dec 14 16:51:19.802 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:26.670 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:26.674 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding EthernetCore 1 1 
-Dec 14 16:51:26.676 HYPERVISOR: exec_cmd: nio delete udp-016c6117-b009-4336-bed3-7a11d44d865e 
-Dec 14 16:51:26.689 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:26.691 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding EthernetCore 1 0 
-Dec 14 16:51:26.694 HYPERVISOR: exec_cmd: nio delete udp-9bfdb0b5-5a5f-4bc5-95a7-f459159e5d59 
-Dec 14 16:51:26.699 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:26.700 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding EthernetCore 0 0 
-Dec 14 16:51:26.701 HYPERVISOR: exec_cmd: nio delete udp-da1a0d28-d5d4-4db4-ba5f-d57e8dea9226 
-Dec 14 16:51:26.704 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:26.705 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding EthernetCore 0 1 
-Dec 14 16:51:26.705 HYPERVISOR: exec_cmd: nio delete udp-96298a8d-4a1c-4083-98ae-b7c0d5a16c51 
-Dec 14 16:51:26.709 HYPERVISOR: exec_cmd: vm get_status EthernetCore 
-Dec 14 16:51:26.709 HYPERVISOR: exec_cmd: vm extract_config EthernetCore 
-Dec 14 16:51:26.710 HYPERVISOR: exec_cmd: vm delete EthernetCore 
-Dec 14 16:51:26.710 VM: VM EthernetCore destroyed.
-Dec 14 16:51:26.711 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 14 16:51:26.793 HYPERVISOR: Stopped.
-Dec 14 16:51:26.793 GENERAL: reset done.
+Dec 16 16:23:08.607 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 16 16:23:08.608 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52807.
+Dec 16 16:23:08.643 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 16 16:23:08.643 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 16 16:23:08.658 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 16 16:23:08.658 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 16 16:23:08.664 HYPERVISOR: exec_cmd: ethsw create Ethernet Core 
+Dec 16 16:23:09.661 HYPERVISOR: exec_cmd: nio create_udp udp-a17b3088-6877-4098-87e1-af12fd5da96c 10029 127.0.0.1 10028 
+Dec 16 16:23:09.709 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-a17b3088-6877-4098-87e1-af12fd5da96c 
+Dec 16 16:23:09.761 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-a17b3088-6877-4098-87e1-af12fd5da96c 1 
+Dec 16 16:23:09.890 HYPERVISOR: exec_cmd: nio create_udp udp-5cda6727-eaa9-4825-a904-0e1163f2065a 10019 127.0.0.1 10018 
+Dec 16 16:23:09.925 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-5cda6727-eaa9-4825-a904-0e1163f2065a 
+Dec 16 16:23:09.946 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-5cda6727-eaa9-4825-a904-0e1163f2065a 1 
+Dec 16 16:23:09.959 HYPERVISOR: exec_cmd: nio create_udp udp-3520cf0b-585a-4533-88c8-03c9e225e82c 10017 127.0.0.1 10016 
+Dec 16 16:23:09.984 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-3520cf0b-585a-4533-88c8-03c9e225e82c 
+Dec 16 16:23:09.987 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-3520cf0b-585a-4533-88c8-03c9e225e82c 1 
+Dec 16 16:23:10.002 HYPERVISOR: exec_cmd: nio create_udp udp-e9da96da-f058-4fc9-9950-31e02b15e703 10015 127.0.0.1 10014 
+Dec 16 16:23:10.003 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-e9da96da-f058-4fc9-9950-31e02b15e703 
+Dec 16 16:23:10.011 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-e9da96da-f058-4fc9-9950-31e02b15e703 1 
+Dec 16 17:37:05.418 HYPERVISOR: exec_cmd: ethsw delete Ethernet Core 
+Dec 16 17:37:05.499 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 16 17:37:05.552 HYPERVISOR: Stopped.
+Dec 16 17:37:05.552 GENERAL: reset done.

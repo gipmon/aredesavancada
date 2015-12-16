@@ -1,5 +1,7 @@
 conf t
 
+ipv6 unicast-routing !ipv6 routing enabled
+
 int f1/1
 no shut
 ip add 82.84.100.1 255.255.255.0

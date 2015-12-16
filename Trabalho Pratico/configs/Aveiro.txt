@@ -1,5 +1,7 @@
 conf t
 
+ipv6 unicast-routing !ipv6 routing enabled
+
 int f0/0
 ip add 80.172.100.129 255.255.255.192 ! dividido porque em baixo tambem temos outra empresa, a EmpA
 no shut
@@ -24,14 +26,28 @@ ipv6 ospf 1 area 0
 
 int lo0
 ip add 10.1.0.2 255.255.255.255
+ip ospf 1 area 0
 no shut
 
 ! BGP CONFIGS
 router bgp 9.345
 address-family ipv4 unicast
-neighbor 192.172.100.1 remote-as 9.345 !iBGP Neighboring with Ethernet Core
-neighbor 192.172.100.3 remote-as 9.345 !iBGP Neighboring with Ethernet Core
-neighbor 192.172.100.4 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+
+neighbor 10.1.0.1 remote-as 9.345
+neighbor 10.1.0.1 next-hop-self
+neighbor 10.1.0.1 update-source Loopback 0
+
+neighbor 10.1.0.3 remote-as 9.345
+neighbor 10.1.0.3 next-hop-self
+neighbor 10.1.0.3 update-source Loopback 0
+
+neighbor 10.1.0.4 remote-as 9.345
+neighbor 10.1.0.4 next-hop-self
+neighbor 10.1.0.4 update-source Loopback 0
+
+!neighbor 192.172.100.1 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+!neighbor 192.172.100.3 remote-as 9.345 !iBGP Neighboring with Ethernet Core
+!neighbor 192.172.100.4 remote-as 9.345 !iBGP Neighboring with Ethernet Core
 neighbor 81.84.100.2 remote-as 65000 !eBGP Neighboring with EmpB
 
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
