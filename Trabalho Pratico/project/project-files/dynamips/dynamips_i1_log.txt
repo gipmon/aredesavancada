@@ -1,49 +1,45 @@
-Dec 18 15:07:45.900 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 18 15:07:45.901 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56065.
-Dec 18 15:07:45.948 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 18 15:07:45.948 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 18 15:07:45.949 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 18 15:07:45.949 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 18 15:07:45.949 HYPERVISOR: exec_cmd: vm create Porto 2 c7200 
-Dec 18 15:07:45.949 VM: VM Porto created.
-Dec 18 15:07:45.950 HYPERVISOR: exec_cmd: vm set_con_tcp_port Porto 2002 
-Dec 18 15:07:45.950 HYPERVISOR: exec_cmd: c7200 get_mac_addr Porto 
-Dec 18 15:07:45.951 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:45.951 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-FE 
-Dec 18 15:07:45.952 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:45.952 HYPERVISOR: exec_cmd: vm set_idle_pc Porto 0x60608040 
-Dec 18 15:07:45.953 HYPERVISOR: exec_cmd: vm set_disk0 Porto 0 
-Dec 18 15:07:45.954 HYPERVISOR: exec_cmd: vm set_nvram Porto 512 
-Dec 18 15:07:45.954 HYPERVISOR: exec_cmd: vm set_ios Porto /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 18 15:07:45.955 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:45.955 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 1 0 PA-2FE-TX 
-Dec 18 15:07:45.955 HYPERVISOR: exec_cmd: vm set_ram Porto 512 
-Dec 18 15:07:45.956 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:45.956 HYPERVISOR: exec_cmd: vm slot_remove_binding Porto 0 0 
-Dec 18 15:07:45.956 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:45.957 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-2FE 
-Dec 18 15:07:45.957 HYPERVISOR: exec_cmd: c7200 set_mac_addr Porto ca02.3480.0000 
-Dec 18 15:07:45.958 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:45.958 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 2 0 PA-2FE-TX 
-Dec 18 15:07:45.959 HYPERVISOR: exec_cmd: vm set_config Porto configs/i2_startup-config.cfg 
-Dec 18 15:07:47.811 HYPERVISOR: exec_cmd: vm set_ghost_status Porto 2 
-Dec 18 15:07:47.852 HYPERVISOR: exec_cmd: vm set_ghost_file Porto c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 18 15:07:48.838 HYPERVISOR: exec_cmd: nio create_udp udp-5794238f-9e71-4565-b622-2ce9d473b4f5 10002 127.0.0.1 10004 
-Dec 18 15:07:48.899 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 0 udp-5794238f-9e71-4565-b622-2ce9d473b4f5 
-Dec 18 15:07:48.902 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:07:49.584 HYPERVISOR: exec_cmd: nio create_udp udp-0798c244-3cc8-40d3-a6ab-e7ee7c4a092e 10012 127.0.0.1 10013 
-Dec 18 15:07:49.607 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 1 udp-0798c244-3cc8-40d3-a6ab-e7ee7c4a092e 
-Dec 18 15:07:49.703 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:08:11.397 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 15:08:11.398 HYPERVISOR: exec_cmd: vm start Porto 
-Dec 18 18:15:08.540 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 18:15:08.541 HYPERVISOR: exec_cmd: vm stop Porto 
-Dec 18 18:15:12.688 VM: VM Porto shutdown.
-Dec 18 18:15:32.490 HYPERVISOR: exec_cmd: vm extract_config Porto 
-Dec 18 18:15:32.758 HYPERVISOR: exec_cmd: vm get_status Porto 
-Dec 18 18:15:32.761 HYPERVISOR: exec_cmd: vm extract_config Porto 
-Dec 18 18:15:32.773 HYPERVISOR: exec_cmd: vm delete Porto 
-Dec 18 18:15:32.773 VM: VM Porto destroyed.
-Dec 18 18:15:32.783 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 18 18:15:33.233 HYPERVISOR: Stopped.
-Dec 18 18:15:33.233 GENERAL: reset done.
+Dec 18 19:42:00.708 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 18 19:42:00.715 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51901.
+Dec 18 19:42:00.914 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 18 19:42:00.915 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 18 19:42:00.916 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Trabalho Pratico/project/project-files/dynamips 
+Dec 18 19:42:00.916 GENERAL: working_dir=/Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Trabalho Pratico/project/project-files/dynamips
+Dec 18 19:42:00.918 HYPERVISOR: exec_cmd: vm create EmpA1 6 c7200 
+Dec 18 19:42:00.919 VM: VM EmpA1 created.
+Dec 18 19:42:00.920 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpA1 2006 
+Dec 18 19:42:00.922 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpA1 
+Dec 18 19:42:00.923 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:00.924 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-FE 
+Dec 18 19:42:00.928 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpA1 ca06.3488.0000 
+Dec 18 19:42:00.931 HYPERVISOR: exec_cmd: vm set_disk0 EmpA1 0 
+Dec 18 19:42:00.933 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:00.934 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpA1 0 0 
+Dec 18 19:42:00.936 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:00.937 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-2FE 
+Dec 18 19:42:00.941 HYPERVISOR: exec_cmd: vm set_nvram EmpA1 512 
+Dec 18 19:42:00.943 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:00.944 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 2 0 PA-2FE-TX 
+Dec 18 19:42:00.948 HYPERVISOR: exec_cmd: vm set_ram EmpA1 512 
+Dec 18 19:42:00.951 HYPERVISOR: exec_cmd: vm set_ios EmpA1 /Users/RodrigoCunha/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 18 19:42:00.953 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:00.954 HYPERVISOR: exec_cmd: vm set_idle_pc EmpA1 0x60608040 
+Dec 18 19:42:00.956 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:00.957 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 1 0 PA-2FE-TX 
+Dec 18 19:42:00.961 HYPERVISOR: exec_cmd: vm set_config EmpA1 configs/i6_startup-config.cfg 
+Dec 18 19:42:02.860 HYPERVISOR: exec_cmd: vm set_ghost_status EmpA1 2 
+Dec 18 19:42:02.915 HYPERVISOR: exec_cmd: vm set_ghost_file EmpA1 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 18 19:42:04.841 HYPERVISOR: exec_cmd: nio create_udp udp-5cdf760d-898b-47cc-bfd0-ae2078578b7e 10024 127.0.0.1 10025 
+Dec 18 19:42:04.892 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 1 udp-5cdf760d-898b-47cc-bfd0-ae2078578b7e 
+Dec 18 19:42:04.921 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:42:04.999 HYPERVISOR: exec_cmd: nio create_udp udp-a5f764f7-014a-4c54-a20c-f2f24600dc5b 10023 127.0.0.1 10022 
+Dec 18 19:42:05.020 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 0 udp-a5f764f7-014a-4c54-a20c-f2f24600dc5b 
+Dec 18 19:42:05.034 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:47:33.458 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 18 19:48:17.009 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 18 19:48:18.931 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 18 19:48:18.935 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 18 19:48:18.942 HYPERVISOR: exec_cmd: vm delete EmpA1 
+Dec 18 19:48:18.942 VM: VM EmpA1 destroyed.
+Dec 18 19:48:18.947 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 18 19:48:19.280 HYPERVISOR: Stopped.
+Dec 18 19:48:19.280 GENERAL: reset done.

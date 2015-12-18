@@ -6,7 +6,7 @@ int f0/0
 no shut
 ip add 213.30.5.1 255.255.255.252
 ipv6 enable
-ipv6 add 2001:5c0:1000::2/48
+ipv6 add 2001:5c0:1000::1/48
 
 ! rota estatica para dentro
 ip route 192.172.100.0 255.255.255.0 213.30.5.2 ! ethernet core

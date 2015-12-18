@@ -6,13 +6,13 @@ int f0/0
 no shut
 ip add 4.20.20.6 255.255.255.252
 ipv6 enable
-ipv6 add 2001:420:0:2::2/64
+ipv6 add 2001:420:2::2/64
 
 int f0/1
 no shut
 ip add 4.20.20.14 255.255.255.252
 ipv6 enable
-ipv6 add 2001:420:0:4::2/64
+ipv6 add 2001:420:4::2/64
 
 int f1/1
 ip add 192.172.100.3 255.255.255.128
@@ -54,22 +54,22 @@ neighbor 10.1.0.4 update-source Loopback 0
 network 192.172.100.128 mask 255.255.255.128 !netX1
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
 
-address-family ipv6
+address-family ipv6 unicast
 
-neighbor 2001:420:0:4::1 remote-as 8657
-neighbor 2001:420:0:4::1 dont-capability-negotiate
+neighbor 2001:420:4::1 remote-as 8657
+neighbor 2001:420:4::1 activate
 
-neighbor 2001:420:0:2::1 remote-as 34419
-neighbor 2001:420:0:2::1 dont-capability-negotiate
+neighbor 2001:420:2::1 remote-as 34419
+neighbor 2001:420:2::1 activate
 
 neighbor 2001:192:100::1 remote-as 9.345
-neighbor 2001:192:100::1 dont-capability-negotiate
+neighbor 2001:192:100::1 activate
 
 neighbor 2001:192:100::2 remote-as 9.345
-neighbor 2001:192:100::2 dont-capability-negotiate
+neighbor 2001:192:100::2 activate
 
 neighbor 2001:192:100::4 remote-as 9.345
-neighbor 2001:192:100::4 dont-capability-negotiate
+neighbor 2001:192:100::4 activate
 
 network 2001:192:101::/48
 network 2001:192:100::/50
