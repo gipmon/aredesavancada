@@ -6,13 +6,13 @@ int f0/0
 no shut
 ip add 4.20.20.2 255.255.255.252
 ipv6 enable
-ipv6 add 2001:420:1::2/64
+ipv6 add 2001:420:0:1::2/64
 
 int f0/1
 ip add 192.172.100.1 255.255.255.128
 no shut
 ipv6 enable
-ipv6 add 2001:192:100::1/48
+ipv6 add 2001:192:100::1/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
 
@@ -38,11 +38,23 @@ neighbor 10.1.0.4 remote-as 9.345
 neighbor 10.1.0.4 next-hop-self
 neighbor 10.1.0.4 update-source Loopback 0
 
-!neighbor 192.172.100.2 remote-as 9.345 !iBGP Neighboring with Ethernet Core
-!neighbor 192.172.100.3 remote-as 9.345 !iBGP Neighboring with Ethernet Core
-!neighbor 192.172.100.4 remote-as 9.345 !iBGP Neighboring with Ethernet Core
-
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
+
+address-family ipv6
+
+neighbor 2001:420:0:1::1 remote-as 34419
+neighbor 2001:420:0:1::1 dont-capability-negotiate
+
+neighbor 2001:192:100::2 remote-as 9.345
+neighbor 2001:192:100::2 dont-capability-negotiate
+
+neighbor 2001:192:100::3 remote-as 9.345
+neighbor 2001:192:100::3 dont-capability-negotiate
+
+neighbor 2001:192:100::4 remote-as 9.345
+neighbor 2001:192:100::4 dont-capability-negotiate
+
+network 2001:192:100::/50
 
 end
 write

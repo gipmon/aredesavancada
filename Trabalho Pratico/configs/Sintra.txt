@@ -14,13 +14,13 @@ int f0/0
 no shut
 ip add 4.20.20.10 255.255.255.252
 ipv6 enable
-ipv6 add 2001:420:3::2/64
+ipv6 add 2001:420:0:3::2/64
 
 int f0/1
 no shut
 ip add 4.20.20.13 255.255.255.252
 ipv6 enable
-ipv6 add 2001:420:4::1/64
+ipv6 add 2001:420:0:4::1/64
 
 ! BGP CONFIGS
 router bgp 8657
@@ -29,6 +29,16 @@ neighbor 4.20.20.9 remote-as 34419 !eBGP Neighboring with London
 neighbor 4.20.20.14 remote-as 9.345 !eBGP Neighboring with Lisboa
 
 network 200.1.100.0 mask 255.255.255.0
+
+address-family ipv6 unicast
+
+neighbor 2001:420:0:3::1 remote-as 34419
+neighbor 2001:420:0:3::1 dont-capability-negotiate
+neighbor 2001:420:0:4::2 remote-as 9.345
+neighbor 2001:420:0:4::2 dont-capability-negotiate
+
+
+network 2001:200:100::/48
 
 end
 write

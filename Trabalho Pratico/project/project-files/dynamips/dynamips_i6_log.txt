@@ -1,57 +1,68 @@
-Dec 16 16:23:06.162 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 16 16:23:06.162 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52449.
-Dec 16 16:23:06.207 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 16 16:23:06.208 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 16 16:23:06.208 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 16 16:23:06.208 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 16 16:23:06.208 HYPERVISOR: exec_cmd: vm create Lisboa 4 c7200 
-Dec 16 16:23:06.209 VM: VM Lisboa created.
-Dec 16 16:23:06.209 HYPERVISOR: exec_cmd: vm set_con_tcp_port Lisboa 2004 
-Dec 16 16:23:06.210 HYPERVISOR: exec_cmd: c7200 get_mac_addr Lisboa 
-Dec 16 16:23:06.210 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:06.210 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 0 0 C7200-IO-FE 
-Dec 16 16:23:06.211 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:06.212 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 2 0 PA-2FE-TX 
-Dec 16 16:23:06.213 HYPERVISOR: exec_cmd: c7200 set_mac_addr Lisboa ca04.3486.0000 
-Dec 16 16:23:06.214 HYPERVISOR: exec_cmd: vm set_ios Lisboa /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 16 16:23:06.215 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:06.215 HYPERVISOR: exec_cmd: vm set_idle_pc Lisboa 0x60608040 
-Dec 16 16:23:06.216 HYPERVISOR: exec_cmd: vm set_nvram Lisboa 512 
-Dec 16 16:23:06.216 HYPERVISOR: exec_cmd: vm set_disk0 Lisboa 0 
-Dec 16 16:23:06.217 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:06.218 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 1 0 PA-2FE-TX 
-Dec 16 16:23:06.218 HYPERVISOR: exec_cmd: vm set_ram Lisboa 512 
-Dec 16 16:23:06.219 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:06.220 HYPERVISOR: exec_cmd: vm slot_remove_binding Lisboa 0 0 
-Dec 16 16:23:06.220 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:06.221 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 0 0 C7200-IO-2FE 
-Dec 16 16:23:06.222 HYPERVISOR: exec_cmd: vm set_config Lisboa configs/i4_startup-config.cfg 
-Dec 16 16:23:08.308 HYPERVISOR: exec_cmd: vm set_ghost_status Lisboa 2 
-Dec 16 16:23:08.310 HYPERVISOR: exec_cmd: vm set_ghost_file Lisboa c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 16 16:23:09.002 HYPERVISOR: exec_cmd: nio create_udp udp-9689e333-7f11-40f3-b7b7-0c528f56f532 10009 127.0.0.1 10007 
-Dec 16 16:23:09.025 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 0 1 udp-9689e333-7f11-40f3-b7b7-0c528f56f532 
-Dec 16 16:23:09.027 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:09.088 HYPERVISOR: exec_cmd: nio create_udp udp-32cedc0a-27e7-4a1e-82d3-63c4e646ac34 10003 127.0.0.1 10002 
-Dec 16 16:23:09.089 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 0 0 udp-32cedc0a-27e7-4a1e-82d3-63c4e646ac34 
-Dec 16 16:23:09.099 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:09.782 HYPERVISOR: exec_cmd: nio create_udp udp-df283ff9-4688-46e7-a50e-6c716e711f65 10022 127.0.0.1 10023 
-Dec 16 16:23:09.827 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 1 0 udp-df283ff9-4688-46e7-a50e-6c716e711f65 
-Dec 16 16:23:09.848 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:09.915 HYPERVISOR: exec_cmd: nio create_udp udp-6a57b4ec-8ee5-4901-be15-accd822702bf 10016 127.0.0.1 10017 
-Dec 16 16:23:09.945 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 1 1 udp-6a57b4ec-8ee5-4901-be15-accd822702bf 
-Dec 16 16:23:09.946 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:21.889 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 16:23:21.889 HYPERVISOR: exec_cmd: vm start Lisboa 
-Dec 16 17:29:19.998 HYPERVISOR: exec_cmd: nio bind_filter udp-9689e333-7f11-40f3-b7b7-0c528f56f532 2 capture 
-Dec 16 17:29:20.000 HYPERVISOR: exec_cmd: nio setup_filter udp-9689e333-7f11-40f3-b7b7-0c528f56f532 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Lisboa_FastEthernet0-1_to_Sintra_FastEthernet0-1.pcap 
-Dec 16 17:36:58.170 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 17:36:58.174 HYPERVISOR: exec_cmd: vm stop Lisboa 
-Dec 16 17:37:02.577 VM: VM Lisboa shutdown.
-Dec 16 17:37:04.280 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
-Dec 16 17:37:05.557 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 16 17:37:05.559 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
-Dec 16 17:37:05.568 HYPERVISOR: exec_cmd: vm delete Lisboa 
-Dec 16 17:37:05.568 VM: VM Lisboa destroyed.
-Dec 16 17:37:05.573 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 16 17:37:05.969 HYPERVISOR: Stopped.
-Dec 16 17:37:05.970 GENERAL: reset done.
+Dec 18 15:07:45.749 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 18 15:07:45.749 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56070.
+Dec 18 15:07:45.758 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 18 15:07:45.759 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 18 15:07:45.759 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 18 15:07:45.759 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 18 15:07:45.759 HYPERVISOR: exec_cmd: vm create Lisboa 4 c7200 
+Dec 18 15:07:45.760 VM: VM Lisboa created.
+Dec 18 15:07:45.760 HYPERVISOR: exec_cmd: vm set_con_tcp_port Lisboa 2004 
+Dec 18 15:07:45.760 HYPERVISOR: exec_cmd: c7200 get_mac_addr Lisboa 
+Dec 18 15:07:45.761 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:45.761 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 0 0 C7200-IO-FE 
+Dec 18 15:07:45.761 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:45.761 HYPERVISOR: exec_cmd: vm set_idle_pc Lisboa 0x60608040 
+Dec 18 15:07:45.762 HYPERVISOR: exec_cmd: vm set_disk0 Lisboa 0 
+Dec 18 15:07:45.762 HYPERVISOR: exec_cmd: vm set_nvram Lisboa 512 
+Dec 18 15:07:45.763 HYPERVISOR: exec_cmd: vm set_ios Lisboa /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 18 15:07:45.763 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:45.763 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 1 0 PA-2FE-TX 
+Dec 18 15:07:45.764 HYPERVISOR: exec_cmd: vm set_ram Lisboa 512 
+Dec 18 15:07:45.764 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:45.764 HYPERVISOR: exec_cmd: vm slot_remove_binding Lisboa 0 0 
+Dec 18 15:07:45.765 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:45.765 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 0 0 C7200-IO-2FE 
+Dec 18 15:07:45.765 HYPERVISOR: exec_cmd: c7200 set_mac_addr Lisboa ca04.3486.0000 
+Dec 18 15:07:45.766 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:45.766 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 2 0 PA-2FE-TX 
+Dec 18 15:07:45.766 HYPERVISOR: exec_cmd: vm set_config Lisboa configs/i4_startup-config.cfg 
+Dec 18 15:07:45.767 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 18 15:07:45.768 VM: VM Ghost created.
+Dec 18 15:07:45.768 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 18 15:07:45.768 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 18 15:07:45.769 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 18 15:07:45.769 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 18 15:07:45.769 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 18 15:07:45.770 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 18 15:07:46.200 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 18 15:07:46.200 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 18 15:07:47.781 VM: VM Ghost shutdown.
+Dec 18 15:07:47.782 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 18 15:07:47.782 VM: VM Ghost destroyed.
+Dec 18 15:07:47.785 HYPERVISOR: exec_cmd: vm set_ghost_status Lisboa 2 
+Dec 18 15:07:47.785 HYPERVISOR: exec_cmd: vm set_ghost_file Lisboa c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 18 15:07:49.049 HYPERVISOR: exec_cmd: nio create_udp udp-da13d1f7-b659-43f1-8c2a-0127fbcb1534 10001 127.0.0.1 10000 
+Dec 18 15:07:49.060 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 0 0 udp-da13d1f7-b659-43f1-8c2a-0127fbcb1534 
+Dec 18 15:07:49.065 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:49.190 HYPERVISOR: exec_cmd: nio create_udp udp-c1cb075b-e088-4fa6-b6e4-f7cdef7e5f1a 10014 127.0.0.1 10015 
+Dec 18 15:07:49.192 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 1 1 udp-c1cb075b-e088-4fa6-b6e4-f7cdef7e5f1a 
+Dec 18 15:07:49.194 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:49.832 HYPERVISOR: exec_cmd: nio create_udp udp-cafc2fa6-860d-4db3-9a82-ed3d6f046b10 10033 127.0.0.1 10032 
+Dec 18 15:07:49.858 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 0 1 udp-cafc2fa6-860d-4db3-9a82-ed3d6f046b10 
+Dec 18 15:07:49.862 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:07:50.336 HYPERVISOR: exec_cmd: nio create_udp udp-63dc26ee-9b02-4e04-8556-f0849bd0d91f 10020 127.0.0.1 10021 
+Dec 18 15:07:50.396 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 1 0 udp-63dc26ee-9b02-4e04-8556-f0849bd0d91f 
+Dec 18 15:07:50.398 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:08:08.914 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 15:08:08.914 HYPERVISOR: exec_cmd: vm start Lisboa 
+Dec 18 18:15:07.261 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 18:15:07.261 HYPERVISOR: exec_cmd: vm stop Lisboa 
+Dec 18 18:15:09.926 VM: VM Lisboa shutdown.
+Dec 18 18:15:32.481 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
+Dec 18 18:15:32.760 HYPERVISOR: exec_cmd: vm get_status Lisboa 
+Dec 18 18:15:32.762 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
+Dec 18 18:15:32.781 HYPERVISOR: exec_cmd: vm delete Lisboa 
+Dec 18 18:15:32.781 VM: VM Lisboa destroyed.
+Dec 18 18:15:32.786 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 18 18:15:33.259 HYPERVISOR: Stopped.
+Dec 18 18:15:33.259 GENERAL: reset done.

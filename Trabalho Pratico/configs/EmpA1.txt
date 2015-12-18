@@ -1,8 +1,21 @@
 conf t
 
+ipv6 unicast-routing !ipv6 routing enabled
+
 int f0/0
-ip add 80.172.100.130 255.255.255.192
+ip add 10.1.80.2 255.255.255.252
+ipv6 add 2001:192:100:8000::2/50
+ip ospf 2 area 0
+ipv6 ospf 2 area 0
 no shut
+
+int f0/1
+ip add 80.172.100.129 255.255.255.192
+ipv6 add 2001:80:100::129/49
+no shut
+
+! rota estatica
+ip route 0.0.0.0 0.0.0.0 10.1.80.1
 
 end
 write
