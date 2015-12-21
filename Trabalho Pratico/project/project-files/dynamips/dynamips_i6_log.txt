@@ -1,69 +1,49 @@
-Dec 18 19:42:00.633 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 18 19:42:00.633 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51906.
-Dec 18 19:42:00.686 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 18 19:42:00.686 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 18 19:42:00.687 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Trabalho Pratico/project/project-files/dynamips 
-Dec 18 19:42:00.687 GENERAL: working_dir=/Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Trabalho Pratico/project/project-files/dynamips
-Dec 18 19:42:00.687 HYPERVISOR: exec_cmd: vm create Lisboa 4 c7200 
-Dec 18 19:42:00.687 VM: VM Lisboa created.
-Dec 18 19:42:00.688 HYPERVISOR: exec_cmd: vm set_con_tcp_port Lisboa 2004 
-Dec 18 19:42:00.688 HYPERVISOR: exec_cmd: c7200 get_mac_addr Lisboa 
-Dec 18 19:42:00.689 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:00.689 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 0 0 C7200-IO-FE 
-Dec 18 19:42:00.690 HYPERVISOR: exec_cmd: c7200 set_mac_addr Lisboa ca04.3486.0000 
-Dec 18 19:42:00.690 HYPERVISOR: exec_cmd: vm set_disk0 Lisboa 0 
-Dec 18 19:42:00.691 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:00.691 HYPERVISOR: exec_cmd: vm slot_remove_binding Lisboa 0 0 
-Dec 18 19:42:00.692 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:00.692 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 0 0 C7200-IO-2FE 
-Dec 18 19:42:00.693 HYPERVISOR: exec_cmd: vm set_nvram Lisboa 512 
-Dec 18 19:42:00.693 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:00.694 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 2 0 PA-2FE-TX 
-Dec 18 19:42:00.694 HYPERVISOR: exec_cmd: vm set_ram Lisboa 512 
-Dec 18 19:42:00.695 HYPERVISOR: exec_cmd: vm set_ios Lisboa /Users/RodrigoCunha/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 18 19:42:00.695 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:00.695 HYPERVISOR: exec_cmd: vm set_idle_pc Lisboa 0x60608040 
-Dec 18 19:42:00.696 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:00.696 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa 1 0 PA-2FE-TX 
-Dec 18 19:42:00.697 HYPERVISOR: exec_cmd: vm set_config Lisboa configs/i4_startup-config.cfg 
-Dec 18 19:42:00.698 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
-Dec 18 19:42:00.698 VM: VM Ghost created.
-Dec 18 19:42:00.699 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/RodrigoCunha/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 18 19:42:00.700 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
-Dec 18 19:42:00.700 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 18 19:42:00.701 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
-Dec 18 19:42:00.701 HYPERVISOR: exec_cmd: vm get_status Ghost 
-Dec 18 19:42:00.701 HYPERVISOR: exec_cmd: vm start Ghost 
-Dec 18 19:42:01.132 HYPERVISOR: exec_cmd: vm get_status Ghost 
-Dec 18 19:42:01.132 HYPERVISOR: exec_cmd: vm stop Ghost 
-Dec 18 19:42:02.578 VM: VM Ghost shutdown.
-Dec 18 19:42:02.578 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
-Dec 18 19:42:02.578 VM: VM Ghost destroyed.
-Dec 18 19:42:02.595 HYPERVISOR: exec_cmd: vm set_ghost_status Lisboa 2 
-Dec 18 19:42:02.595 HYPERVISOR: exec_cmd: vm set_ghost_file Lisboa c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 18 19:42:03.454 HYPERVISOR: exec_cmd: nio create_udp udp-21db0f71-c7aa-4df0-8fa2-4b63e35ac519 10004 127.0.0.1 10005 
-Dec 18 19:42:03.456 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 1 0 udp-21db0f71-c7aa-4df0-8fa2-4b63e35ac519 
-Dec 18 19:42:03.456 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:03.662 HYPERVISOR: exec_cmd: nio create_udp udp-b2417e91-9669-4036-90d4-f874fb06c3f0 10001 127.0.0.1 10000 
-Dec 18 19:42:03.664 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 0 1 udp-b2417e91-9669-4036-90d4-f874fb06c3f0 
-Dec 18 19:42:03.665 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:04.342 HYPERVISOR: exec_cmd: nio create_udp udp-26e3e2c3-d654-45b9-ab1e-d049ae69502c 10014 127.0.0.1 10015 
-Dec 18 19:42:04.356 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 1 1 udp-26e3e2c3-d654-45b9-ab1e-d049ae69502c 
-Dec 18 19:42:04.357 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:04.755 HYPERVISOR: exec_cmd: nio create_udp udp-366d4593-e8c8-48b6-a01d-d0323b0fbef9 10027 127.0.0.1 10026 
-Dec 18 19:42:04.757 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa 0 0 udp-366d4593-e8c8-48b6-a01d-d0323b0fbef9 
-Dec 18 19:42:04.773 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:14.332 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:42:14.333 HYPERVISOR: exec_cmd: vm start Lisboa 
-Dec 18 19:47:33.469 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
-Dec 18 19:48:12.399 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:48:12.404 HYPERVISOR: exec_cmd: vm stop Lisboa 
-Dec 18 19:48:15.259 VM: VM Lisboa shutdown.
-Dec 18 19:48:17.015 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
-Dec 18 19:48:18.929 HYPERVISOR: exec_cmd: vm get_status Lisboa 
-Dec 18 19:48:18.933 HYPERVISOR: exec_cmd: vm extract_config Lisboa 
-Dec 18 19:48:18.940 HYPERVISOR: exec_cmd: vm delete Lisboa 
-Dec 18 19:48:18.940 VM: VM Lisboa destroyed.
-Dec 18 19:48:18.945 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 18 19:48:19.049 HYPERVISOR: Stopped.
-Dec 18 19:48:19.049 GENERAL: reset done.
+Dec 21 09:48:13.931 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 21 09:48:13.932 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49306.
+Dec 21 09:48:13.943 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 09:48:13.944 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 21 09:48:13.944 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 21 09:48:13.944 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 21 09:48:13.945 HYPERVISOR: exec_cmd: vm create EmpA1 6 c7200 
+Dec 21 09:48:13.945 VM: VM EmpA1 created.
+Dec 21 09:48:13.946 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpA1 2006 
+Dec 21 09:48:13.947 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpA1 
+Dec 21 09:48:13.948 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:13.948 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-FE 
+Dec 21 09:48:13.948 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:13.949 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpA1 0 0 
+Dec 21 09:48:13.949 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:13.949 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-2FE 
+Dec 21 09:48:13.949 HYPERVISOR: exec_cmd: vm set_ios EmpA1 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 21 09:48:13.950 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpA1 ca06.3488.0000 
+Dec 21 09:48:13.950 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:13.950 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 2 0 PA-2FE-TX 
+Dec 21 09:48:13.951 HYPERVISOR: exec_cmd: vm set_nvram EmpA1 512 
+Dec 21 09:48:13.951 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:13.951 HYPERVISOR: exec_cmd: vm set_idle_pc EmpA1 0x60608040 
+Dec 21 09:48:13.951 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:13.952 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 1 0 PA-2FE-TX 
+Dec 21 09:48:13.952 HYPERVISOR: exec_cmd: vm set_ram EmpA1 512 
+Dec 21 09:48:13.952 HYPERVISOR: exec_cmd: vm set_disk0 EmpA1 0 
+Dec 21 09:48:13.953 HYPERVISOR: exec_cmd: vm set_config EmpA1 configs/i6_startup-config.cfg 
+Dec 21 09:48:16.135 HYPERVISOR: exec_cmd: vm set_ghost_status EmpA1 2 
+Dec 21 09:48:16.147 HYPERVISOR: exec_cmd: vm set_ghost_file EmpA1 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 21 09:48:16.666 HYPERVISOR: exec_cmd: nio create_udp udp-5afbafb1-7fa4-452a-bf12-a1a388e674a0 10013 127.0.0.1 10012 
+Dec 21 09:48:16.674 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 0 udp-5afbafb1-7fa4-452a-bf12-a1a388e674a0 
+Dec 21 09:48:16.679 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:48:17.646 HYPERVISOR: exec_cmd: nio create_udp udp-48a0c013-c83c-4eee-a8d5-90e270ecfda8 10036 127.0.0.1 10037 
+Dec 21 09:48:17.687 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 1 udp-48a0c013-c83c-4eee-a8d5-90e270ecfda8 
+Dec 21 09:48:17.713 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:59:35.996 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 09:59:35.997 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 15:00:38.247 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 15:00:38.251 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 15:00:43.117 VM: VM EmpA1 shutdown.
+Dec 21 15:01:11.988 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 15:01:12.429 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 15:01:12.432 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 15:01:12.446 HYPERVISOR: exec_cmd: vm delete EmpA1 
+Dec 21 15:01:12.446 VM: VM EmpA1 destroyed.
+Dec 21 15:01:12.451 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 21 15:01:12.536 HYPERVISOR: Stopped.
+Dec 21 15:01:12.536 GENERAL: reset done.

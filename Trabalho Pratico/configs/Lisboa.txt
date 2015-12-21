@@ -33,11 +33,35 @@ ip add 10.1.0.3 255.255.255.255
 ip ospf 1 area 0
 no shut
 
+! NON - TRANSIT
+ip as-path access-list 1 permit ^$
+route-map routes-out
+match as-path 1
+
+! COMMUNITIES
+ip bgp-community new-format
+
+access-list 1 permit 0.0.0.0 0.0.0.0
+
+route-map Lisboa-out permit 10    ! 10 is the order of processing
+match ip address 1
+set community 5               ! Community 1
+
+route-map Sintra-in permit 15
+match ip address 1
+set local-preference 111
+
 ! BGP CONFIGS
 router bgp 9.345
+
 address-family ipv4 unicast
+
 neighbor 4.20.20.13 remote-as 8657 !eBGP Neighboring with Sintra
+neighbor 4.20.20.13 route-map routes-out out
+neighbor 4.20.20.13 route-map Sintra-in in
+
 neighbor 4.20.20.5 remote-as 34419 !eBGP Neighboring with London
+neighbor 4.20.20.5 route-map routes-out out
 
 neighbor 10.1.0.1 remote-as 9.345
 neighbor 10.1.0.1 next-hop-self
@@ -46,10 +70,14 @@ neighbor 10.1.0.1 update-source Loopback 0
 neighbor 10.1.0.2 remote-as 9.345
 neighbor 10.1.0.2 next-hop-self
 neighbor 10.1.0.2 update-source Loopback 0
+neighbor 10.1.0.2 route-map Lisboa-out out
+neighbor 10.1.0.2 send-community
 
 neighbor 10.1.0.4 remote-as 9.345
 neighbor 10.1.0.4 next-hop-self
 neighbor 10.1.0.4 update-source Loopback 0
+neighbor 10.1.0.4 route-map Lisboa-out out
+neighbor 10.1.0.4 send-community
 
 network 192.172.100.128 mask 255.255.255.128 !netX1
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
@@ -58,18 +86,24 @@ address-family ipv6 unicast
 
 neighbor 2001:420:4::1 remote-as 8657
 neighbor 2001:420:4::1 activate
+neighbor 2001:420:4::1 route-map routes-out out
 
 neighbor 2001:420:2::1 remote-as 34419
 neighbor 2001:420:2::1 activate
+neighbor 2001:420:2::1 route-map routes-out out
 
 neighbor 2001:192:100::1 remote-as 9.345
 neighbor 2001:192:100::1 activate
 
 neighbor 2001:192:100::2 remote-as 9.345
 neighbor 2001:192:100::2 activate
+neighbor 2001:192:100::2 route-map Lisboa-out out
+neighbor 2001:192:100::2 send-community
 
 neighbor 2001:192:100::4 remote-as 9.345
 neighbor 2001:192:100::4 activate
+neighbor 2001:192:100::4 route-map Lisboa-out out
+neighbor 2001:192:100::4 send-community
 
 network 2001:192:101::/48
 network 2001:192:100::/50

@@ -40,6 +40,17 @@ ip add 4.20.20.9 255.255.255.252
 ipv6 enable
 ipv6 add 2001:420:3::1/64
 
+! Communities
+ip bgp-community new-format
+
+route-map London-out permit 10    ! 10 is the order of processing
+match route-type local
+set community 1                   ! Community 1
+
+route-map London-out permit 20    ! 20 is the order of processing.
+match route-type external
+set community 2                   ! Community 2
+
 ! BGP CONFIGS
 router bgp 34419
 address-family ipv4 unicast
@@ -50,6 +61,12 @@ neighbor 4.20.20.2 remote-as 9.345 !eBGP Neighboring with Porto
 neighbor 4.20.20.10 default-originate ! remote-as 8657 !eBGP Neighboring with Sintra
 neighbor 4.20.20.6 default-originate ! remote-as 9.345 !eBGP Neighboring with Lisboa
 neighbor 4.20.20.2 default-originate ! remote-as 9.345 !eBGP Neighboring with Porto
+
+neighbor 4.20.20.6 route-map London-out out
+neighbor 4.20.20.6 send-community
+
+neighbor 4.20.20.2 route-map London-out out
+neighbor 4.20.20.2 send-community
 
 network 82.84.100.0 mask 255.255.255.0 !L1
 network 82.84.200.0 mask 255.255.255.0 !L2

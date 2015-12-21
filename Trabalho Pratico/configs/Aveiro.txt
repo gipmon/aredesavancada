@@ -32,6 +32,14 @@ no shut
 ! rota estatica
 ip route 80.172.100.128 255.255.255.192 10.1.80.2
 
+! Local Preference based on Community value
+ip bgp-community new-format
+
+ip community-list 1 permit 0:5
+
+route-map routes-in permit 10
+match community 1
+set local-preference 111
 
 ! BGP CONFIGS
 router bgp 9.345
@@ -44,6 +52,7 @@ neighbor 10.1.0.1 update-source Loopback 0
 neighbor 10.1.0.3 remote-as 9.345
 neighbor 10.1.0.3 next-hop-self
 neighbor 10.1.0.3 update-source Loopback 0
+neighbor 10.1.0.3 route-map routes-in in
 
 neighbor 10.1.0.4 remote-as 9.345
 neighbor 10.1.0.4 next-hop-self
