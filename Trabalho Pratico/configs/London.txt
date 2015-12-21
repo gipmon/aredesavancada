@@ -45,11 +45,11 @@ ip bgp-community new-format
 
 route-map London-out permit 10    ! 10 is the order of processing
 match route-type local
-set community 1                   ! Community 1
+set community 0:1                   ! Community 1
 
 route-map London-out permit 20    ! 20 is the order of processing.
 match route-type external
-set community 2                   ! Community 2
+set community 0:2                   ! Community 2
 
 ! BGP CONFIGS
 router bgp 34419
