@@ -1,5 +1,7 @@
 conf t
 
+ip cef
+
 ipv6 unicast-routing !ipv6 routing enabled
 
 int f0/0
@@ -21,6 +23,7 @@ ipv6 enable
 ipv6 add 2001:192:100::3/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
+mpls ip
 
 int f1/0
 no shut
