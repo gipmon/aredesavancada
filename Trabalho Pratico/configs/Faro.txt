@@ -40,6 +40,8 @@ ip bgp-community new-format
 route-map routes-in permit 10
 set local-preference 111
 
+route-map routes-in permit 20
+
 ! BGP CONFIGS
 router bgp 9.345
 bgp router-id 10.10.10.4
@@ -61,6 +63,8 @@ neighbor 10.1.0.3 route-map routes-in in
 
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
 
+redistribute static
+
 address-family vpnv4
 neighbor 10.1.0.2 activate
 neighbor 10.1.0.2 send-community both
@@ -80,6 +84,7 @@ neighbor 2001:192:100::2 activate
 
 neighbor 2001:192:100::3 remote-as 9.345
 neighbor 2001:192:100::3 activate
+neighbor 2001:192:100::3 route-map routes-in in
 
 ! IP ROUTE
 ip route 10.1.200.0 255.255.255.252 FastEthernet0/0

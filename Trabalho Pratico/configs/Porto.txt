@@ -17,7 +17,6 @@ ipv6 enable
 ipv6 add 2001:192:100::1/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
-mpls ip
 
 int lo0
 ip add 10.1.0.1 255.255.255.255
@@ -40,6 +39,8 @@ route-map rotas-l1-l2 permit 10
 match community 1
 set community 1:1
 
+route-map rotas-l1-l2 permit 20
+
 ! BGP CONFIGS
 router bgp 9.345
 address-family ipv4 unicast
@@ -61,6 +62,7 @@ neighbor 10.1.0.4 next-hop-self
 neighbor 10.1.0.4 update-source Loopback 0
 
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
+aggregate-address 80.172.100.128 255.255.255.128 summary-only
 
 !! IPv6
 

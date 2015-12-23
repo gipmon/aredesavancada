@@ -1,86 +1,54 @@
-Dec 22 17:44:42.428 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 22 17:44:42.428 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64230.
-Dec 22 17:44:42.461 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 22 17:44:42.462 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 22 17:44:42.463 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 22 17:44:42.463 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 22 17:44:42.466 HYPERVISOR: exec_cmd: vm create Aveiro 5 c7200 
-Dec 22 17:44:42.467 VM: VM Aveiro created.
-Dec 22 17:44:42.468 HYPERVISOR: exec_cmd: vm set_con_tcp_port Aveiro 2005 
-Dec 22 17:44:42.469 HYPERVISOR: exec_cmd: c7200 get_mac_addr Aveiro 
-Dec 22 17:44:42.470 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:42.471 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 0 0 C7200-IO-FE 
-Dec 22 17:44:42.472 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:42.472 HYPERVISOR: exec_cmd: vm set_idle_pc Aveiro 0x60608040 
-Dec 22 17:44:42.473 HYPERVISOR: exec_cmd: c7200 set_mac_addr Aveiro ca05.3487.0000 
-Dec 22 17:44:42.474 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:42.475 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 1 0 PA-2FE-TX 
-Dec 22 17:44:42.477 HYPERVISOR: exec_cmd: vm set_disk0 Aveiro 0 
-Dec 22 17:44:42.478 HYPERVISOR: exec_cmd: vm set_ram Aveiro 512 
-Dec 22 17:44:42.480 HYPERVISOR: exec_cmd: vm set_ios Aveiro /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 22 17:44:42.482 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:42.483 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 2 0 PA-2FE-TX 
-Dec 22 17:44:42.484 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:42.485 HYPERVISOR: exec_cmd: vm slot_remove_binding Aveiro 0 0 
-Dec 22 17:44:42.485 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:42.486 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 0 0 C7200-IO-2FE 
-Dec 22 17:44:42.488 HYPERVISOR: exec_cmd: vm set_nvram Aveiro 512 
-Dec 22 17:44:42.489 HYPERVISOR: exec_cmd: vm set_config Aveiro configs/i5_startup-config.cfg 
-Dec 22 17:44:42.493 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
-Dec 22 17:44:42.493 VM: VM Ghost created.
-Dec 22 17:44:42.495 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 22 17:44:42.496 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
-Dec 22 17:44:42.496 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 22 17:44:42.497 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
-Dec 22 17:44:42.497 HYPERVISOR: exec_cmd: vm get_status Ghost 
-Dec 22 17:44:42.498 HYPERVISOR: exec_cmd: vm start Ghost 
-Dec 22 17:44:42.994 HYPERVISOR: exec_cmd: vm get_status Ghost 
-Dec 22 17:44:42.994 HYPERVISOR: exec_cmd: vm stop Ghost 
-Dec 22 17:44:45.292 VM: VM Ghost shutdown.
-Dec 22 17:44:45.294 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
-Dec 22 17:44:45.294 VM: VM Ghost destroyed.
-Dec 22 17:44:45.337 HYPERVISOR: exec_cmd: vm set_ghost_status Aveiro 2 
-Dec 22 17:44:45.338 HYPERVISOR: exec_cmd: vm set_ghost_file Aveiro c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 22 17:44:46.878 HYPERVISOR: exec_cmd: nio create_udp udp-690ce60e-9f78-4d93-8f42-35600df58a7b 10000 127.0.0.1 10001 
-Dec 22 17:44:46.903 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 0 0 udp-690ce60e-9f78-4d93-8f42-35600df58a7b 
-Dec 22 17:44:46.910 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:47.252 HYPERVISOR: exec_cmd: nio create_udp udp-ed85dd2a-1823-4ba7-81e1-3a52516cecb4 10016 127.0.0.1 10017 
-Dec 22 17:44:47.343 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 0 1 udp-ed85dd2a-1823-4ba7-81e1-3a52516cecb4 
-Dec 22 17:44:47.409 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:44:47.978 HYPERVISOR: exec_cmd: nio create_udp udp-61eab957-772a-4745-bb60-edf45eaa6d91 10024 127.0.0.1 10025 
-Dec 22 17:44:47.982 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 1 0 udp-61eab957-772a-4745-bb60-edf45eaa6d91 
-Dec 22 17:44:47.995 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:45:00.881 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 22 17:45:00.882 HYPERVISOR: exec_cmd: vm start Aveiro 
-Dec 23 10:03:24.021 HYPERVISOR: exec_cmd: nio bind_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 capture 
-Dec 23 10:03:24.022 HYPERVISOR: exec_cmd: nio setup_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet1-0_to_Ethernet-Core_3.pcap 
-Dec 23 10:04:00.818 HYPERVISOR: exec_cmd: nio bind_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 capture 
-Dec 23 10:04:00.819 HYPERVISOR: exec_cmd: nio setup_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet0-0_to_EmpA1_FastEthernet0-0.pcap 
-Dec 23 10:04:24.414 HYPERVISOR: exec_cmd: nio bind_filter udp-ed85dd2a-1823-4ba7-81e1-3a52516cecb4 2 capture 
-Dec 23 10:04:24.414 HYPERVISOR: exec_cmd: nio setup_filter udp-ed85dd2a-1823-4ba7-81e1-3a52516cecb4 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet0-1_to_EmpB_FastEthernet0-0.pcap 
-Dec 23 10:05:58.193 HYPERVISOR: exec_cmd: nio unbind_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 
-Dec 23 10:06:00.346 HYPERVISOR: exec_cmd: nio unbind_filter udp-ed85dd2a-1823-4ba7-81e1-3a52516cecb4 2 
-Dec 23 10:06:02.348 HYPERVISOR: exec_cmd: nio unbind_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 
-Dec 23 10:09:31.206 HYPERVISOR: exec_cmd: nio bind_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 capture 
-Dec 23 10:09:31.206 HYPERVISOR: exec_cmd: nio setup_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet0-0_to_EmpA1_FastEthernet0-0.pcap 
-Dec 23 10:09:56.212 HYPERVISOR: exec_cmd: nio bind_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 capture 
-Dec 23 10:09:56.212 HYPERVISOR: exec_cmd: nio setup_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet1-0_to_Ethernet-Core_3.pcap 
-Dec 23 10:10:09.881 HYPERVISOR: exec_cmd: nio unbind_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 
-Dec 23 10:10:44.904 HYPERVISOR: exec_cmd: nio unbind_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 
-Dec 23 10:11:23.434 HYPERVISOR: exec_cmd: nio bind_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 capture 
-Dec 23 10:11:23.435 HYPERVISOR: exec_cmd: nio setup_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet1-0_to_Ethernet-Core_3.pcap 
-Dec 23 10:11:38.789 HYPERVISOR: exec_cmd: nio bind_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 capture 
-Dec 23 10:11:38.789 HYPERVISOR: exec_cmd: nio setup_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Aveiro_FastEthernet0-0_to_EmpA1_FastEthernet0-0.pcap 
-Dec 23 12:31:06.778 HYPERVISOR: exec_cmd: nio unbind_filter udp-61eab957-772a-4745-bb60-edf45eaa6d91 2 
-Dec 23 12:31:08.933 HYPERVISOR: exec_cmd: nio unbind_filter udp-690ce60e-9f78-4d93-8f42-35600df58a7b 2 
-Dec 23 13:12:11.294 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 23 13:12:11.297 HYPERVISOR: exec_cmd: vm stop Aveiro 
-Dec 23 13:12:15.532 VM: VM Aveiro shutdown.
-Dec 23 13:12:25.769 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
-Dec 23 13:12:26.023 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Dec 23 13:12:26.026 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
-Dec 23 13:12:26.035 HYPERVISOR: exec_cmd: vm delete Aveiro 
-Dec 23 13:12:26.036 VM: VM Aveiro destroyed.
-Dec 23 13:12:26.041 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 23 13:12:26.345 HYPERVISOR: Stopped.
-Dec 23 13:12:26.346 GENERAL: reset done.
+Dec 23 13:18:22.961 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 23 13:18:22.981 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58018.
+Dec 23 13:18:23.032 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 23 13:18:23.033 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 23 13:18:23.033 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 23 13:18:23.033 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 23 13:18:23.033 HYPERVISOR: exec_cmd: vm create Sintra 3 c7200 
+Dec 23 13:18:23.044 VM: VM Sintra created.
+Dec 23 13:18:23.045 HYPERVISOR: exec_cmd: vm set_con_tcp_port Sintra 2003 
+Dec 23 13:18:23.047 HYPERVISOR: exec_cmd: c7200 get_mac_addr Sintra 
+Dec 23 13:18:23.047 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:23.048 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-FE 
+Dec 23 13:18:23.049 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:23.051 HYPERVISOR: exec_cmd: vm slot_remove_binding Sintra 0 0 
+Dec 23 13:18:23.052 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:23.053 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-2FE 
+Dec 23 13:18:23.053 HYPERVISOR: exec_cmd: vm set_ios Sintra /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 23 13:18:23.054 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:23.055 HYPERVISOR: exec_cmd: vm set_idle_pc Sintra 0x60608040 
+Dec 23 13:18:23.056 HYPERVISOR: exec_cmd: c7200 set_mac_addr Sintra ca03.3482.0000 
+Dec 23 13:18:23.057 HYPERVISOR: exec_cmd: vm set_nvram Sintra 512 
+Dec 23 13:18:23.058 HYPERVISOR: exec_cmd: vm set_ram Sintra 512 
+Dec 23 13:18:23.058 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:23.059 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 2 0 PA-2FE-TX 
+Dec 23 13:18:23.059 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:23.060 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 1 0 PA-2FE-TX 
+Dec 23 13:18:23.060 HYPERVISOR: exec_cmd: vm set_disk0 Sintra 0 
+Dec 23 13:18:23.061 HYPERVISOR: exec_cmd: vm set_config Sintra configs/i3_startup-config.cfg 
+Dec 23 13:18:25.540 HYPERVISOR: exec_cmd: vm set_ghost_status Sintra 2 
+Dec 23 13:18:25.541 HYPERVISOR: exec_cmd: vm set_ghost_file Sintra c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 23 13:18:26.361 HYPERVISOR: exec_cmd: nio create_udp udp-d0ee1afe-c201-4c2a-b7c0-68a72d270696 10001 127.0.0.1 10000 
+Dec 23 13:18:26.363 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 0 udp-d0ee1afe-c201-4c2a-b7c0-68a72d270696 
+Dec 23 13:18:26.364 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:27.426 HYPERVISOR: exec_cmd: nio create_udp udp-1c78f033-4573-4b46-869d-2a30bd6347cf 10010 127.0.0.1 10011 
+Dec 23 13:18:27.454 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 1 udp-1c78f033-4573-4b46-869d-2a30bd6347cf 
+Dec 23 13:18:27.466 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:18:27.511 HYPERVISOR: exec_cmd: nio create_udp udp-abd5bc0d-d75a-4b31-ad69-e5f5b6266143 10006 127.0.0.1 10007 
+Dec 23 13:18:27.550 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 1 0 udp-abd5bc0d-d75a-4b31-ad69-e5f5b6266143 
+Dec 23 13:18:27.581 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:31:05.819 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 13:31:05.819 HYPERVISOR: exec_cmd: vm start Sintra 
+Dec 23 17:31:03.335 HYPERVISOR: exec_cmd: nio bind_filter udp-1c78f033-4573-4b46-869d-2a30bd6347cf 2 capture 
+Dec 23 17:31:03.336 HYPERVISOR: exec_cmd: nio setup_filter udp-1c78f033-4573-4b46-869d-2a30bd6347cf 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Sintra_FastEthernet0-1_to_Lisboa_FastEthernet0-1.pcap 
+Dec 23 19:05:45.774 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 19:05:45.775 HYPERVISOR: exec_cmd: vm stop Sintra 
+Dec 23 19:05:50.797 VM: VM Sintra shutdown.
+Dec 23 19:06:00.542 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Dec 23 19:06:01.786 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Dec 23 19:06:01.791 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Dec 23 19:06:01.806 HYPERVISOR: exec_cmd: vm delete Sintra 
+Dec 23 19:06:01.806 VM: VM Sintra destroyed.
+Dec 23 19:06:01.817 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 23 19:06:02.100 HYPERVISOR: Stopped.
+Dec 23 19:06:02.102 GENERAL: reset done.

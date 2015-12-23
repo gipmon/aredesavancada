@@ -51,9 +51,11 @@ set local-preference 111
 route-map routes-in permit 20
 ! accept sintra :)
 
-route-map routes-in-l1-l2 permit 20
+route-map routes-in-l1-l2 permit 30
 match community 2
 set local-preference 111
+
+route-map routes-in-l1-l2 permit 40
 
 ! BGP CONFIGS
 router bgp 9.345
@@ -79,6 +81,8 @@ neighbor 10.1.100.2 remote-as 65000 !eBGP Neighboring with EmpB
 
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
 
+redistribute static
+
 address-family vpnv4
 neighbor 10.1.0.4 activate
 neighbor 10.1.0.4 send-community both
@@ -91,9 +95,11 @@ address-family ipv6 unicast
 
 neighbor 2001:192:100::1 remote-as 9.345
 neighbor 2001:192:100::1 activate
+neighbor 2001:192:100::1 route-map routes-in-l1-l2 in
 
 neighbor 2001:192:100::3 remote-as 9.345
 neighbor 2001:192:100::3 activate
+neighbor 2001:192:100::3 route-map routes-in in
 
 neighbor 2001:192:100::4 remote-as 9.345
 neighbor 2001:192:100::4 activate

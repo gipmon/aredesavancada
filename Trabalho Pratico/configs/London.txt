@@ -80,14 +80,17 @@ neighbor 2001:420:3::2 activate
 neighbor 2001:420:1::2 remote-as 9.345
 neighbor 2001:420:1::2 default-originate
 neighbor 2001:420:1::2 activate
+neighbor 2001:420:1::2 route-map London-out out
+neighbor 2001:420:1::2 send-community
 
 neighbor 2001:420:2::2 remote-as 9.345
 neighbor 2001:420:2::2 default-originate
 neighbor 2001:420:2::2 activate
+neighbor 2001:420:2::2 route-map London-out out
+neighbor 2001:420:2::2 send-community
 
 network 2001:82:100::/48
 network 2001:82:200::/48
-
 
 end
 write
