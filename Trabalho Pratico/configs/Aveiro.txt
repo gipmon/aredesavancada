@@ -48,6 +48,9 @@ route-map routes-in permit 10
 match community 1
 set local-preference 111
 
+route-map routes-in permit 20
+! accept sintra :)
+
 route-map routes-in-l1-l2 permit 20
 match community 2
 set local-preference 111

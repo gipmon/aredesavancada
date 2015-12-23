@@ -46,6 +46,7 @@ ip bgp-community new-format
 
 access-list 1 permit 0.0.0.0 0.0.0.0
 ip community-list 1 permit 0:1
+ip community-list 2 permit 0:2
 
 ! enviar a community para as rotas de netL1 e netL2
 route-map rotas-para-faro permit 10
@@ -62,6 +63,10 @@ set community 1:4
 route-map rota-default permit 30
 match ip address 1
 set community 1:3
+
+route-map rota-default permit 50
+match community 2
+set community 1:5
 
 ! route map usado para todo o que for para a internet ir para Sintra pelo
 ! ISP S, aumentando a preferencia para a rota recebida por sintra

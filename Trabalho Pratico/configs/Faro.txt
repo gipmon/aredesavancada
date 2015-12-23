@@ -7,17 +7,18 @@ ipv6 unicast-routing !ipv6 routing enabled
 int f0/0
 ip vrf forwarding vpn1
 ip add 10.1.200.1 255.255.255.252
+ip ospf 2 area 0
 no shut
 ipv6 enable
 ipv6 add 2001:192:100:C000::1/50
-ip ospf 2 area 0
+ipv6 ospf 2 area 0
 
 int f0/1
 ip add 192.172.100.4 255.255.255.128
-no shut
-ipv6 enable
-ipv6 add 2001:192:100::4/50
 ip ospf 1 area 0
+no shut
+ipv6 add 2001:192:100::4/50
+ipv6 enable
 ipv6 ospf 1 area 0
 mpls ip
 

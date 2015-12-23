@@ -34,6 +34,7 @@ address-family ipv6 unicast
 
 neighbor 2001:420:3::1 remote-as 34419
 neighbor 2001:420:3::1 activate
+
 neighbor 2001:420:4::2 remote-as 9.345
 neighbor 2001:420:4::2 activate
 

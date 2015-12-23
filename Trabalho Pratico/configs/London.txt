@@ -43,13 +43,13 @@ ipv6 add 2001:420:3::1/64
 ! Communities
 ip bgp-community new-format
 
-route-map London-out permit 10    ! 10 is the order of processing
+route-map London-out permit 10
 match route-type local
-set community 0:1                   ! Community 1
+set community 0:1
 
-route-map London-out permit 20    ! 20 is the order of processing.
+route-map London-out permit 20
 match route-type external
-set community 0:2                   ! Community 2
+set community 0:2
 
 ! BGP CONFIGS
 router bgp 34419
