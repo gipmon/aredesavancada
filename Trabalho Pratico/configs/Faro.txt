@@ -42,8 +42,6 @@ set local-preference 111
 router bgp 9.345
 bgp router-id 10.10.10.4
 
-redistribute static
-
 address-family ipv4 unicast
 
 neighbor 10.1.0.1 remote-as 9.345
@@ -67,7 +65,6 @@ neighbor 10.1.0.2 send-community both
 
 address-family ipv4 vrf vpn1
 redistribute connected
-redistribute ospf 2
 
 address-family ipv6 unicast
 
@@ -83,8 +80,10 @@ neighbor 2001:192:100::3 activate
 
 ! IP ROUTE
 ip route 10.1.200.0 255.255.255.252 FastEthernet0/0
+ip route 80.172.100.192 255.255.255.192 FastEthernet0/0
+
+ip route vrf vpn1 80.172.100.192 255.255.255.192 10.1.200.2
 ip route vrf vpn1 0.0.0.0 0.0.0.0 192.172.100.3 global
-ip route 80.172.100.192 255.255.255.192 f0/0
 
 exit
 

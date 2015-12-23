@@ -1,23 +1,23 @@
-Dec 21 15:02:54.146 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 21 15:02:54.146 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56403.
-Dec 21 15:02:54.168 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 21 15:02:54.171 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 21 15:02:54.179 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 21 15:02:54.179 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 21 15:02:54.182 HYPERVISOR: exec_cmd: ethsw create Ethernet Core 
-Dec 21 15:02:54.885 HYPERVISOR: exec_cmd: nio create_udp udp-82296b45-8acc-45b0-b5ac-88619691a451 10013 127.0.0.1 10012 
-Dec 21 15:02:54.913 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-82296b45-8acc-45b0-b5ac-88619691a451 
-Dec 21 15:02:54.949 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-82296b45-8acc-45b0-b5ac-88619691a451 1 
-Dec 21 15:02:54.974 HYPERVISOR: exec_cmd: nio create_udp udp-818c57f8-7ed2-49d8-89e1-5ad0880134f0 10011 127.0.0.1 10010 
-Dec 21 15:02:54.977 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-818c57f8-7ed2-49d8-89e1-5ad0880134f0 
-Dec 21 15:02:54.997 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-818c57f8-7ed2-49d8-89e1-5ad0880134f0 1 
-Dec 21 15:02:55.009 HYPERVISOR: exec_cmd: nio create_udp udp-66dd2eda-e7a0-4020-95a8-d09713bd1f0e 10009 127.0.0.1 10008 
-Dec 21 15:02:55.010 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-66dd2eda-e7a0-4020-95a8-d09713bd1f0e 
-Dec 21 15:02:55.021 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-66dd2eda-e7a0-4020-95a8-d09713bd1f0e 1 
-Dec 21 15:02:55.646 HYPERVISOR: exec_cmd: nio create_udp udp-4d02908e-5eec-419c-8b16-f388c3ba414f 10035 127.0.0.1 10033 
-Dec 21 15:02:55.671 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-4d02908e-5eec-419c-8b16-f388c3ba414f 
-Dec 21 15:02:55.738 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-4d02908e-5eec-419c-8b16-f388c3ba414f 1 
-Dec 21 18:03:48.841 HYPERVISOR: exec_cmd: ethsw delete Ethernet Core 
-Dec 21 18:03:48.928 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 21 18:03:49.148 HYPERVISOR: Stopped.
-Dec 21 18:03:49.149 GENERAL: reset done.
+Dec 22 17:44:46.028 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 22 17:44:46.029 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64504.
+Dec 22 17:44:46.147 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 22 17:44:46.148 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 22 17:44:46.148 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 22 17:44:46.148 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 22 17:44:46.149 HYPERVISOR: exec_cmd: ethsw create Ethernet Core 
+Dec 22 17:44:47.963 HYPERVISOR: exec_cmd: nio create_udp udp-7382dc2d-2830-4d16-a77e-d28ac58187c5 10027 127.0.0.1 10026 
+Dec 22 17:44:47.982 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-7382dc2d-2830-4d16-a77e-d28ac58187c5 
+Dec 22 17:44:48.057 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-7382dc2d-2830-4d16-a77e-d28ac58187c5 1 
+Dec 22 17:44:48.077 HYPERVISOR: exec_cmd: nio create_udp udp-014461ac-9c5d-4b60-af00-673faac0f2ea 10025 127.0.0.1 10024 
+Dec 22 17:44:48.107 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-014461ac-9c5d-4b60-af00-673faac0f2ea 
+Dec 22 17:44:48.133 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-014461ac-9c5d-4b60-af00-673faac0f2ea 1 
+Dec 22 17:44:48.149 HYPERVISOR: exec_cmd: nio create_udp udp-9cd30ff7-1eb4-4c24-8656-10871a8f246a 10023 127.0.0.1 10022 
+Dec 22 17:44:48.202 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-9cd30ff7-1eb4-4c24-8656-10871a8f246a 
+Dec 22 17:44:48.250 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-9cd30ff7-1eb4-4c24-8656-10871a8f246a 1 
+Dec 22 17:44:48.276 HYPERVISOR: exec_cmd: nio create_udp udp-9cb2416b-cdaa-4360-b27a-fe81dc992259 10033 127.0.0.1 10032 
+Dec 22 17:44:48.319 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-9cb2416b-cdaa-4360-b27a-fe81dc992259 
+Dec 22 17:44:48.359 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-9cb2416b-cdaa-4360-b27a-fe81dc992259 1 
+Dec 23 13:12:25.757 HYPERVISOR: exec_cmd: ethsw delete Ethernet Core 
+Dec 23 13:12:25.834 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 23 13:12:25.940 HYPERVISOR: Stopped.
+Dec 23 13:12:25.940 GENERAL: reset done.
