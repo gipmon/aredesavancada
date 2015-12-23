@@ -1,45 +1,55 @@
-Dec 18 19:42:02.718 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 18 19:42:02.718 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52164.
-Dec 18 19:42:02.895 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 18 19:42:02.916 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 18 19:42:02.951 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Trabalho Pratico/project/project-files/dynamips 
-Dec 18 19:42:02.951 GENERAL: working_dir=/Users/RodrigoCunha/Desktop/StudyWorkTeam/4ano/ARA/ara-git/Trabalho Pratico/project/project-files/dynamips
-Dec 18 19:42:02.968 HYPERVISOR: exec_cmd: vm create Faro 8 c7200 
-Dec 18 19:42:02.968 VM: VM Faro created.
-Dec 18 19:42:03.008 HYPERVISOR: exec_cmd: vm set_con_tcp_port Faro 2008 
-Dec 18 19:42:03.051 HYPERVISOR: exec_cmd: c7200 get_mac_addr Faro 
-Dec 18 19:42:03.066 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:03.069 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 0 0 C7200-IO-FE 
-Dec 18 19:42:03.072 HYPERVISOR: exec_cmd: c7200 set_mac_addr Faro ca08.348e.0000 
-Dec 18 19:42:03.075 HYPERVISOR: exec_cmd: vm set_disk0 Faro 0 
-Dec 18 19:42:03.079 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:03.085 HYPERVISOR: exec_cmd: vm slot_remove_binding Faro 0 0 
-Dec 18 19:42:03.092 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:03.099 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 0 0 C7200-IO-2FE 
-Dec 18 19:42:03.119 HYPERVISOR: exec_cmd: vm set_nvram Faro 512 
-Dec 18 19:42:03.125 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:03.128 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 2 0 PA-2FE-TX 
-Dec 18 19:42:03.133 HYPERVISOR: exec_cmd: vm set_ram Faro 512 
-Dec 18 19:42:03.135 HYPERVISOR: exec_cmd: vm set_ios Faro /Users/RodrigoCunha/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 18 19:42:03.136 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:03.139 HYPERVISOR: exec_cmd: vm set_idle_pc Faro 0x60608040 
-Dec 18 19:42:03.141 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:03.142 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 1 0 PA-2FE-TX 
-Dec 18 19:42:03.172 HYPERVISOR: exec_cmd: vm set_config Faro configs/i8_startup-config.cfg 
-Dec 18 19:42:03.173 HYPERVISOR: exec_cmd: vm set_ghost_status Faro 2 
-Dec 18 19:42:03.175 HYPERVISOR: exec_cmd: vm set_ghost_file Faro c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 18 19:42:03.900 HYPERVISOR: exec_cmd: nio create_udp udp-63b62aa1-fbc6-4634-bbc8-cc3c95b96ed0 10006 127.0.0.1 10007 
-Dec 18 19:42:03.927 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Faro 0 0 udp-63b62aa1-fbc6-4634-bbc8-cc3c95b96ed0 
-Dec 18 19:42:03.929 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:42:04.018 HYPERVISOR: exec_cmd: nio create_udp udp-1cd760f5-ea05-49c3-8708-de57881a964b 10018 127.0.0.1 10019 
-Dec 18 19:42:04.020 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Faro 0 1 udp-1cd760f5-ea05-49c3-8708-de57881a964b 
-Dec 18 19:42:04.021 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:47:33.469 HYPERVISOR: exec_cmd: vm extract_config Faro 
-Dec 18 19:48:17.014 HYPERVISOR: exec_cmd: vm extract_config Faro 
-Dec 18 19:48:18.930 HYPERVISOR: exec_cmd: vm get_status Faro 
-Dec 18 19:48:18.934 HYPERVISOR: exec_cmd: vm extract_config Faro 
-Dec 18 19:48:18.941 HYPERVISOR: exec_cmd: vm delete Faro 
-Dec 18 19:48:18.942 VM: VM Faro destroyed.
-Dec 18 19:48:18.946 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 18 19:48:19.176 HYPERVISOR: Stopped.
-Dec 18 19:48:19.176 GENERAL: reset done.
+Dec 22 17:44:45.543 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 22 17:44:45.544 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64497.
+Dec 22 17:44:45.742 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 22 17:44:45.780 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 22 17:44:45.794 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 22 17:44:45.794 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 22 17:44:45.826 HYPERVISOR: exec_cmd: vm create Faro 8 c7200 
+Dec 22 17:44:45.827 VM: VM Faro created.
+Dec 22 17:44:45.919 HYPERVISOR: exec_cmd: vm set_con_tcp_port Faro 2008 
+Dec 22 17:44:45.921 HYPERVISOR: exec_cmd: c7200 get_mac_addr Faro 
+Dec 22 17:44:45.922 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:45.924 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 0 0 C7200-IO-FE 
+Dec 22 17:44:45.925 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:45.926 HYPERVISOR: exec_cmd: vm set_idle_pc Faro 0x60608040 
+Dec 22 17:44:45.931 HYPERVISOR: exec_cmd: c7200 set_mac_addr Faro ca08.348e.0000 
+Dec 22 17:44:45.934 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:45.936 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 1 0 PA-2FE-TX 
+Dec 22 17:44:45.939 HYPERVISOR: exec_cmd: vm set_disk0 Faro 0 
+Dec 22 17:44:45.942 HYPERVISOR: exec_cmd: vm set_ram Faro 512 
+Dec 22 17:44:45.945 HYPERVISOR: exec_cmd: vm set_ios Faro /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 22 17:44:45.947 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:45.949 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 2 0 PA-2FE-TX 
+Dec 22 17:44:45.950 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:45.954 HYPERVISOR: exec_cmd: vm slot_remove_binding Faro 0 0 
+Dec 22 17:44:45.957 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:45.958 HYPERVISOR: exec_cmd: vm slot_add_binding Faro 0 0 C7200-IO-2FE 
+Dec 22 17:44:45.960 HYPERVISOR: exec_cmd: vm set_nvram Faro 512 
+Dec 22 17:44:45.963 HYPERVISOR: exec_cmd: vm set_config Faro configs/i8_startup-config.cfg 
+Dec 22 17:44:45.985 HYPERVISOR: exec_cmd: vm set_ghost_status Faro 2 
+Dec 22 17:44:46.011 HYPERVISOR: exec_cmd: vm set_ghost_file Faro c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 22 17:44:48.090 HYPERVISOR: exec_cmd: nio create_udp udp-d25e88d7-a702-4ed6-998b-05394d165638 10032 127.0.0.1 10033 
+Dec 22 17:44:48.107 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Faro 0 1 udp-d25e88d7-a702-4ed6-998b-05394d165638 
+Dec 22 17:44:48.109 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:44:48.132 HYPERVISOR: exec_cmd: nio create_udp udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 10030 127.0.0.1 10031 
+Dec 22 17:44:48.134 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Faro 0 0 udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 
+Dec 22 17:44:48.149 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:45:58.546 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 22 17:45:58.547 HYPERVISOR: exec_cmd: vm start Faro 
+Dec 22 19:40:47.834 HYPERVISOR: exec_cmd: nio bind_filter udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 2 capture 
+Dec 22 19:40:47.834 HYPERVISOR: exec_cmd: nio setup_filter udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Faro_FastEthernet0-0_to_EmpA2_FastEthernet0-0.pcap 
+Dec 22 19:49:46.707 HYPERVISOR: exec_cmd: nio unbind_filter udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 2 
+Dec 22 19:49:57.477 HYPERVISOR: exec_cmd: nio bind_filter udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 2 capture 
+Dec 22 19:49:57.477 HYPERVISOR: exec_cmd: nio setup_filter udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Faro_FastEthernet0-0_to_EmpA2_FastEthernet0-0.pcap 
+Dec 22 19:51:00.917 HYPERVISOR: exec_cmd: nio unbind_filter udp-cd397106-ac9e-46a3-83c6-f25955db9ba5 2 
+Dec 23 13:12:11.296 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 23 13:12:11.299 HYPERVISOR: exec_cmd: vm stop Faro 
+Dec 23 13:12:22.201 VM: VM Faro shutdown.
+Dec 23 13:12:25.756 HYPERVISOR: exec_cmd: vm extract_config Faro 
+Dec 23 13:12:26.023 HYPERVISOR: exec_cmd: vm get_status Faro 
+Dec 23 13:12:26.025 HYPERVISOR: exec_cmd: vm extract_config Faro 
+Dec 23 13:12:26.032 HYPERVISOR: exec_cmd: vm delete Faro 
+Dec 23 13:12:26.032 VM: VM Faro destroyed.
+Dec 23 13:12:26.040 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 23 13:12:26.486 HYPERVISOR: Stopped.
+Dec 23 13:12:26.487 GENERAL: reset done.

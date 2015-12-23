@@ -1,5 +1,7 @@
 conf t
 
+ip cef
+
 ipv6 unicast-routing !ipv6 routing enabled
 
 int f0/0
@@ -15,20 +17,40 @@ ipv6 enable
 ipv6 add 2001:192:100::1/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
+mpls ip
 
 int lo0
 ip add 10.1.0.1 255.255.255.255
 ip ospf 1 area 0
 no shut
 
+! NON - TRANSIT
+ip as-path access-list 1 permit ^$
+route-map non-transit
+match as-path 1
+
+! Communities
+ip bgp-community new-format
+
+! usado para enviar as redes netL1 e netL2 para Aveiro para que este meta a
+! preferencia correta
+ip community-list 1 permit 0:1
+
+route-map rotas-l1-l2 permit 10
+match community 1
+set community 1:1
+
 ! BGP CONFIGS
 router bgp 9.345
 address-family ipv4 unicast
 neighbor 4.20.20.1 remote-as 34419 !eBGP Neighboring with London
+neighbor 4.20.20.1 route-map non-transit out
 
 neighbor 10.1.0.2 remote-as 9.345
 neighbor 10.1.0.2 next-hop-self
 neighbor 10.1.0.2 update-source Loopback 0
+neighbor 10.1.0.2 route-map rotas-l1-l2 out
+neighbor 10.1.0.2 send-community
 
 neighbor 10.1.0.3 remote-as 9.345
 neighbor 10.1.0.3 next-hop-self
@@ -40,13 +62,18 @@ neighbor 10.1.0.4 update-source Loopback 0
 
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
 
+!! IPv6
+
 address-family ipv6 unicast
 
 neighbor 2001:420:1::1 remote-as 34419
 neighbor 2001:420:1::1 activate
+neighbor 2001:420:1::1 route-map non-transit out
 
 neighbor 2001:192:100::2 remote-as 9.345
 neighbor 2001:192:100::2 activate
+neighbor 2001:192:100::2 route-map rotas-l1-l2 out
+neighbor 2001:192:100::2 send-community
 
 neighbor 2001:192:100::3 remote-as 9.345
 neighbor 2001:192:100::3 activate

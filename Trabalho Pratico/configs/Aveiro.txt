@@ -1,14 +1,16 @@
 conf t
 
+ip cef
+mpls ip
 ipv6 unicast-routing !ipv6 routing enabled
 
 int f0/0
+ip vrf forwarding vpn1
 ip add 10.1.80.1 255.255.255.252 ! dividido porque em baixo tambem temos outra empresa, a EmpA
 no shut
 ipv6 enable
 ipv6 add 2001:192:100:8000::1/50
 ip ospf 2 area 0
-ipv6 ospf 2 area 0
 
 int f0/1
 ip add 10.1.100.1 255.255.255.252
@@ -23,27 +25,51 @@ ipv6 enable
 ipv6 add 2001:192:100::2/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
+mpls ip
 
 int lo0
 ip add 10.1.0.2 255.255.255.255
 ip ospf 1 area 0
 no shut
 
-! rota estatica
-ip route 80.172.100.128 255.255.255.192 10.1.80.2
+! VRF MPLS
+ip vrf vpn1
+rd 9345:1
+route-target export 9345:1
+route-target import 9345:1
 
+! Local Preference based on Community value
+ip bgp-community new-format
+
+ip community-list 1 permit 1:3
+ip community-list 2 permit 1:1
+
+route-map routes-in permit 10
+match community 1
+set local-preference 111
+
+route-map routes-in permit 20
+! accept sintra :)
+
+route-map routes-in-l1-l2 permit 20
+match community 2
+set local-preference 111
 
 ! BGP CONFIGS
 router bgp 9.345
+
+bgp router-id 10.10.10.2
 address-family ipv4 unicast
 
 neighbor 10.1.0.1 remote-as 9.345
 neighbor 10.1.0.1 next-hop-self
 neighbor 10.1.0.1 update-source Loopback 0
+neighbor 10.1.0.1 route-map routes-in-l1-l2 in
 
 neighbor 10.1.0.3 remote-as 9.345
 neighbor 10.1.0.3 next-hop-self
 neighbor 10.1.0.3 update-source Loopback 0
+neighbor 10.1.0.3 route-map routes-in in
 
 neighbor 10.1.0.4 remote-as 9.345
 neighbor 10.1.0.4 next-hop-self
@@ -52,6 +78,14 @@ neighbor 10.1.0.4 update-source Loopback 0
 neighbor 10.1.100.2 remote-as 65000 !eBGP Neighboring with EmpB
 
 network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
+
+address-family vpnv4
+neighbor 10.1.0.4 activate
+neighbor 10.1.0.4 send-community both
+
+address-family ipv4 vrf vpn1
+redistribute connected
+redistribute static
 
 address-family ipv6 unicast
 
@@ -69,10 +103,14 @@ neighbor 2001:192:100:4000::2 activate
 
 network 2001:192:100::/50
 
-exit
+! IP ROUTE
+ip route 10.1.80.0 255.255.255.252 FastEthernet0/0
+ip route 80.172.100.128 255.255.255.192 FastEthernet0/0
 
-redistribute static
-redistribute ospf 2
+ip route vrf vpn1 80.172.100.128 255.255.255.192 10.1.80.2
+ip route vrf vpn1 0.0.0.0 0.0.0.0 192.172.100.3 global
+
+exit
 
 end
 write
