@@ -1,46 +1,46 @@
-Dec 23 13:18:25.712 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 23 13:18:25.712 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58349.
-Dec 23 13:18:25.758 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 23 13:18:25.761 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 23 13:18:25.772 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 23 13:18:25.772 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 23 13:18:25.773 HYPERVISOR: exec_cmd: vm create InternetCore 10 c7200 
-Dec 23 13:18:25.774 VM: VM InternetCore created.
-Dec 23 13:18:25.776 HYPERVISOR: exec_cmd: vm set_con_tcp_port InternetCore 2012 
-Dec 23 13:18:25.778 HYPERVISOR: exec_cmd: c7200 get_mac_addr InternetCore 
-Dec 23 13:18:25.779 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:18:25.782 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 0 0 C7200-IO-FE 
-Dec 23 13:18:25.785 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:18:25.795 HYPERVISOR: exec_cmd: vm slot_remove_binding InternetCore 0 0 
-Dec 23 13:18:25.796 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:18:25.797 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 0 0 C7200-IO-2FE 
-Dec 23 13:18:25.799 HYPERVISOR: exec_cmd: vm set_ios InternetCore /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 23 13:18:25.800 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:18:25.801 HYPERVISOR: exec_cmd: vm set_idle_pc InternetCore 0x60608040 
-Dec 23 13:18:25.827 HYPERVISOR: exec_cmd: c7200 set_mac_addr InternetCore ca0a.34be.0000 
-Dec 23 13:18:25.830 HYPERVISOR: exec_cmd: vm set_nvram InternetCore 512 
-Dec 23 13:18:25.831 HYPERVISOR: exec_cmd: vm set_ram InternetCore 512 
-Dec 23 13:18:25.860 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:18:25.861 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 2 0 PA-2FE-TX 
-Dec 23 13:18:25.862 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:18:25.882 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 1 0 PA-2FE-TX 
-Dec 23 13:18:25.882 HYPERVISOR: exec_cmd: vm set_disk0 InternetCore 0 
-Dec 23 13:18:25.883 HYPERVISOR: exec_cmd: vm set_config InternetCore configs/i10_startup-config.cfg 
-Dec 23 13:18:25.883 HYPERVISOR: exec_cmd: vm set_ghost_status InternetCore 2 
-Dec 23 13:18:25.884 HYPERVISOR: exec_cmd: vm set_ghost_file InternetCore c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 23 13:18:27.281 HYPERVISOR: exec_cmd: nio create_udp udp-4386ad82-430a-4403-8646-76cca39b3aac 10019 127.0.0.1 10018 
-Dec 23 13:18:27.283 HYPERVISOR: exec_cmd: vm slot_add_nio_binding InternetCore 0 0 udp-4386ad82-430a-4403-8646-76cca39b3aac 
-Dec 23 13:18:27.284 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:32:02.633 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 13:32:02.634 HYPERVISOR: exec_cmd: vm start InternetCore 
-Dec 23 19:05:42.829 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 19:05:42.833 HYPERVISOR: exec_cmd: vm stop InternetCore 
-Dec 23 19:05:51.965 VM: VM InternetCore shutdown.
-Dec 23 19:06:00.544 HYPERVISOR: exec_cmd: vm extract_config InternetCore 
-Dec 23 19:06:01.779 HYPERVISOR: exec_cmd: vm get_status InternetCore 
-Dec 23 19:06:01.789 HYPERVISOR: exec_cmd: vm extract_config InternetCore 
-Dec 23 19:06:01.794 HYPERVISOR: exec_cmd: vm delete InternetCore 
-Dec 23 19:06:01.794 VM: VM InternetCore destroyed.
-Dec 23 19:06:01.816 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 23 19:06:01.898 HYPERVISOR: Stopped.
-Dec 23 19:06:01.898 GENERAL: reset done.
+Dec 24 09:31:49.762 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 24 09:31:49.763 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64528.
+Dec 24 09:31:49.812 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 24 09:31:49.814 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 24 09:31:49.814 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 24 09:31:49.814 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 24 09:31:49.817 HYPERVISOR: exec_cmd: vm create InternetCore 10 c7200 
+Dec 24 09:31:49.818 VM: VM InternetCore created.
+Dec 24 09:31:49.837 HYPERVISOR: exec_cmd: vm set_con_tcp_port InternetCore 2012 
+Dec 24 09:31:49.838 HYPERVISOR: exec_cmd: c7200 get_mac_addr InternetCore 
+Dec 24 09:31:49.854 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:31:49.855 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 0 0 C7200-IO-FE 
+Dec 24 09:31:49.855 HYPERVISOR: exec_cmd: vm set_ram InternetCore 512 
+Dec 24 09:31:49.856 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:31:49.856 HYPERVISOR: exec_cmd: vm set_idle_pc InternetCore 0x60608040 
+Dec 24 09:31:49.856 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:31:49.857 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 2 0 PA-2FE-TX 
+Dec 24 09:31:49.857 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:31:49.857 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 1 0 PA-2FE-TX 
+Dec 24 09:31:49.858 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:31:49.858 HYPERVISOR: exec_cmd: vm slot_remove_binding InternetCore 0 0 
+Dec 24 09:31:49.858 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:31:49.858 HYPERVISOR: exec_cmd: vm slot_add_binding InternetCore 0 0 C7200-IO-2FE 
+Dec 24 09:31:49.859 HYPERVISOR: exec_cmd: c7200 set_mac_addr InternetCore ca0a.34be.0000 
+Dec 24 09:31:49.859 HYPERVISOR: exec_cmd: vm set_ios InternetCore /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 24 09:31:49.859 HYPERVISOR: exec_cmd: vm set_nvram InternetCore 512 
+Dec 24 09:31:49.860 HYPERVISOR: exec_cmd: vm set_disk0 InternetCore 0 
+Dec 24 09:31:49.860 HYPERVISOR: exec_cmd: vm set_config InternetCore configs/i10_startup-config.cfg 
+Dec 24 09:31:49.861 HYPERVISOR: exec_cmd: vm set_ghost_status InternetCore 2 
+Dec 24 09:31:49.861 HYPERVISOR: exec_cmd: vm set_ghost_file InternetCore c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 24 09:31:51.882 HYPERVISOR: exec_cmd: nio create_udp udp-0d01f110-c727-4c7d-8ba5-2c635d3d3b32 10021 127.0.0.1 10020 
+Dec 24 09:31:51.907 HYPERVISOR: exec_cmd: vm slot_add_nio_binding InternetCore 0 0 udp-0d01f110-c727-4c7d-8ba5-2c635d3d3b32 
+Dec 24 09:31:51.908 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:35:12.952 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 09:35:12.952 HYPERVISOR: exec_cmd: vm start InternetCore 
+Dec 24 13:20:41.016 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 13:20:41.031 HYPERVISOR: exec_cmd: vm stop InternetCore 
+Dec 24 13:20:49.041 VM: VM InternetCore shutdown.
+Dec 24 13:20:58.027 HYPERVISOR: exec_cmd: vm extract_config InternetCore 
+Dec 24 13:20:58.215 HYPERVISOR: exec_cmd: vm get_status InternetCore 
+Dec 24 13:20:58.220 HYPERVISOR: exec_cmd: vm extract_config InternetCore 
+Dec 24 13:20:58.225 HYPERVISOR: exec_cmd: vm delete InternetCore 
+Dec 24 13:20:58.225 VM: VM InternetCore destroyed.
+Dec 24 13:20:58.237 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 24 13:20:58.591 HYPERVISOR: Stopped.
+Dec 24 13:20:58.591 GENERAL: reset done.
