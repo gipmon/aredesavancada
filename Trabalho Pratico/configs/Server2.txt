@@ -1,0 +1,9 @@
+conf t
+int f0/0
+no shut
+ip add 213.30.60.1 255.255.255.0
+
+ip route 0.0.0.0 0.0.0.0 213.30.60.2
+
+end
+write

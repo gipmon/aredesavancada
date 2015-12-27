@@ -1,23 +1,42 @@
-Dec 26 21:18:36.894 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 26 21:18:36.895 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 61555.
-Dec 26 21:18:36.945 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 26 21:18:36.946 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 26 21:18:36.947 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 26 21:18:36.947 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 26 21:18:36.950 HYPERVISOR: exec_cmd: ethsw create Ethernet Core 
-Dec 26 21:18:38.463 HYPERVISOR: exec_cmd: nio create_udp udp-bff9c90c-ced7-4ee2-bfd5-c32045a94b83 10034 127.0.0.1 10033 
-Dec 26 21:18:38.512 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-bff9c90c-ced7-4ee2-bfd5-c32045a94b83 
-Dec 26 21:18:38.575 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-bff9c90c-ced7-4ee2-bfd5-c32045a94b83 1 
-Dec 26 21:18:38.617 HYPERVISOR: exec_cmd: nio create_udp udp-4ba60b97-1ad7-48f2-b139-460acac90abd 10030 127.0.0.1 10029 
-Dec 26 21:18:38.618 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-4ba60b97-1ad7-48f2-b139-460acac90abd 
-Dec 26 21:18:38.647 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-4ba60b97-1ad7-48f2-b139-460acac90abd 1 
-Dec 26 21:18:38.713 HYPERVISOR: exec_cmd: nio create_udp udp-277c418f-c2d6-4a70-9082-82b822ac13a7 10032 127.0.0.1 10028 
-Dec 26 21:18:38.782 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-277c418f-c2d6-4a70-9082-82b822ac13a7 
-Dec 26 21:18:38.832 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-277c418f-c2d6-4a70-9082-82b822ac13a7 1 
-Dec 26 21:18:38.870 HYPERVISOR: exec_cmd: nio create_udp udp-77345720-03e2-418f-8650-e4816aabb2d6 10027 127.0.0.1 10026 
-Dec 26 21:18:38.872 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-77345720-03e2-418f-8650-e4816aabb2d6 
-Dec 26 21:18:38.910 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-77345720-03e2-418f-8650-e4816aabb2d6 1 
-Dec 26 23:36:44.362 HYPERVISOR: exec_cmd: ethsw delete Ethernet Core 
-Dec 26 23:36:44.442 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 26 23:36:44.575 HYPERVISOR: Stopped.
-Dec 26 23:36:44.576 GENERAL: reset done.
+Dec 27 09:36:15.264 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 27 09:36:15.264 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52356.
+Dec 27 09:36:15.302 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 27 09:36:15.303 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 27 09:36:15.304 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 27 09:36:15.304 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 27 09:36:15.305 HYPERVISOR: exec_cmd: ethsw create Ethernet Core 
+Dec 27 09:36:16.552 HYPERVISOR: exec_cmd: nio create_udp udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 10018 127.0.0.1 10017 
+Dec 27 09:36:16.571 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 
+Dec 27 09:36:16.600 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 1 
+Dec 27 09:36:16.616 HYPERVISOR: exec_cmd: nio create_udp udp-1e80b9f8-5b59-43a1-8e64-3e6e3a7eca0d 10016 127.0.0.1 10014 
+Dec 27 09:36:16.617 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-1e80b9f8-5b59-43a1-8e64-3e6e3a7eca0d 
+Dec 27 09:36:16.638 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-1e80b9f8-5b59-43a1-8e64-3e6e3a7eca0d 1 
+Dec 27 09:36:17.114 HYPERVISOR: exec_cmd: nio create_udp udp-7dc7cbda-a9f9-480c-b845-0baee9fd4654 10027 127.0.0.1 10026 
+Dec 27 09:36:17.183 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-7dc7cbda-a9f9-480c-b845-0baee9fd4654 
+Dec 27 09:36:17.217 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-7dc7cbda-a9f9-480c-b845-0baee9fd4654 1 
+Dec 27 09:36:17.308 HYPERVISOR: exec_cmd: nio create_udp udp-87e12b9e-18d2-472a-a1bd-68a8e36b8d07 10019 127.0.0.1 10015 
+Dec 27 09:36:17.385 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-87e12b9e-18d2-472a-a1bd-68a8e36b8d07 
+Dec 27 09:36:17.493 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-87e12b9e-18d2-472a-a1bd-68a8e36b8d07 1 
+Dec 27 10:33:58.273 HYPERVISOR: exec_cmd: nio bind_filter udp-7dc7cbda-a9f9-480c-b845-0baee9fd4654 2 capture 
+Dec 27 10:33:58.275 HYPERVISOR: exec_cmd: nio setup_filter udp-7dc7cbda-a9f9-480c-b845-0baee9fd4654 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Ethernet-Core_4_to_Faro_FastEthernet0-1.pcap 
+Dec 27 11:49:56.188 HYPERVISOR: exec_cmd: nio unbind_filter udp-7dc7cbda-a9f9-480c-b845-0baee9fd4654 2 
+Dec 27 13:48:23.473 HYPERVISOR: exec_cmd: nio bind_filter udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 2 capture 
+Dec 27 13:48:23.475 HYPERVISOR: exec_cmd: nio setup_filter udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Ethernet-Core_3_to_Aveiro_FastEthernet1-0.pcap 
+Dec 27 13:56:14.790 HYPERVISOR: exec_cmd: nio unbind_filter udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 2 
+Dec 27 13:56:18.930 HYPERVISOR: exec_cmd: nio bind_filter udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 2 capture 
+Dec 27 13:56:18.936 HYPERVISOR: exec_cmd: nio setup_filter udp-9c7bfd55-58d4-42de-bae4-94f091b5b442 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Ethernet-Core_3_to_Aveiro_FastEthernet1-0.pcap 
+Dec 27 14:21:44.786 HYPERVISOR: exec_cmd: nio create_udp udp-c4773717-ac61-4201-9029-684862034554 10039 127.0.0.1 10038 
+Dec 27 14:21:44.793 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-c4773717-ac61-4201-9029-684862034554 
+Dec 27 14:21:44.802 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-c4773717-ac61-4201-9029-684862034554 1 
+Dec 27 20:06:28.033 HYPERVISOR: exec_cmd: nio bind_filter udp-c4773717-ac61-4201-9029-684862034554 2 capture 
+Dec 27 20:06:28.034 HYPERVISOR: exec_cmd: nio setup_filter udp-c4773717-ac61-4201-9029-684862034554 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Ethernet-Core_5_to_DNS-Server_Ethernet0.pcap 
+Dec 27 20:15:19.799 HYPERVISOR: exec_cmd: nio unbind_filter udp-c4773717-ac61-4201-9029-684862034554 2 
+Dec 27 20:15:23.324 HYPERVISOR: exec_cmd: nio bind_filter udp-c4773717-ac61-4201-9029-684862034554 2 capture 
+Dec 27 20:15:23.326 HYPERVISOR: exec_cmd: nio setup_filter udp-c4773717-ac61-4201-9029-684862034554 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Ethernet-Core_5_to_DNS-Server_Ethernet0.pcap 
+Dec 27 21:06:29.780 HYPERVISOR: exec_cmd: nio unbind_filter udp-c4773717-ac61-4201-9029-684862034554 2 
+Dec 27 21:06:31.896 HYPERVISOR: exec_cmd: nio bind_filter udp-c4773717-ac61-4201-9029-684862034554 2 capture 
+Dec 27 21:06:31.897 HYPERVISOR: exec_cmd: nio setup_filter udp-c4773717-ac61-4201-9029-684862034554 2 en10mb /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/captures/Ethernet-Core_5_to_DNS-Server_Ethernet0.pcap 
+Dec 27 21:16:07.251 HYPERVISOR: exec_cmd: ethsw delete Ethernet Core 
+Dec 27 21:16:07.358 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 27 21:16:07.539 HYPERVISOR: Stopped.
+Dec 27 21:16:07.539 GENERAL: reset done.

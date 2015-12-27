@@ -92,5 +92,7 @@ neighbor 2001:420:2::2 send-community
 network 2001:82:100::/48
 network 2001:82:200::/48
 
+ip route 0.0.0.0 0.0.0.0 213.30.5.1
+
 end
 write

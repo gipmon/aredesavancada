@@ -8,6 +8,14 @@ ip add 213.30.5.1 255.255.255.252
 ipv6 enable
 ipv6 add 2001:5c0:1000::1/48
 
+int f0/1
+no shut
+ip add 213.30.50.2 255.255.255.0
+
+int f1/0
+no shut
+ip add 213.30.60.2 255.255.255.0
+
 ! rota estatica para dentro
 ip route 192.172.100.0 255.255.255.0 213.30.5.2 ! ethernet core
 ip route 80.172.100.128 255.255.255.128 213.30.5.2 ! net A

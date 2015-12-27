@@ -1,0 +1,34 @@
+Dec 27 14:24:25.535 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 27 14:24:25.535 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58697.
+Dec 27 14:24:25.540 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 27 14:24:25.541 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 27 14:24:25.541 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 27 14:24:25.541 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 27 14:24:25.542 HYPERVISOR: exec_cmd: vm create R2 12 c3725 
+Dec 27 14:24:25.542 VM: VM R2 created.
+Dec 27 14:24:25.543 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 2020 
+Dec 27 14:24:25.543 HYPERVISOR: exec_cmd: c3725 get_mac_addr R2 
+Dec 27 14:24:25.543 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Dec 27 14:24:25.544 HYPERVISOR: exec_cmd: vm set_ios R2 /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 27 14:24:25.545 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Dec 27 14:24:25.546 HYPERVISOR: exec_cmd: vm set_config R2 configs/i12_startup-config.cfg 
+Dec 27 14:24:25.547 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Dec 27 14:24:25.547 HYPERVISOR: exec_cmd: vm set_ghost_file R2 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Dec 27 14:24:52.692 HYPERVISOR: exec_cmd: vm rename R2 Server2 
+Dec 27 14:25:04.459 HYPERVISOR: exec_cmd: nio create_udp udp-e1350108-3f32-48b5-a793-0b0d4f496516 10042 127.0.0.1 10043 
+Dec 27 14:25:04.472 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Server2 0 0 udp-e1350108-3f32-48b5-a793-0b0d4f496516 
+Dec 27 14:25:04.472 HYPERVISOR: exec_cmd: vm get_status Server2 
+Dec 27 14:25:46.693 HYPERVISOR: exec_cmd: vm get_status Server2 
+Dec 27 14:25:46.693 HYPERVISOR: exec_cmd: vm start Server2 
+Dec 27 21:15:25.244 HYPERVISOR: exec_cmd: vm get_status Server2 
+Dec 27 21:15:25.248 HYPERVISOR: exec_cmd: vm stop Server2 
+Dec 27 21:15:25.327 VM: VM Server2 shutdown.
+Dec 27 21:15:40.717 HYPERVISOR: exec_cmd: vm extract_config Server2 
+Dec 27 21:16:07.259 HYPERVISOR: exec_cmd: vm extract_config Server2 
+Dec 27 21:16:07.550 HYPERVISOR: exec_cmd: vm get_status Server2 
+Dec 27 21:16:07.556 HYPERVISOR: exec_cmd: vm extract_config Server2 
+Dec 27 21:16:07.575 HYPERVISOR: exec_cmd: vm delete Server2 
+Dec 27 21:16:07.575 VM: VM Server2 destroyed.
+Dec 27 21:16:07.586 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 27 21:16:07.743 HYPERVISOR: Stopped.
+Dec 27 21:16:07.743 GENERAL: reset done.
