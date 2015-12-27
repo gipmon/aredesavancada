@@ -23,6 +23,27 @@ ipv6 enable
 ipv6 add 2001:192:100::3/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
+ip rsvp bandwidth 2048 2048
+
+interface tunnel1
+ip unnumbered Loopback0
+tunnel destination 10.1.0.2
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 1024
+tunnel mpls traffic-eng path-option 1 explicit name lisboa_aveiro
+
+ip explicit-path name lisboa_aveiro enable
+next-address 192.172.100.2
+
+interface tunnel2
+ip unnumbered Loopback0
+tunnel destination 10.1.0.4
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 1024
+tunnel mpls traffic-eng path-option 1 explicit name lisboa_faro
+
+ip explicit-path name lisboa_faro enable
+next-address 192.172.100.4
 
 int f1/0
 no shut
@@ -82,6 +103,19 @@ access-list 101 permit ip 192.172.100.130 0.0.0.127 200.1.100.1 0.0.0.255
 route-map SIPProxyNet permit 70
 match ip add 101
 set ip next-hop 4.20.20.13
+
+! SIP TRAFFIC TO THE TUNNEL
+access-list 104 permit ip 192.172.100.130 0.0.0.127 80.172.100.130 0.0.0.63
+access-list 102 permit ip 192.172.100.130 0.0.0.127 81.84.100.2 0.0.0.255
+access-list 103 permit ip 192.172.100.130 0.0.0.127 80.172.100.194 0.0.0.63
+
+route-map SIPProxyNet permit 80
+match ip add 104 102
+set interface tunnel1
+
+route-map SIPProxyNet permit 90
+match ip add 103
+set interface tunnel2
 
 ! BGP CONFIGS
 router bgp 9.345

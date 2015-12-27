@@ -3,6 +3,11 @@ conf t
 ip cef
 mpls ip
 ipv6 unicast-routing !ipv6 routing enabled
+mpls traffic-eng tunnels
+
+router ospf 1
+mpls traffic-eng area 0
+mpls traffic-eng router-id Loopback 0
 
 int f0/0
 ip vrf forwarding vpn1
@@ -12,12 +17,14 @@ ipv6 enable
 ipv6 add 2001:192:100:8000::1/50
 ip ospf 2 area 0
 ipv6 ospf 2 area 0
+ip policy route-map SIPProxyNet
 
 int f0/1
 ip add 10.1.100.1 255.255.255.252
 no shut
 ipv6 enable
 ipv6 add 2001:192:100:4000::1/50
+ip policy route-map SIPProxyNet
 
 int f1/0
 ip add 192.172.100.2 255.255.255.128
@@ -27,6 +34,17 @@ ipv6 add 2001:192:100::2/50
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
 mpls ip
+ip rsvp bandwidth 1024 1024
+
+interface tunnel1
+ip unnumbered Loopback0
+tunnel destination 10.1.0.3
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 1024
+tunnel mpls traffic-eng path-option 1 explicit name aveiro_lisboa
+
+ip explicit-path name aveiro_lisboa enable
+next-address 192.172.100.3
 
 int lo0
 ip add 10.1.0.2 255.255.255.255
@@ -57,6 +75,14 @@ match community 2
 set local-preference 111
 
 route-map routes-in-l1-l2 permit 40
+
+! SIP TRAFFIC TO THE TUNNEL
+access-list 101 permit ip 80.172.100.130 0.0.0.63 192.172.100.130 0.0.0.127
+access-list 102 permit ip 81.84.100.2 0.0.0.255 192.172.100.130 0.0.0.127
+
+route-map SIPProxyNet permit 70
+match ip add 101 102
+set interface tunnel1
 
 ! BGP CONFIGS
 router bgp 9.345
