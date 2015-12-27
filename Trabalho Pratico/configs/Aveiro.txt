@@ -11,6 +11,7 @@ no shut
 ipv6 enable
 ipv6 add 2001:192:100:8000::1/50
 ip ospf 2 area 0
+ipv6 ospf 2 area 0
 
 int f0/1
 ip add 10.1.100.1 255.255.255.252
@@ -89,7 +90,7 @@ neighbor 10.1.0.4 send-community both
 
 address-family ipv4 vrf vpn1
 redistribute connected
-redistribute static
+redistribute ospf 2 vrf vpn1
 
 address-family ipv6 unicast
 
@@ -110,10 +111,13 @@ neighbor 2001:192:100:4000::2 activate
 network 2001:192:100::/50
 
 ! IP ROUTE
-ip route 10.1.80.0 255.255.255.252 FastEthernet0/0
 ip route 80.172.100.128 255.255.255.192 FastEthernet0/0
-
 ip route vrf vpn1 0.0.0.0 0.0.0.0 192.172.100.3 global
+
+! OPSF
+router ospf 2 vrf vpn1
+network 80.172.100.128 0.0.0.63 area 0
+capability vrf-lite
 
 exit
 

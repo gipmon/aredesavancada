@@ -29,6 +29,7 @@ no shut
 ip add 192.172.100.129 255.255.255.128
 ipv6 enable
 ipv6 add 2001:192:101::129/48
+ip policy route-map SIPProxyNet
 
 int lo0
 ip add 10.1.0.3 255.255.255.255
@@ -73,6 +74,14 @@ match ip address 1
 set local-preference 111
 
 route-map default-goes-sintra permit 60
+
+! IP traffic for remote SIP proxy 2 (to network netS1) should be routed only
+! via Lisboa using the direct peering link to ISP S.
+access-list 101 permit ip 192.172.100.130 0.0.0.127 200.1.100.1 0.0.0.255
+
+route-map SIPProxyNet permit 70
+match ip add 101
+set ip next-hop 4.20.20.13
 
 ! BGP CONFIGS
 router bgp 9.345

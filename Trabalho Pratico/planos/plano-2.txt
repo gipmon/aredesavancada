@@ -5,7 +5,7 @@ Por exemplo, na tabela de Sintra, do Operador ISP S, deve aparecer as redes
 públicas do próprio operador e as redes públicas das empresas cliente tudo agregado. 3 entradas com as máscaras certas.
 
 netX1, rede pública toda
-O ISP X, é não transito. London não pode ver as redes do operador X através de Sintra.
+O ISP X, é não transito.
 Londres não deverá ver as redes de Sintra (show ip bgp) por Lisboa.
 Só devemos anunciar redes que sejam do nosso próprio sistema autónomo.
 Não transito:
