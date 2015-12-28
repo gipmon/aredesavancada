@@ -20,7 +20,7 @@ ipv6 ospf 2 area 0
 ip policy route-map SIPProxyNet
 
 int f0/1
-ip add 10.1.100.1 255.255.255.252
+ip add 10.1.150.1 255.255.255.252
 no shut
 ipv6 enable
 ipv6 add 2001:192:100:4000::1/50
@@ -139,6 +139,9 @@ network 2001:192:100::/50
 ! IP ROUTE
 ip route 80.172.100.128 255.255.255.192 FastEthernet0/0
 ip route vrf vpn1 0.0.0.0 0.0.0.0 192.172.100.3 global
+
+! IP ROUTE EMPB
+ip route 10.1.100.0 255.255.255.252 10.1.150.2
 
 ! OPSF
 router ospf 2 vrf vpn1

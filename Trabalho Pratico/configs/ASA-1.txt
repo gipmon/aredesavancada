@@ -1,0 +1,21 @@
+enable
+conf t
+
+interface GigabitEthernet0
+nameif outside
+security-level 0
+ip address  10.1.150.2 255.255.255.252
+no shutdown
+
+int GigabitEthernet1
+nameif inside
+security-level 100
+ip add  10.1.100.1 255.255.255.252
+no shut
+
+route inside 81.84.100.1 255.255.255.0 10.1.100.2
+route outside 0.0.0.0 0.0.0.0 10.1.150.1
+
+access-list OUTSIDE_IN extended permit icmp any 10.1.100.0 255.255.255.252 echo-reply
+access-list OUTSIDE_IN extended permit icmp any 81.84.100.0 255.255.255.0 echo-reply
+access-group OUTSIDE_IN in interface outside
