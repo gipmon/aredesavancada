@@ -179,5 +179,7 @@ neighbor 2001:192:100::4 send-community
 network 2001:192:101::/48
 network 2001:192:100::/50
 
+aggregate-address 2001:80:100::/48 summary-only
+
 end
 write

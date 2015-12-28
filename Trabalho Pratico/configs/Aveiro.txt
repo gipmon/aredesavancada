@@ -119,6 +119,7 @@ redistribute connected
 redistribute ospf 2 vrf vpn1
 
 address-family ipv6 unicast
+redistribute ospf 2
 
 neighbor 2001:192:100::1 remote-as 9.345
 neighbor 2001:192:100::1 activate
