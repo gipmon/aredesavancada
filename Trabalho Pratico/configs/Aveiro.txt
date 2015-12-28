@@ -61,22 +61,6 @@ route-target import 9345:1
 ! Local Preference based on Community value
 ip bgp-community new-format
 
-ip community-list 1 permit 1:3
-ip community-list 2 permit 1:1
-
-route-map routes-in permit 10
-match community 1
-set local-preference 111
-
-route-map routes-in permit 20
-! accept sintra :)
-
-route-map routes-in-l1-l2 permit 30
-match community 2
-set local-preference 111
-
-route-map routes-in-l1-l2 permit 40
-
 ! SIP TRAFFIC TO THE TUNNEL
 access-list 101 permit ip 80.172.100.130 0.0.0.0 192.172.100.130 0.0.0.0
 access-list 101 permit ip 81.84.100.2 0.0.0.0 192.172.100.130 0.0.0.0
@@ -94,21 +78,19 @@ address-family ipv4 unicast
 neighbor 10.1.0.1 remote-as 9.345
 neighbor 10.1.0.1 next-hop-self
 neighbor 10.1.0.1 update-source Loopback 0
-neighbor 10.1.0.1 route-map routes-in-l1-l2 in
 
 neighbor 10.1.0.3 remote-as 9.345
 neighbor 10.1.0.3 next-hop-self
 neighbor 10.1.0.3 update-source Loopback 0
-neighbor 10.1.0.3 route-map routes-in in
 
 neighbor 10.1.0.4 remote-as 9.345
 neighbor 10.1.0.4 next-hop-self
 neighbor 10.1.0.4 update-source Loopback 0
 
-neighbor 10.1.100.2 remote-as 65000 !eBGP Neighboring with EmpB
+neighbor 10.1.100.2 remote-as 65000
 neighbor 10.1.100.2 ebgp-multihop 2
 
-network 192.172.100.0 mask 255.255.255.128 ! do ethernet core
+network 192.172.100.0 mask 255.255.255.128
 
 redistribute static
 
@@ -125,11 +107,9 @@ redistribute ospf 2
 
 neighbor 2001:192:100::1 remote-as 9.345
 neighbor 2001:192:100::1 activate
-neighbor 2001:192:100::1 route-map routes-in-l1-l2 in
 
 neighbor 2001:192:100::3 remote-as 9.345
 neighbor 2001:192:100::3 activate
-neighbor 2001:192:100::3 route-map routes-in in
 
 neighbor 2001:192:100::4 remote-as 9.345
 neighbor 2001:192:100::4 activate
