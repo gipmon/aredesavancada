@@ -28,6 +28,7 @@ ipv6 enable
 ipv6 ospf 1 area 0
 mpls ip
 ip rsvp bandwidth 1024 1024
+mpls traffic-eng tunnels
 
 interface tunnel1
 ip unnumbered Loopback0

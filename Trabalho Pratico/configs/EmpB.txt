@@ -17,6 +17,7 @@ router bgp 65000
 address-family ipv4 unicast
 
 neighbor 10.1.150.1 remote-as 9.345 !eBGP Neighboring with Aveiro
+neighbor 10.1.150.1 ebgp-multihop 2 
 
 network 81.84.100.0 mask 255.255.255.0
 
