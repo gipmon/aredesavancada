@@ -52,6 +52,27 @@ ip add 10.1.0.2 255.255.255.255
 ip ospf 1 area 0
 no shut
 
+! rotas preferencia local
+ip community-list 1 permit 1:1
+ip community-list 2 permit 1:2
+ip community-list 3 permit 1:3
+
+route-map rotas-l1-l2-porto permit 10
+match community 1
+set local-preference 111
+
+route-map rotas-l1-l2-porto permit 20
+
+
+route-map rotas-to-internet permit 10
+match community 2
+
+route-map rotas-to-internet permit 20
+match community 3
+set local-preference 110
+
+route-map rotas-to-internet permit 30
+
 ! VRF MPLS
 ip vrf vpn1
 rd 9345:1
@@ -78,10 +99,12 @@ address-family ipv4 unicast
 neighbor 10.1.0.1 remote-as 9.345
 neighbor 10.1.0.1 next-hop-self
 neighbor 10.1.0.1 update-source Loopback 0
+neighbor 10.1.0.1 route-map rotas-l1-l2-porto in
 
 neighbor 10.1.0.3 remote-as 9.345
 neighbor 10.1.0.3 next-hop-self
 neighbor 10.1.0.3 update-source Loopback 0
+neighbor 10.1.0.3 route-map rotas-to-internet in
 
 neighbor 10.1.0.4 remote-as 9.345
 neighbor 10.1.0.4 next-hop-self
@@ -107,9 +130,11 @@ redistribute ospf 2
 
 neighbor 2001:192:100::1 remote-as 9.345
 neighbor 2001:192:100::1 activate
+neighbor 2001:192:100::1 route-map rotas-l1-l2-porto in
 
 neighbor 2001:192:100::3 remote-as 9.345
 neighbor 2001:192:100::3 activate
+neighbor 2001:192:100::3 route-map rotas-to-internet in
 
 neighbor 2001:192:100::4 remote-as 9.345
 neighbor 2001:192:100::4 activate
