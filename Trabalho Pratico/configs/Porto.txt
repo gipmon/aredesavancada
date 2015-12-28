@@ -28,6 +28,13 @@ ip as-path access-list 1 permit ^$
 route-map non-transit
 match as-path 1
 
+! deny from sintra the route
+ip prefix-list sintra-route-deny-ipv4 seq 10 deny 200.1.100.0/24
+ip prefix-list sintra-route-deny-ipv4 seq 100 permit 0.0.0.0/0 le 32
+
+ipv6 prefix-list sintra-route-deny-ipv6 seq 10 deny 2001:200:100::/48
+ipv6 prefix-list sintra-route-deny-ipv6 seq 100 permit ::/0 le 128
+
 ! Communities
 ip bgp-community new-format
 
@@ -55,6 +62,7 @@ address-family ipv4 unicast
 neighbor 4.20.20.1 remote-as 34419 !eBGP Neighboring with London
 neighbor 4.20.20.1 route-map non-transit out
 neighbor 4.20.20.1 route-map rotas-l1-l2-ipv4 in
+neighbor 4.20.20.1 prefix-list sintra-route-deny-ipv4 in
 
 neighbor 10.1.0.2 remote-as 9.345
 neighbor 10.1.0.2 next-hop-self
@@ -80,6 +88,7 @@ neighbor 2001:420:1::1 remote-as 34419
 neighbor 2001:420:1::1 activate
 neighbor 2001:420:1::1 route-map non-transit out
 neighbor 2001:420:1::1 route-map rotas-l1-l2-ipv6 in
+neighbor 2001:420:1::1 prefix-list sintra-route-deny-ipv6 in
 
 neighbor 2001:192:100::2 remote-as 9.345
 neighbor 2001:192:100::2 activate
