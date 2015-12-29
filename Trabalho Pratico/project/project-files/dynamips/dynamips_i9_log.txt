@@ -1,49 +1,49 @@
-Dec 29 10:16:03.360 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 29 10:16:03.360 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63265.
-Dec 29 10:16:03.372 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 29 10:16:03.372 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 29 10:16:03.373 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 29 10:16:03.373 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 29 10:16:03.374 HYPERVISOR: exec_cmd: vm create EmpA2 9 c7200 
-Dec 29 10:16:03.386 VM: VM EmpA2 created.
-Dec 29 10:16:03.387 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpA2 2009 
-Dec 29 10:16:03.389 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpA2 
-Dec 29 10:16:03.389 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:03.390 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 0 0 C7200-IO-FE 
-Dec 29 10:16:03.390 HYPERVISOR: exec_cmd: vm set_disk0 EmpA2 0 
-Dec 29 10:16:03.391 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:03.392 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpA2 0 0 
-Dec 29 10:16:03.393 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:03.393 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 0 0 C7200-IO-2FE 
-Dec 29 10:16:03.394 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:03.394 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 1 0 PA-2FE-TX 
-Dec 29 10:16:03.395 HYPERVISOR: exec_cmd: vm set_nvram EmpA2 512 
-Dec 29 10:16:03.396 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:03.396 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 2 0 PA-2FE-TX 
-Dec 29 10:16:03.397 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:03.398 HYPERVISOR: exec_cmd: vm set_idle_pc EmpA2 0x60608040 
-Dec 29 10:16:03.400 HYPERVISOR: exec_cmd: vm set_ios EmpA2 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 29 10:16:03.400 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpA2 ca09.3493.0000 
-Dec 29 10:16:03.401 HYPERVISOR: exec_cmd: vm set_ram EmpA2 512 
-Dec 29 10:16:03.402 HYPERVISOR: exec_cmd: vm set_config EmpA2 configs/i9_startup-config.cfg 
-Dec 29 10:16:04.643 HYPERVISOR: exec_cmd: vm set_ghost_status EmpA2 2 
-Dec 29 10:16:04.646 HYPERVISOR: exec_cmd: vm set_ghost_file EmpA2 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 29 10:16:06.574 HYPERVISOR: exec_cmd: nio create_udp udp-c12d8471-bfc7-454d-a8ba-d01ff574714a 10027 127.0.0.1 10026 
-Dec 29 10:16:06.590 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA2 0 1 udp-c12d8471-bfc7-454d-a8ba-d01ff574714a 
-Dec 29 10:16:06.614 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:16:06.980 HYPERVISOR: exec_cmd: nio create_udp udp-32912018-d06b-45c0-89ef-bce3f51665b1 10013 127.0.0.1 10012 
-Dec 29 10:16:06.982 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA2 0 0 udp-32912018-d06b-45c0-89ef-bce3f51665b1 
-Dec 29 10:16:07.076 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:17:35.550 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:17:35.550 HYPERVISOR: exec_cmd: vm start EmpA2 
-Dec 29 10:53:42.192 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:53:42.235 HYPERVISOR: exec_cmd: vm stop EmpA2 
-Dec 29 10:53:43.379 VM: VM EmpA2 shutdown.
-Dec 29 10:53:49.692 HYPERVISOR: exec_cmd: vm extract_config EmpA2 
-Dec 29 10:53:51.820 HYPERVISOR: exec_cmd: vm get_status EmpA2 
-Dec 29 10:53:51.826 HYPERVISOR: exec_cmd: vm extract_config EmpA2 
-Dec 29 10:53:51.832 HYPERVISOR: exec_cmd: vm delete EmpA2 
-Dec 29 10:53:51.832 VM: VM EmpA2 destroyed.
-Dec 29 10:53:51.845 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 29 10:53:51.916 HYPERVISOR: Stopped.
-Dec 29 10:53:51.916 GENERAL: reset done.
+Dec 29 11:36:58.016 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 29 11:36:58.017 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49786.
+Dec 29 11:36:58.030 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 29 11:36:58.031 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 29 11:36:58.039 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 29 11:36:58.039 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 29 11:36:58.043 HYPERVISOR: exec_cmd: vm create EmpA2 9 c7200 
+Dec 29 11:36:58.057 VM: VM EmpA2 created.
+Dec 29 11:36:58.060 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpA2 2009 
+Dec 29 11:36:58.064 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpA2 
+Dec 29 11:36:58.078 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:36:58.080 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 0 0 C7200-IO-FE 
+Dec 29 11:36:58.082 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:36:58.084 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpA2 0 0 
+Dec 29 11:36:58.084 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:36:58.085 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 0 0 C7200-IO-2FE 
+Dec 29 11:36:58.086 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:36:58.086 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 1 0 PA-2FE-TX 
+Dec 29 11:36:58.087 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpA2 ca09.3493.0000 
+Dec 29 11:36:58.087 HYPERVISOR: exec_cmd: vm set_ram EmpA2 512 
+Dec 29 11:36:58.088 HYPERVISOR: exec_cmd: vm set_nvram EmpA2 512 
+Dec 29 11:36:58.088 HYPERVISOR: exec_cmd: vm set_disk0 EmpA2 0 
+Dec 29 11:36:58.089 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:36:58.089 HYPERVISOR: exec_cmd: vm set_idle_pc EmpA2 0x60608040 
+Dec 29 11:36:58.090 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:36:58.090 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA2 2 0 PA-2FE-TX 
+Dec 29 11:36:58.090 HYPERVISOR: exec_cmd: vm set_ios EmpA2 /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 29 11:36:58.091 HYPERVISOR: exec_cmd: vm set_config EmpA2 configs/i9_startup-config.cfg 
+Dec 29 11:37:01.094 HYPERVISOR: exec_cmd: vm set_ghost_status EmpA2 2 
+Dec 29 11:37:01.133 HYPERVISOR: exec_cmd: vm set_ghost_file EmpA2 c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 29 11:37:03.882 HYPERVISOR: exec_cmd: nio create_udp udp-03e02935-20e4-4bbe-8f29-92ee9f3a1e80 10021 127.0.0.1 10020 
+Dec 29 11:37:03.897 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA2 0 1 udp-03e02935-20e4-4bbe-8f29-92ee9f3a1e80 
+Dec 29 11:37:03.932 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 11:37:03.969 HYPERVISOR: exec_cmd: nio create_udp udp-e4c3f3a3-8db1-4a75-ad39-1101e020e88b 10019 127.0.0.1 10018 
+Dec 29 11:37:04.038 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA2 0 0 udp-e4c3f3a3-8db1-4a75-ad39-1101e020e88b 
+Dec 29 11:37:04.119 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 12:04:53.673 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 12:04:53.676 HYPERVISOR: exec_cmd: vm start EmpA2 
+Dec 29 12:34:16.670 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 12:34:16.681 HYPERVISOR: exec_cmd: vm stop EmpA2 
+Dec 29 12:34:17.806 VM: VM EmpA2 shutdown.
+Dec 29 12:34:40.116 HYPERVISOR: exec_cmd: vm extract_config EmpA2 
+Dec 29 12:34:40.668 HYPERVISOR: exec_cmd: vm get_status EmpA2 
+Dec 29 12:34:40.672 HYPERVISOR: exec_cmd: vm extract_config EmpA2 
+Dec 29 12:34:40.681 HYPERVISOR: exec_cmd: vm delete EmpA2 
+Dec 29 12:34:40.681 VM: VM EmpA2 destroyed.
+Dec 29 12:34:40.695 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 29 12:34:40.733 HYPERVISOR: Stopped.
+Dec 29 12:34:40.734 GENERAL: reset done.
