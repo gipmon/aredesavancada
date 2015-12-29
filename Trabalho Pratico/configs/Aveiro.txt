@@ -90,6 +90,8 @@ route-map SIPProxyNet permit 70
 match ip add 101
 set interface tunnel1
 
+route-map SIPProxyNet permit 80
+
 ! BGP CONFIGS
 router bgp 9.345
 
