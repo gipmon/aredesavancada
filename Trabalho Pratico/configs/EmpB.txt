@@ -4,12 +4,14 @@ ipv6 unicast-routing !ipv6 routing enabled
 
 int f0/0
 ip add 10.1.100.2 255.255.255.252
-ipv6 add 2001:192:100:4000::2/50
+ipv6 add 2001:192:100:6000::1/51
+ipv6 enable
 no shut
 
 int f0/1
 ip add 81.84.100.1 255.255.255.0
 ipv6 add 2001:81:100::1/48
+ipv6 enable
 no shut
 
 ! BGP CONFIGS
@@ -17,7 +19,7 @@ router bgp 65000
 address-family ipv4 unicast
 
 neighbor 10.1.150.1 remote-as 9.345 !eBGP Neighboring with Aveiro
-neighbor 10.1.150.1 ebgp-multihop 2 
+neighbor 10.1.150.1 ebgp-multihop 2
 
 network 81.84.100.0 mask 255.255.255.0
 
@@ -25,10 +27,12 @@ address-family ipv6 unicast
 
 neighbor 2001:192:100:4000::1 remote-as 9.345
 neighbor 2001:192:100:4000::1 activate
+neighbor 2001:192:100:4000::1 ebgp-multihop 2
 
 network 2001:81:100::/48
 
 ip route 0.0.0.0 0.0.0.0 10.1.100.1
+ipv6 route ::/0 2001:192:100:6000::2
 
 end
 write

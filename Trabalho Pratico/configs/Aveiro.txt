@@ -23,7 +23,7 @@ int f0/1
 ip add 10.1.150.1 255.255.255.252
 no shut
 ipv6 enable
-ipv6 add 2001:192:100:4000::1/50
+ipv6 add 2001:192:100:4000::1/51
 ip policy route-map SIPProxyNet
 
 int f1/0
@@ -139,8 +139,9 @@ neighbor 2001:192:100::3 route-map rotas-to-internet in
 neighbor 2001:192:100::4 remote-as 9.345
 neighbor 2001:192:100::4 activate
 
-neighbor 2001:192:100:4000::2 remote-as 65000
-neighbor 2001:192:100:4000::2 activate
+neighbor 2001:192:100:6000::1 remote-as 65000
+neighbor 2001:192:100:6000::1 activate
+neighbor 2001:192:100:6000::1 ebgp-multihop 2
 
 network 2001:192:100::/50
 
@@ -150,6 +151,7 @@ ip route vrf vpn1 0.0.0.0 0.0.0.0 192.172.100.3 global
 
 ! IP ROUTE EMPB
 ip route 10.1.100.0 255.255.255.252 10.1.150.2
+ipv6 route 2001:192:100:6000::/51 2001:192:100:4000::2
 
 ! OPSF
 router ospf 2 vrf vpn1

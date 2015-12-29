@@ -5,16 +5,22 @@ interface GigabitEthernet0
 nameif outside
 security-level 0
 ip address  10.1.150.2 255.255.255.252
+ipv6 enable
+ipv6 add 2001:192:100:4000::2/51
 no shutdown
 
 int GigabitEthernet1
 nameif inside
 security-level 100
 ip add  10.1.100.1 255.255.255.252
+ipv6 enable
+ipv6 add 2001:192:100:6000::2/51
 no shut
 
 route inside 81.84.100.1 255.255.255.0 10.1.100.2
 route outside 0.0.0.0 0.0.0.0 10.1.150.1
+
+! IPV4
 
 access-list OUTSIDE_IN extended permit icmp any 10.1.100.0 255.255.255.252 echo-reply
 access-list OUTSIDE_IN extended permit icmp any 81.84.100.0 255.255.255.0 echo-reply
@@ -25,3 +31,15 @@ access-list OUTSIDE_OUT extended permit tcp host 10.1.100.2 host 10.1.150.1 eq b
 access-list OUTSIDE_OUT extended permit icmp 10.1.100.0 255.255.255.252 any echo
 access-list OUTSIDE_OUT extended permit icmp 81.84.100.0 255.255.255.0 any echo
 access-group OUTSIDE_OUT out interface outside
+
+! IPV6
+
+ipv6 access-list OUTSIDE_IN_IPV6 permit icmp6 any 2001:192:100:6000::/51
+ipv6 access-list OUTSIDE_IN_IPV6 permit icmp6 any 2001:81:100::/48
+ipv6 access-list OUTSIDE_IN_IPV6 permit tcp host 2001:192:100:4000::1 host 2001:192:100:6000::1 eq bgp
+access-group OUTSIDE_IN_IPV6 in interface outside
+
+ipv6 access-list OUTSIDE_IN_IPV6 permit tcp host 2001:192:100:6000::1 host 2001:192:100:4000::1 eq bgp
+ipv6 access-list OUTSIDE_IN_IPV6 permit icmp6 2001:81:100::/48 any
+ipv6 access-list OUTSIDE_IN_IPV6 permit icmp6 2001:192:100:6000::/51 any
+access-group OUTSIDE_IN_IPV6 out interface outside
