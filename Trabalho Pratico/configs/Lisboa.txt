@@ -98,6 +98,16 @@ set community 1:3
 
 route-map rotas-l1-l2-ipv6 permit 30
 
+! not anunciar privadas
+ip prefix-list pOut-priv-default seq 10 deny 10.0.0.0/8 le 32
+ip prefix-list pOut-priv-default seq 12 deny 172.16.0.0/12 le 32
+ip prefix-list pOut-priv-default seq 14 deny 192.168.0.0/16 le 32
+ip prefix-list pOut-priv-default seq 16 deny 0.0.0.0/0
+ip prefix-list pOut-priv-default seq 100 permit 0.0.0.0/0 le 32
+
+ipv6 prefix-list pOut-default seq 16 deny ::/0
+ipv6 prefix-list pOut-default seq 100 permit ::/0 le 128
+
 ! deny from sintra the route
 ip prefix-list sintra-route-deny-ipv4 seq 10 deny 200.1.100.0/24
 ip prefix-list sintra-route-deny-ipv4 seq 100 permit 0.0.0.0/0 le 32
@@ -126,11 +136,13 @@ address-family ipv4 unicast
 neighbor 4.20.20.13 remote-as 8657 !eBGP Neighboring with Sintra
 neighbor 4.20.20.13 route-map non-transit out
 neighbor 4.20.20.13 route-map rotas-l1-l2-ipv4 in
+neighbor 4.20.20.13 prefix-list pOut-priv-default out
 
 neighbor 4.20.20.5 remote-as 34419 !eBGP Neighboring with London
 neighbor 4.20.20.5 route-map non-transit out
 neighbor 4.20.20.5 route-map rotas-l1-l2-ipv4 in
 neighbor 4.20.20.5 prefix-list sintra-route-deny-ipv4 in
+neighbor 4.20.20.5 prefix-list pOut-priv-default out
 
 neighbor 10.1.0.1 remote-as 9.345
 neighbor 10.1.0.1 next-hop-self
@@ -159,12 +171,14 @@ neighbor 2001:420:4::1 remote-as 8657
 neighbor 2001:420:4::1 activate
 neighbor 2001:420:4::1 route-map non-transit out
 neighbor 2001:420:4::1 route-map rotas-l1-l2-ipv6 in
+neighbor 2001:420:4::1 prefix-list pOut-default out
 
 neighbor 2001:420:2::1 remote-as 34419
 neighbor 2001:420:2::1 activate
 neighbor 2001:420:2::1 route-map non-transit out
 neighbor 2001:420:2::1 route-map rotas-l1-l2-ipv6 in
 neighbor 2001:420:2::1 prefix-list sintra-route-deny-ipv6 in
+neighbor 2001:420:2::1 prefix-list pOut-default out
 
 neighbor 2001:192:100::1 remote-as 9.345
 neighbor 2001:192:100::1 activate
