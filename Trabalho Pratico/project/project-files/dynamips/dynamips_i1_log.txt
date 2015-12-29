@@ -1,61 +1,61 @@
-Dec 28 15:58:44.419 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Dec 28 15:58:44.419 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 65444.
-Dec 28 15:58:44.448 HYPERVISOR: exec_cmd: hypervisor version 
-Dec 28 15:58:44.448 HYPERVISOR: exec_cmd: hypervisor uuid 
-Dec 28 15:58:44.449 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Dec 28 15:58:44.449 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Dec 28 15:58:44.449 HYPERVISOR: exec_cmd: vm create London 1 c7200 
-Dec 28 15:58:44.450 VM: VM London created.
-Dec 28 15:58:44.450 HYPERVISOR: exec_cmd: vm set_con_tcp_port London 2001 
-Dec 28 15:58:44.450 HYPERVISOR: exec_cmd: c7200 get_mac_addr London 
-Dec 28 15:58:44.451 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:44.451 HYPERVISOR: exec_cmd: vm slot_add_binding London 0 0 C7200-IO-FE 
-Dec 28 15:58:44.452 HYPERVISOR: exec_cmd: vm set_disk0 London 0 
-Dec 28 15:58:44.452 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:44.453 HYPERVISOR: exec_cmd: vm set_idle_pc London 0x60608040 
-Dec 28 15:58:44.453 HYPERVISOR: exec_cmd: vm set_nvram London 512 
-Dec 28 15:58:44.454 HYPERVISOR: exec_cmd: vm set_ios London /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Dec 28 15:58:44.455 HYPERVISOR: exec_cmd: vm set_ram London 512 
-Dec 28 15:58:44.455 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:44.456 HYPERVISOR: exec_cmd: vm slot_add_binding London 2 0 PA-2FE-TX 
-Dec 28 15:58:44.456 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:44.457 HYPERVISOR: exec_cmd: vm slot_add_binding London 1 0 PA-2FE-TX 
-Dec 28 15:58:44.457 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:44.458 HYPERVISOR: exec_cmd: vm slot_remove_binding London 0 0 
-Dec 28 15:58:44.458 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:44.458 HYPERVISOR: exec_cmd: vm slot_add_binding London 0 0 C7200-IO-2FE 
-Dec 28 15:58:44.459 HYPERVISOR: exec_cmd: c7200 set_mac_addr London ca01.347f.0000 
-Dec 28 15:58:44.460 HYPERVISOR: exec_cmd: vm set_config London configs/i1_startup-config.cfg 
-Dec 28 15:58:45.611 HYPERVISOR: exec_cmd: vm set_ghost_status London 2 
-Dec 28 15:58:45.633 HYPERVISOR: exec_cmd: vm set_ghost_file London c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Dec 28 15:58:47.547 HYPERVISOR: exec_cmd: nio create_udp udp-2304919d-36b0-47ff-a1e9-9c888621fb2e 10030 127.0.0.1 10031 
-Dec 28 15:58:47.587 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 2 1 udp-2304919d-36b0-47ff-a1e9-9c888621fb2e 
-Dec 28 15:58:47.599 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:48.032 HYPERVISOR: exec_cmd: nio create_udp udp-e8892fb7-4fed-4dd7-b533-d24cf57fc899 10013 127.0.0.1 10012 
-Dec 28 15:58:48.060 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 1 1 udp-e8892fb7-4fed-4dd7-b533-d24cf57fc899 
-Dec 28 15:58:48.086 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:48.155 HYPERVISOR: exec_cmd: nio create_udp udp-1df22b94-2cb0-4206-90e7-4db3238a9f1d 10011 127.0.0.1 10010 
-Dec 28 15:58:48.168 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 2 0 udp-1df22b94-2cb0-4206-90e7-4db3238a9f1d 
-Dec 28 15:58:48.169 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:48.209 HYPERVISOR: exec_cmd: nio create_udp udp-580832ae-320b-42b0-8762-88632dbc56da 10004 127.0.0.1 10005 
-Dec 28 15:58:48.229 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 0 1 udp-580832ae-320b-42b0-8762-88632dbc56da 
-Dec 28 15:58:48.230 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:48.282 HYPERVISOR: exec_cmd: nio create_udp udp-9d484075-e8b1-4909-83f5-ad8e89875b6e 10002 127.0.0.1 10003 
-Dec 28 15:58:48.295 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 1 0 udp-9d484075-e8b1-4909-83f5-ad8e89875b6e 
-Dec 28 15:58:48.297 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 15:58:48.335 HYPERVISOR: exec_cmd: nio create_udp udp-60a6e7fc-8209-41b6-a4bf-4ed9a4b0db16 10000 127.0.0.1 10001 
-Dec 28 15:58:48.366 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 0 0 udp-60a6e7fc-8209-41b6-a4bf-4ed9a4b0db16 
-Dec 28 15:58:48.371 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 16:00:56.731 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 16:00:56.731 HYPERVISOR: exec_cmd: vm start London 
-Dec 28 18:41:27.472 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 18:41:27.483 HYPERVISOR: exec_cmd: vm stop London 
-Dec 28 18:41:28.671 VM: VM London shutdown.
-Dec 28 18:43:02.144 HYPERVISOR: exec_cmd: vm extract_config London 
-Dec 28 18:43:03.951 HYPERVISOR: exec_cmd: vm get_status London 
-Dec 28 18:43:03.960 HYPERVISOR: exec_cmd: vm extract_config London 
-Dec 28 18:43:03.964 HYPERVISOR: exec_cmd: vm delete London 
-Dec 28 18:43:03.964 VM: VM London destroyed.
-Dec 28 18:43:03.982 HYPERVISOR: exec_cmd: hypervisor stop 
-Dec 28 18:43:04.445 HYPERVISOR: Stopped.
-Dec 28 18:43:04.445 GENERAL: reset done.
+Dec 28 18:47:49.720 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Dec 28 18:47:49.720 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52979.
+Dec 28 18:47:49.814 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 18:47:49.815 HYPERVISOR: exec_cmd: hypervisor uuid 
+Dec 28 18:47:49.815 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Dec 28 18:47:49.815 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Dec 28 18:47:49.815 HYPERVISOR: exec_cmd: vm create London 1 c7200 
+Dec 28 18:47:49.866 VM: VM London created.
+Dec 28 18:47:49.867 HYPERVISOR: exec_cmd: vm set_con_tcp_port London 2001 
+Dec 28 18:47:49.867 HYPERVISOR: exec_cmd: c7200 get_mac_addr London 
+Dec 28 18:47:49.867 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:49.868 HYPERVISOR: exec_cmd: vm slot_add_binding London 0 0 C7200-IO-FE 
+Dec 28 18:47:49.868 HYPERVISOR: exec_cmd: vm set_ram London 512 
+Dec 28 18:47:49.869 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:49.869 HYPERVISOR: exec_cmd: vm set_idle_pc London 0x60608040 
+Dec 28 18:47:49.869 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:49.870 HYPERVISOR: exec_cmd: vm slot_add_binding London 2 0 PA-2FE-TX 
+Dec 28 18:47:49.870 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:49.870 HYPERVISOR: exec_cmd: vm slot_remove_binding London 0 0 
+Dec 28 18:47:49.871 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:49.871 HYPERVISOR: exec_cmd: vm slot_add_binding London 0 0 C7200-IO-2FE 
+Dec 28 18:47:49.872 HYPERVISOR: exec_cmd: vm set_ios London /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Dec 28 18:47:49.872 HYPERVISOR: exec_cmd: c7200 set_mac_addr London ca01.347f.0000 
+Dec 28 18:47:49.873 HYPERVISOR: exec_cmd: vm set_disk0 London 0 
+Dec 28 18:47:49.873 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:49.873 HYPERVISOR: exec_cmd: vm slot_add_binding London 1 0 PA-2FE-TX 
+Dec 28 18:47:49.874 HYPERVISOR: exec_cmd: vm set_nvram London 512 
+Dec 28 18:47:49.874 HYPERVISOR: exec_cmd: vm set_config London configs/i1_startup-config.cfg 
+Dec 28 18:47:51.218 HYPERVISOR: exec_cmd: vm set_ghost_status London 2 
+Dec 28 18:47:51.240 HYPERVISOR: exec_cmd: vm set_ghost_file London c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Dec 28 18:47:53.664 HYPERVISOR: exec_cmd: nio create_udp udp-6fb6289f-cc81-485b-863a-00c682d40ca6 10018 127.0.0.1 10019 
+Dec 28 18:47:53.710 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 2 1 udp-6fb6289f-cc81-485b-863a-00c682d40ca6 
+Dec 28 18:47:53.711 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:53.753 HYPERVISOR: exec_cmd: nio create_udp udp-f7d57777-2533-40c6-a651-ddbdd8e91de4 10017 127.0.0.1 10016 
+Dec 28 18:47:53.773 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 1 1 udp-f7d57777-2533-40c6-a651-ddbdd8e91de4 
+Dec 28 18:47:53.807 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:53.829 HYPERVISOR: exec_cmd: nio create_udp udp-f597d763-e5d0-4795-8b3d-f948fadd8210 10012 127.0.0.1 10013 
+Dec 28 18:47:53.881 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 0 0 udp-f597d763-e5d0-4795-8b3d-f948fadd8210 
+Dec 28 18:47:53.936 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:53.969 HYPERVISOR: exec_cmd: nio create_udp udp-2f57f7c7-8cb5-4ceb-89df-d06b2a5b1881 10007 127.0.0.1 10006 
+Dec 28 18:47:53.978 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 2 0 udp-2f57f7c7-8cb5-4ceb-89df-d06b2a5b1881 
+Dec 28 18:47:53.991 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:54.022 HYPERVISOR: exec_cmd: nio create_udp udp-04a9ae52-160a-40bc-a746-2cdd702a537d 10004 127.0.0.1 10005 
+Dec 28 18:47:54.034 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 0 1 udp-04a9ae52-160a-40bc-a746-2cdd702a537d 
+Dec 28 18:47:54.035 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:47:54.054 HYPERVISOR: exec_cmd: nio create_udp udp-d196cffe-7a37-4ef3-a764-6167a3dda443 10002 127.0.0.1 10003 
+Dec 28 18:47:54.055 HYPERVISOR: exec_cmd: vm slot_add_nio_binding London 1 0 udp-d196cffe-7a37-4ef3-a764-6167a3dda443 
+Dec 28 18:47:54.055 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:49:51.422 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 28 18:49:51.423 HYPERVISOR: exec_cmd: vm start London 
+Dec 29 01:17:29.490 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 29 01:17:29.494 HYPERVISOR: exec_cmd: vm stop London 
+Dec 29 01:17:32.257 VM: VM London shutdown.
+Dec 29 01:17:39.657 HYPERVISOR: exec_cmd: vm extract_config London 
+Dec 29 01:17:42.956 HYPERVISOR: exec_cmd: vm get_status London 
+Dec 29 01:17:43.051 HYPERVISOR: exec_cmd: vm extract_config London 
+Dec 29 01:17:43.059 HYPERVISOR: exec_cmd: vm delete London 
+Dec 29 01:17:43.059 VM: VM London destroyed.
+Dec 29 01:17:43.093 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 29 01:17:43.171 HYPERVISOR: Stopped.
+Dec 29 01:17:43.175 GENERAL: reset done.
