@@ -61,8 +61,14 @@ no shut
 
 ! NON - TRANSIT
 ip as-path access-list 1 permit ^$
-route-map non-transit
+
+route-map non-transit permit 10
 match as-path 1
+
+access-list 1 permit 81.84.100.0 0.0.0.255
+
+route-map non-transit permit 20
+match ip add 1
 
 ! COMMUNITIES
 ip bgp-community new-format
@@ -87,7 +93,6 @@ set community 1:3
 
 route-map rotas-l1-l2-ipv4 permit 30
 
-
 route-map rotas-l1-l2-ipv6 permit 10
 match ipv6 address prefix-list rotas-default-prefix-ipv6
 set community 1:2
@@ -97,6 +102,31 @@ match as-path 2
 set community 1:3
 
 route-map rotas-l1-l2-ipv6 permit 30
+
+! rotas-l1-l2-ipv4_sintra
+
+route-map rotas-l1-l2-ipv4_sintra permit 10
+match  ip address prefix-list rotas-default-prefix-ipv4
+set community 1:2
+
+route-map rotas-l1-l2-ipv4_sintra permit 20
+match as-path 2
+set community 1:3
+set local-preference 110
+
+route-map rotas-l1-l2-ipv4_sintra permit 30
+
+
+route-map rotas-l1-l2-ipv6_sintra permit 10
+match ipv6 address prefix-list rotas-default-prefix-ipv6
+set community 1:2
+
+route-map rotas-l1-l2-ipv6_sintra permit 20
+match as-path 2
+set community 1:3
+set local-preference 110
+
+route-map rotas-l1-l2-ipv6_sintra permit 30
 
 ! not anunciar privadas
 ip prefix-list pOut-priv-default seq 10 deny 10.0.0.0/8 le 32
@@ -135,7 +165,7 @@ address-family ipv4 unicast
 
 neighbor 4.20.20.13 remote-as 8657 !eBGP Neighboring with Sintra
 neighbor 4.20.20.13 route-map non-transit out
-neighbor 4.20.20.13 route-map rotas-l1-l2-ipv4 in
+neighbor 4.20.20.13 route-map rotas-l1-l2-ipv4_sintra in
 neighbor 4.20.20.13 prefix-list pOut-priv-default out
 
 neighbor 4.20.20.5 remote-as 34419 !eBGP Neighboring with London
@@ -170,7 +200,7 @@ address-family ipv6 unicast
 neighbor 2001:420:4::1 remote-as 8657
 neighbor 2001:420:4::1 activate
 neighbor 2001:420:4::1 route-map non-transit out
-neighbor 2001:420:4::1 route-map rotas-l1-l2-ipv6 in
+neighbor 2001:420:4::1 route-map rotas-l1-l2-ipv6_sintra in
 neighbor 2001:420:4::1 prefix-list pOut-default out
 
 neighbor 2001:420:2::1 remote-as 34419

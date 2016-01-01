@@ -25,8 +25,14 @@ no shut
 
 ! NON - TRANSIT
 ip as-path access-list 1 permit ^$
-route-map non-transit
+
+route-map non-transit permit 10
 match as-path 1
+
+access-list 1 permit 81.84.100.0 0.0.0.255
+
+route-map non-transit permit 20
+match ip add 1
 
 ! not anunciar privadas
 ip prefix-list pOut-priv-default seq 10 deny 10.0.0.0/8 le 32

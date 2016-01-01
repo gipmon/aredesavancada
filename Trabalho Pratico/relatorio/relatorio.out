@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.0.1}{Introdu\347\343o}{}% 1
+\BOOKMARK [1][-]{section.0.2}{Vis\343o Geral}{}% 2
+\BOOKMARK [1][-]{section.0.3}{Conectividade IPv4}{}% 3
+\BOOKMARK [2][-]{subsection.0.3.1}{Rela\347\343o do ISP X com os outros ISPs}{section.0.3}% 4
+\BOOKMARK [2][-]{subsection.0.3.2}{Empresa B}{section.0.3}% 5
+\BOOKMARK [2][-]{subsection.0.3.3}{Routing Constraints}{section.0.3}% 6
+\BOOKMARK [2][-]{subsection.0.3.4}{OSPF e BGP}{section.0.3}% 7
+\BOOKMARK [1][-]{section.0.4}{MPLS}{}% 8
+\BOOKMARK [2][-]{subsection.0.4.1}{MPLS tunnels for SIP traffic com uma reserva de 1Mbps}{section.0.4}% 9
+\BOOKMARK [2][-]{subsection.0.4.2}{MPLS VPN para a Empresa A, ligando Aveiro e Faro}{section.0.4}% 10
+\BOOKMARK [1][-]{section.0.5}{VoIP - SIP}{}% 11
+\BOOKMARK [1][-]{section.0.6}{CDN}{}% 12
+\BOOKMARK [1][-]{section.0.7}{Firewall}{}% 13
+\BOOKMARK [1][-]{section.0.8}{Conclus\343o}{}% 14
