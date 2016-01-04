@@ -1,52 +1,52 @@
-Jan 01 17:04:53.316 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Jan 01 17:04:53.317 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60003.
-Jan 01 17:04:53.325 HYPERVISOR: exec_cmd: hypervisor version 
-Jan 01 17:04:53.326 HYPERVISOR: exec_cmd: hypervisor uuid 
-Jan 01 17:04:53.327 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Jan 01 17:04:53.327 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Jan 01 17:04:53.328 HYPERVISOR: exec_cmd: vm create Aveiro 5 c7200 
-Jan 01 17:04:53.328 VM: VM Aveiro created.
-Jan 01 17:04:53.329 HYPERVISOR: exec_cmd: vm set_con_tcp_port Aveiro 2005 
-Jan 01 17:04:53.330 HYPERVISOR: exec_cmd: c7200 get_mac_addr Aveiro 
-Jan 01 17:04:53.330 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:53.331 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 0 0 C7200-IO-FE 
-Jan 01 17:04:53.332 HYPERVISOR: exec_cmd: vm set_nvram Aveiro 512 
-Jan 01 17:04:53.333 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:53.334 HYPERVISOR: exec_cmd: vm slot_remove_binding Aveiro 0 0 
-Jan 01 17:04:53.335 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:53.335 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 0 0 C7200-IO-2FE 
-Jan 01 17:04:53.337 HYPERVISOR: exec_cmd: vm set_ios Aveiro /Users/rafaelferreira/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
-Jan 01 17:04:53.339 HYPERVISOR: exec_cmd: vm set_disk0 Aveiro 0 
-Jan 01 17:04:53.342 HYPERVISOR: exec_cmd: vm set_ram Aveiro 512 
-Jan 01 17:04:53.345 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:53.346 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 2 0 PA-2FE-TX 
-Jan 01 17:04:53.348 HYPERVISOR: exec_cmd: c7200 set_mac_addr Aveiro ca05.3487.0000 
-Jan 01 17:04:53.351 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:53.351 HYPERVISOR: exec_cmd: vm set_idle_pc Aveiro 0x60608040 
-Jan 01 17:04:53.355 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:53.356 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 1 0 PA-2FE-TX 
-Jan 01 17:04:53.359 HYPERVISOR: exec_cmd: vm set_config Aveiro configs/i5_startup-config.cfg 
-Jan 01 17:04:56.258 HYPERVISOR: exec_cmd: vm set_ghost_status Aveiro 2 
-Jan 01 17:04:56.259 HYPERVISOR: exec_cmd: vm set_ghost_file Aveiro c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
-Jan 01 17:04:58.061 HYPERVISOR: exec_cmd: nio create_udp udp-1feb8f80-2419-48cf-87c1-09f5f9601400 10026 127.0.0.1 10027 
-Jan 01 17:04:58.064 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 1 0 udp-1feb8f80-2419-48cf-87c1-09f5f9601400 
-Jan 01 17:04:58.065 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:58.453 HYPERVISOR: exec_cmd: nio create_udp udp-58dc5deb-13da-4c5f-9b8d-b9990d2ab8b9 10014 127.0.0.1 10015 
-Jan 01 17:04:58.455 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 0 0 udp-58dc5deb-13da-4c5f-9b8d-b9990d2ab8b9 
-Jan 01 17:04:58.466 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:04:59.422 HYPERVISOR: exec_cmd: nio create_udp udp-304744ee-b245-4070-8693-84038c2852d0 10032 127.0.0.1 10033 
-Jan 01 17:04:59.434 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 0 1 udp-304744ee-b245-4070-8693-84038c2852d0 
-Jan 01 17:04:59.435 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:07:30.033 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 17:07:30.034 HYPERVISOR: exec_cmd: vm start Aveiro 
-Jan 01 23:33:41.830 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 23:33:41.830 HYPERVISOR: exec_cmd: vm stop Aveiro 
-Jan 01 23:33:44.320 VM: VM Aveiro shutdown.
-Jan 01 23:33:56.320 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
-Jan 01 23:33:56.918 HYPERVISOR: exec_cmd: vm get_status Aveiro 
-Jan 01 23:33:56.927 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
-Jan 01 23:33:56.936 HYPERVISOR: exec_cmd: vm delete Aveiro 
-Jan 01 23:33:56.936 VM: VM Aveiro destroyed.
-Jan 01 23:33:56.946 HYPERVISOR: exec_cmd: hypervisor stop 
-Jan 01 23:33:57.193 HYPERVISOR: Stopped.
-Jan 01 23:33:57.198 GENERAL: reset done.
+Jan 04 16:34:52.049 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Jan 04 16:34:52.049 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60537.
+Jan 04 16:34:52.191 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 04 16:34:52.191 HYPERVISOR: exec_cmd: hypervisor uuid 
+Jan 04 16:34:52.192 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Jan 04 16:34:52.192 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Jan 04 16:34:52.192 HYPERVISOR: exec_cmd: vm create Sintra 3 c7200 
+Jan 04 16:34:52.192 VM: VM Sintra created.
+Jan 04 16:34:52.193 HYPERVISOR: exec_cmd: vm set_con_tcp_port Sintra 2003 
+Jan 04 16:34:52.193 HYPERVISOR: exec_cmd: c7200 get_mac_addr Sintra 
+Jan 04 16:34:52.193 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:52.193 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-FE 
+Jan 04 16:34:52.194 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:52.194 HYPERVISOR: exec_cmd: vm slot_remove_binding Sintra 0 0 
+Jan 04 16:34:52.194 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:52.194 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-2FE 
+Jan 04 16:34:52.196 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:52.196 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 2 0 PA-2FE-TX 
+Jan 04 16:34:52.196 HYPERVISOR: exec_cmd: vm set_ram Sintra 512 
+Jan 04 16:34:52.197 HYPERVISOR: exec_cmd: vm set_nvram Sintra 512 
+Jan 04 16:34:52.197 HYPERVISOR: exec_cmd: vm set_ios Sintra /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Jan 04 16:34:52.198 HYPERVISOR: exec_cmd: c7200 set_mac_addr Sintra ca03.3482.0000 
+Jan 04 16:34:52.198 HYPERVISOR: exec_cmd: vm set_disk0 Sintra 0 
+Jan 04 16:34:52.198 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:52.199 HYPERVISOR: exec_cmd: vm set_idle_pc Sintra 0x60608040 
+Jan 04 16:34:52.199 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:52.200 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 1 0 PA-2FE-TX 
+Jan 04 16:34:52.200 HYPERVISOR: exec_cmd: vm set_config Sintra configs/i3_startup-config.cfg 
+Jan 04 16:34:54.626 HYPERVISOR: exec_cmd: vm set_ghost_status Sintra 2 
+Jan 04 16:34:54.627 HYPERVISOR: exec_cmd: vm set_ghost_file Sintra c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Jan 04 16:34:57.027 HYPERVISOR: exec_cmd: nio create_udp udp-5d6a197a-5485-4d78-954c-dce8bf90fd2b 10016 127.0.0.1 10017 
+Jan 04 16:34:57.040 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 1 0 udp-5d6a197a-5485-4d78-954c-dce8bf90fd2b 
+Jan 04 16:34:57.062 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:57.114 HYPERVISOR: exec_cmd: nio create_udp udp-41cae7ce-aa53-462a-83c7-de393baf77ef 10014 127.0.0.1 10015 
+Jan 04 16:34:57.120 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 1 udp-41cae7ce-aa53-462a-83c7-de393baf77ef 
+Jan 04 16:34:57.147 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:34:57.243 HYPERVISOR: exec_cmd: nio create_udp udp-171572c4-b146-4b09-97d9-a4a3e1aacccb 10013 127.0.0.1 10012 
+Jan 04 16:34:57.266 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 0 udp-171572c4-b146-4b09-97d9-a4a3e1aacccb 
+Jan 04 16:34:57.267 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:35:52.928 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:35:52.928 HYPERVISOR: exec_cmd: vm start Sintra 
+Jan 04 16:57:53.171 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 16:57:53.176 HYPERVISOR: exec_cmd: vm stop Sintra 
+Jan 04 16:57:54.965 VM: VM Sintra shutdown.
+Jan 04 18:20:38.741 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Jan 04 18:20:38.878 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 04 18:20:38.892 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Jan 04 18:20:38.904 HYPERVISOR: exec_cmd: vm delete Sintra 
+Jan 04 18:20:38.907 VM: VM Sintra destroyed.
+Jan 04 18:20:38.929 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 04 18:20:39.319 HYPERVISOR: Stopped.
+Jan 04 18:20:39.319 GENERAL: reset done.

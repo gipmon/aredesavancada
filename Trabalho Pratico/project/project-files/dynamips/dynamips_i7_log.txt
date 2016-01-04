@@ -1,49 +1,49 @@
-Jan 01 17:04:54.705 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Jan 01 17:04:54.705 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60292.
-Jan 01 17:04:54.714 HYPERVISOR: exec_cmd: hypervisor version 
-Jan 01 17:04:54.714 HYPERVISOR: exec_cmd: hypervisor uuid 
-Jan 01 17:04:54.715 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Jan 01 17:04:54.715 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Jan 01 17:04:54.715 HYPERVISOR: exec_cmd: vm create EmpB 7 c7200 
-Jan 01 17:04:54.724 VM: VM EmpB created.
-Jan 01 17:04:54.755 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpB 2007 
-Jan 01 17:04:54.756 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpB 
-Jan 01 17:04:54.756 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:54.756 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 0 0 C7200-IO-FE 
-Jan 01 17:04:54.756 HYPERVISOR: exec_cmd: vm set_nvram EmpB 512 
-Jan 01 17:04:54.757 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:54.757 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpB 0 0 
-Jan 01 17:04:54.757 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:54.758 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 0 0 C7200-IO-2FE 
-Jan 01 17:04:54.758 HYPERVISOR: exec_cmd: vm set_ios EmpB /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
-Jan 01 17:04:54.758 HYPERVISOR: exec_cmd: vm set_disk0 EmpB 0 
-Jan 01 17:04:54.759 HYPERVISOR: exec_cmd: vm set_ram EmpB 512 
-Jan 01 17:04:54.759 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:54.759 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 2 0 PA-2FE-TX 
-Jan 01 17:04:54.760 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpB ca07.348c.0000 
-Jan 01 17:04:54.760 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:54.760 HYPERVISOR: exec_cmd: vm set_idle_pc EmpB 0x60608040 
-Jan 01 17:04:54.761 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:54.761 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 1 0 PA-2FE-TX 
-Jan 01 17:04:54.761 HYPERVISOR: exec_cmd: vm set_config EmpB configs/i7_startup-config.cfg 
-Jan 01 17:04:56.278 HYPERVISOR: exec_cmd: vm set_ghost_status EmpB 2 
-Jan 01 17:04:56.279 HYPERVISOR: exec_cmd: vm set_ghost_file EmpB c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
-Jan 01 17:04:58.622 HYPERVISOR: exec_cmd: nio create_udp udp-42e141a0-fff6-4d47-944f-eace65923ce0 10013 127.0.0.1 10012 
-Jan 01 17:04:58.645 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpB 0 1 udp-42e141a0-fff6-4d47-944f-eace65923ce0 
-Jan 01 17:04:58.646 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:04:59.410 HYPERVISOR: exec_cmd: nio create_udp udp-55c33c1f-7c67-4f6c-94b2-a6b323926e24 10034 127.0.0.1 10035 
-Jan 01 17:04:59.434 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpB 0 0 udp-55c33c1f-7c67-4f6c-94b2-a6b323926e24 
-Jan 01 17:04:59.435 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:07:53.244 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 17:07:53.244 HYPERVISOR: exec_cmd: vm start EmpB 
-Jan 01 23:33:41.770 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 23:33:41.771 HYPERVISOR: exec_cmd: vm stop EmpB 
-Jan 01 23:33:44.218 VM: VM EmpB shutdown.
-Jan 01 23:33:56.316 HYPERVISOR: exec_cmd: vm extract_config EmpB 
-Jan 01 23:33:56.918 HYPERVISOR: exec_cmd: vm get_status EmpB 
-Jan 01 23:33:56.926 HYPERVISOR: exec_cmd: vm extract_config EmpB 
-Jan 01 23:33:56.935 HYPERVISOR: exec_cmd: vm delete EmpB 
-Jan 01 23:33:56.935 VM: VM EmpB destroyed.
-Jan 01 23:33:56.946 HYPERVISOR: exec_cmd: hypervisor stop 
-Jan 01 23:33:57.392 HYPERVISOR: Stopped.
-Jan 01 23:33:57.396 GENERAL: reset done.
+Jan 04 16:34:53.190 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Jan 04 16:34:53.190 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60803.
+Jan 04 16:34:53.198 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 04 16:34:53.199 HYPERVISOR: exec_cmd: hypervisor uuid 
+Jan 04 16:34:53.199 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Jan 04 16:34:53.199 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Jan 04 16:34:53.199 HYPERVISOR: exec_cmd: vm create EmpB 7 c7200 
+Jan 04 16:34:53.211 VM: VM EmpB created.
+Jan 04 16:34:53.232 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpB 2007 
+Jan 04 16:34:53.232 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpB 
+Jan 04 16:34:53.232 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:53.232 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 0 0 C7200-IO-FE 
+Jan 04 16:34:53.233 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:53.233 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpB 0 0 
+Jan 04 16:34:53.233 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:53.233 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 0 0 C7200-IO-2FE 
+Jan 04 16:34:53.234 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:53.234 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 2 0 PA-2FE-TX 
+Jan 04 16:34:53.234 HYPERVISOR: exec_cmd: vm set_ram EmpB 512 
+Jan 04 16:34:53.234 HYPERVISOR: exec_cmd: vm set_nvram EmpB 512 
+Jan 04 16:34:53.235 HYPERVISOR: exec_cmd: vm set_ios EmpB /Users/rafaelferreira/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Jan 04 16:34:53.235 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpB ca07.348c.0000 
+Jan 04 16:34:53.235 HYPERVISOR: exec_cmd: vm set_disk0 EmpB 0 
+Jan 04 16:34:53.236 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:53.236 HYPERVISOR: exec_cmd: vm set_idle_pc EmpB 0x60608040 
+Jan 04 16:34:53.236 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:53.236 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB 1 0 PA-2FE-TX 
+Jan 04 16:34:53.237 HYPERVISOR: exec_cmd: vm set_config EmpB configs/i7_startup-config.cfg 
+Jan 04 16:34:54.801 HYPERVISOR: exec_cmd: vm set_ghost_status EmpB 2 
+Jan 04 16:34:54.828 HYPERVISOR: exec_cmd: vm set_ghost_file EmpB c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Jan 04 16:34:57.583 HYPERVISOR: exec_cmd: nio create_udp udp-ac2b2e40-e673-4cb4-be0c-170133ab2b9d 10003 127.0.0.1 10002 
+Jan 04 16:34:57.586 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpB 0 1 udp-ac2b2e40-e673-4cb4-be0c-170133ab2b9d 
+Jan 04 16:34:57.586 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:34:58.168 HYPERVISOR: exec_cmd: nio create_udp udp-ca3d6ba2-3989-44df-955d-cc1bbc1ffc56 10035 127.0.0.1 10034 
+Jan 04 16:34:58.202 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpB 0 0 udp-ca3d6ba2-3989-44df-955d-cc1bbc1ffc56 
+Jan 04 16:34:58.204 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:35:45.548 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:35:45.548 HYPERVISOR: exec_cmd: vm start EmpB 
+Jan 04 16:57:51.599 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 16:57:51.612 HYPERVISOR: exec_cmd: vm stop EmpB 
+Jan 04 16:57:52.948 VM: VM EmpB shutdown.
+Jan 04 18:20:38.885 HYPERVISOR: exec_cmd: vm get_status EmpB 
+Jan 04 18:20:38.899 HYPERVISOR: exec_cmd: vm extract_config EmpB 
+Jan 04 18:20:38.924 HYPERVISOR: exec_cmd: vm extract_config EmpB 
+Jan 04 18:20:38.934 HYPERVISOR: exec_cmd: vm delete EmpB 
+Jan 04 18:20:38.936 VM: VM EmpB destroyed.
+Jan 04 18:20:38.943 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 04 18:20:39.358 HYPERVISOR: Stopped.
+Jan 04 18:20:39.358 GENERAL: reset done.

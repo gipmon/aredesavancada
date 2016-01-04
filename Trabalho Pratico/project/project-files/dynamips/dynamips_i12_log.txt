@@ -1,45 +1,45 @@
-Jan 01 17:04:56.658 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Jan 01 17:04:56.659 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60303.
-Jan 01 17:04:56.741 HYPERVISOR: exec_cmd: hypervisor version 
-Jan 01 17:04:56.742 HYPERVISOR: exec_cmd: hypervisor uuid 
-Jan 01 17:04:56.742 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Jan 01 17:04:56.743 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Jan 01 17:04:56.743 HYPERVISOR: exec_cmd: vm create Server1 11 c3725 
-Jan 01 17:04:56.744 VM: VM Server1 created.
-Jan 01 17:04:56.744 HYPERVISOR: exec_cmd: vm set_con_tcp_port Server1 2018 
-Jan 01 17:04:56.745 HYPERVISOR: exec_cmd: c3725 get_mac_addr Server1 
-Jan 01 17:04:56.745 HYPERVISOR: exec_cmd: vm set_nvram Server1 256 
-Jan 01 17:04:56.746 HYPERVISOR: exec_cmd: vm set_ios Server1 /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
-Jan 01 17:04:56.747 HYPERVISOR: exec_cmd: vm set_disk0 Server1 0 
-Jan 01 17:04:56.748 HYPERVISOR: exec_cmd: c3725 set_mac_addr Server1 c20b.e294.0000 
-Jan 01 17:04:56.750 HYPERVISOR: exec_cmd: vm set_config Server1 configs/i11_startup-config.cfg 
-Jan 01 17:04:56.753 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
-Jan 01 17:04:56.753 VM: VM Ghost created.
-Jan 01 17:04:56.754 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
-Jan 01 17:04:56.755 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
-Jan 01 17:04:56.756 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3725-advipservicesk9-mz.124-21.image-128.ghost 
-Jan 01 17:04:56.757 HYPERVISOR: exec_cmd: vm get_status Ghost 
-Jan 01 17:04:56.758 HYPERVISOR: exec_cmd: vm start Ghost 
-Jan 01 17:04:57.169 HYPERVISOR: exec_cmd: vm get_status Ghost 
-Jan 01 17:04:57.170 HYPERVISOR: exec_cmd: vm stop Ghost 
-Jan 01 17:04:57.651 VM: VM Ghost shutdown.
-Jan 01 17:04:57.651 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
-Jan 01 17:04:57.651 VM: VM Ghost destroyed.
-Jan 01 17:04:57.669 HYPERVISOR: exec_cmd: vm set_ghost_status Server1 2 
-Jan 01 17:04:57.669 HYPERVISOR: exec_cmd: vm set_ghost_file Server1 c3725-advipservicesk9-mz.124-21.image-128.ghost 
-Jan 01 17:04:59.266 HYPERVISOR: exec_cmd: nio create_udp udp-ad41a54c-17a1-44aa-9a5b-32ac43263e12 10040 127.0.0.1 10037 
-Jan 01 17:04:59.287 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Server1 0 0 udp-ad41a54c-17a1-44aa-9a5b-32ac43263e12 
-Jan 01 17:04:59.293 HYPERVISOR: exec_cmd: vm get_status Server1 
-Jan 01 17:08:48.482 HYPERVISOR: exec_cmd: vm get_status Server1 
-Jan 01 17:08:48.483 HYPERVISOR: exec_cmd: vm start Server1 
-Jan 01 23:33:41.714 HYPERVISOR: exec_cmd: vm get_status Server1 
-Jan 01 23:33:41.719 HYPERVISOR: exec_cmd: vm stop Server1 
-Jan 01 23:33:41.813 VM: VM Server1 shutdown.
-Jan 01 23:33:56.311 HYPERVISOR: exec_cmd: vm extract_config Server1 
-Jan 01 23:33:56.923 HYPERVISOR: exec_cmd: vm get_status Server1 
-Jan 01 23:33:56.927 HYPERVISOR: exec_cmd: vm extract_config Server1 
-Jan 01 23:33:56.942 HYPERVISOR: exec_cmd: vm delete Server1 
-Jan 01 23:33:56.942 VM: VM Server1 destroyed.
-Jan 01 23:33:56.950 HYPERVISOR: exec_cmd: hypervisor stop 
-Jan 01 23:33:57.284 HYPERVISOR: Stopped.
-Jan 01 23:33:57.287 GENERAL: reset done.
+Jan 04 16:34:55.270 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Jan 04 16:34:55.270 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60814.
+Jan 04 16:34:55.402 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 04 16:34:55.403 HYPERVISOR: exec_cmd: hypervisor uuid 
+Jan 04 16:34:55.404 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Jan 04 16:34:55.404 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Jan 04 16:34:55.406 HYPERVISOR: exec_cmd: vm create Server1 11 c3725 
+Jan 04 16:34:55.407 VM: VM Server1 created.
+Jan 04 16:34:55.409 HYPERVISOR: exec_cmd: vm set_con_tcp_port Server1 2018 
+Jan 04 16:34:55.409 HYPERVISOR: exec_cmd: c3725 get_mac_addr Server1 
+Jan 04 16:34:55.410 HYPERVISOR: exec_cmd: vm set_nvram Server1 256 
+Jan 04 16:34:55.411 HYPERVISOR: exec_cmd: vm set_ios Server1 /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Jan 04 16:34:55.412 HYPERVISOR: exec_cmd: c3725 set_mac_addr Server1 c20b.e294.0000 
+Jan 04 16:34:55.413 HYPERVISOR: exec_cmd: vm set_disk0 Server1 0 
+Jan 04 16:34:55.414 HYPERVISOR: exec_cmd: vm set_config Server1 configs/i11_startup-config.cfg 
+Jan 04 16:34:55.416 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Jan 04 16:34:55.416 VM: VM Ghost created.
+Jan 04 16:34:55.417 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Jan 04 16:34:55.417 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jan 04 16:34:55.417 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 04 16:34:55.418 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jan 04 16:34:55.420 HYPERVISOR: exec_cmd: vm start Ghost 
+Jan 04 16:34:55.847 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jan 04 16:34:55.848 HYPERVISOR: exec_cmd: vm stop Ghost 
+Jan 04 16:34:56.227 VM: VM Ghost shutdown.
+Jan 04 16:34:56.227 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Jan 04 16:34:56.227 VM: VM Ghost destroyed.
+Jan 04 16:34:56.245 HYPERVISOR: exec_cmd: vm set_ghost_status Server1 2 
+Jan 04 16:34:56.245 HYPERVISOR: exec_cmd: vm set_ghost_file Server1 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 04 16:34:57.975 HYPERVISOR: exec_cmd: nio create_udp udp-ec5903f6-5325-4626-9461-5b9fa9d3ebab 10039 127.0.0.1 10038 
+Jan 04 16:34:57.977 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Server1 0 0 udp-ec5903f6-5325-4626-9461-5b9fa9d3ebab 
+Jan 04 16:34:57.981 HYPERVISOR: exec_cmd: vm get_status Server1 
+Jan 04 16:56:37.471 HYPERVISOR: exec_cmd: vm get_status Server1 
+Jan 04 16:56:37.474 HYPERVISOR: exec_cmd: vm start Server1 
+Jan 04 16:57:49.974 HYPERVISOR: exec_cmd: vm get_status Server1 
+Jan 04 16:57:50.637 HYPERVISOR: exec_cmd: vm stop Server1 
+Jan 04 16:57:50.725 VM: VM Server1 shutdown.
+Jan 04 18:20:38.837 HYPERVISOR: exec_cmd: vm extract_config Server1 
+Jan 04 18:20:38.887 HYPERVISOR: exec_cmd: vm get_status Server1 
+Jan 04 18:20:38.896 HYPERVISOR: exec_cmd: vm extract_config Server1 
+Jan 04 18:20:38.924 HYPERVISOR: exec_cmd: vm delete Server1 
+Jan 04 18:20:38.927 VM: VM Server1 destroyed.
+Jan 04 18:20:38.936 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 04 18:20:39.338 HYPERVISOR: Stopped.
+Jan 04 18:20:39.340 GENERAL: reset done.

@@ -1,33 +1,33 @@
-Jan 01 17:04:56.695 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
-Jan 01 17:04:56.696 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60304.
-Jan 01 17:04:56.742 HYPERVISOR: exec_cmd: hypervisor version 
-Jan 01 17:04:56.742 HYPERVISOR: exec_cmd: hypervisor uuid 
-Jan 01 17:04:56.743 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
-Jan 01 17:04:56.743 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
-Jan 01 17:04:56.744 HYPERVISOR: exec_cmd: vm create Server2 12 c3725 
-Jan 01 17:04:56.744 VM: VM Server2 created.
-Jan 01 17:04:56.745 HYPERVISOR: exec_cmd: vm set_con_tcp_port Server2 2020 
-Jan 01 17:04:56.745 HYPERVISOR: exec_cmd: c3725 get_mac_addr Server2 
-Jan 01 17:04:56.745 HYPERVISOR: exec_cmd: vm set_nvram Server2 256 
-Jan 01 17:04:56.746 HYPERVISOR: exec_cmd: vm set_ios Server2 /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
-Jan 01 17:04:56.748 HYPERVISOR: exec_cmd: vm set_disk0 Server2 0 
-Jan 01 17:04:56.749 HYPERVISOR: exec_cmd: c3725 set_mac_addr Server2 c20c.e295.0000 
-Jan 01 17:04:56.751 HYPERVISOR: exec_cmd: vm set_config Server2 configs/i12_startup-config.cfg 
-Jan 01 17:04:57.686 HYPERVISOR: exec_cmd: vm set_ghost_status Server2 2 
-Jan 01 17:04:57.686 HYPERVISOR: exec_cmd: vm set_ghost_file Server2 c3725-advipservicesk9-mz.124-21.image-128.ghost 
-Jan 01 17:04:59.433 HYPERVISOR: exec_cmd: nio create_udp udp-688cd690-f01c-44cc-b9bb-10aee576631c 10039 127.0.0.1 10036 
-Jan 01 17:04:59.435 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Server2 0 0 udp-688cd690-f01c-44cc-b9bb-10aee576631c 
-Jan 01 17:04:59.446 HYPERVISOR: exec_cmd: vm get_status Server2 
-Jan 01 17:08:46.606 HYPERVISOR: exec_cmd: vm get_status Server2 
-Jan 01 17:08:46.606 HYPERVISOR: exec_cmd: vm start Server2 
-Jan 01 23:33:41.713 HYPERVISOR: exec_cmd: vm get_status Server2 
-Jan 01 23:33:41.719 HYPERVISOR: exec_cmd: vm stop Server2 
-Jan 01 23:33:41.810 VM: VM Server2 shutdown.
-Jan 01 23:33:56.318 HYPERVISOR: exec_cmd: vm extract_config Server2 
-Jan 01 23:33:56.924 HYPERVISOR: exec_cmd: vm get_status Server2 
-Jan 01 23:33:56.928 HYPERVISOR: exec_cmd: vm extract_config Server2 
-Jan 01 23:33:56.943 HYPERVISOR: exec_cmd: vm delete Server2 
-Jan 01 23:33:56.943 VM: VM Server2 destroyed.
-Jan 01 23:33:56.950 HYPERVISOR: exec_cmd: hypervisor stop 
-Jan 01 23:33:57.108 HYPERVISOR: Stopped.
-Jan 01 23:33:57.110 GENERAL: reset done.
+Jan 04 16:34:55.335 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Jan 04 16:34:55.335 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60815.
+Jan 04 16:34:55.403 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 04 16:34:55.403 HYPERVISOR: exec_cmd: hypervisor uuid 
+Jan 04 16:34:55.404 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips 
+Jan 04 16:34:55.404 GENERAL: working_dir=/Users/rafaelferreira/GNS3/projects/ARA - GitHub/Trabalho Pratico/project/project-files/dynamips
+Jan 04 16:34:55.408 HYPERVISOR: exec_cmd: vm create Server2 12 c3725 
+Jan 04 16:34:55.408 VM: VM Server2 created.
+Jan 04 16:34:55.409 HYPERVISOR: exec_cmd: vm set_con_tcp_port Server2 2020 
+Jan 04 16:34:55.410 HYPERVISOR: exec_cmd: c3725 get_mac_addr Server2 
+Jan 04 16:34:55.410 HYPERVISOR: exec_cmd: vm set_nvram Server2 256 
+Jan 04 16:34:55.412 HYPERVISOR: exec_cmd: vm set_ios Server2 /Users/rafaelferreira/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Jan 04 16:34:55.413 HYPERVISOR: exec_cmd: c3725 set_mac_addr Server2 c20c.e295.0000 
+Jan 04 16:34:55.414 HYPERVISOR: exec_cmd: vm set_disk0 Server2 0 
+Jan 04 16:34:55.415 HYPERVISOR: exec_cmd: vm set_config Server2 configs/i12_startup-config.cfg 
+Jan 04 16:34:56.265 HYPERVISOR: exec_cmd: vm set_ghost_status Server2 2 
+Jan 04 16:34:56.265 HYPERVISOR: exec_cmd: vm set_ghost_file Server2 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 04 16:34:58.084 HYPERVISOR: exec_cmd: nio create_udp udp-1c3b5208-1180-4e35-a6f6-bd97c4b0e0f0 10037 127.0.0.1 10036 
+Jan 04 16:34:58.182 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Server2 0 0 udp-1c3b5208-1180-4e35-a6f6-bd97c4b0e0f0 
+Jan 04 16:34:58.203 HYPERVISOR: exec_cmd: vm get_status Server2 
+Jan 04 16:56:40.378 HYPERVISOR: exec_cmd: vm get_status Server2 
+Jan 04 16:56:40.380 HYPERVISOR: exec_cmd: vm start Server2 
+Jan 04 16:57:49.958 HYPERVISOR: exec_cmd: vm get_status Server2 
+Jan 04 16:57:50.614 HYPERVISOR: exec_cmd: vm stop Server2 
+Jan 04 16:57:50.703 VM: VM Server2 shutdown.
+Jan 04 18:20:38.780 HYPERVISOR: exec_cmd: vm extract_config Server2 
+Jan 04 18:20:38.879 HYPERVISOR: exec_cmd: vm get_status Server2 
+Jan 04 18:20:38.892 HYPERVISOR: exec_cmd: vm extract_config Server2 
+Jan 04 18:20:38.909 HYPERVISOR: exec_cmd: vm delete Server2 
+Jan 04 18:20:38.910 VM: VM Server2 destroyed.
+Jan 04 18:20:38.929 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 04 18:20:39.313 HYPERVISOR: Stopped.
+Jan 04 18:20:39.313 GENERAL: reset done.
